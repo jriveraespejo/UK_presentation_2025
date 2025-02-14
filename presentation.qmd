@@ -1,0 +1,179 @@
+---
+title: "Let's talk about Thurstone & Co."
+subtitle: "An information-theoretical model for comparative judgments, and its statistical translation"
+author:
+  - name: 
+      given: Jose(ma)
+      family: Rivera
+    orcid: 0000-0002-3088-2783
+    url: https://www.uantwerpen.be/en/staff/jose-manuel-rivera-espejo_23166/
+    email: JoseManuel.RiveraEspejo@uantwerpen.be
+    corresponding: true
+    affiliation:
+      - name: University of Antwerp
+        department: Training and education sciences
+        group: Edubron
+  - name: 
+      given: Tine
+      family: van Daal
+      non-dropping-particle: van
+    orcid: https://orcid.org/0000-0001-9398-9775
+    url: https://www.uantwerpen.be/en/staff/tine-vandaal/
+    email: tine.vandaal@uantwerpen.be
+    corresponding: false
+    affiliation:
+      - name: University of Antwerp
+        department: Training and education sciences
+        group: Edubron
+  - name: 
+      given: Sven
+      family: De Maeyer
+      non-dropping-particle: De
+    orcid: 0000-0003-2888-1631
+    url: https://www.uantwerpen.be/en/staff/sven-demaeyer/
+    email: sven.demaeyer@uantwerpen.be
+    corresponding: false
+    affiliation:
+      - name: University of Antwerp
+        department: Training and education sciences
+        group: Edubron
+  - name: 
+      given: Steven
+      family: Gillis
+    orcid: 
+    url: https://www.uantwerpen.be/nl/personeel/steven-gillis/
+    email: steven.gillis@uantwerpen.be
+    corresponding: false
+    affiliation:
+      - name: University of Antwerp
+        department: Linguistics
+        group: Centre for computational linguistics, psycholinguistics, and sociolinguistics (CLiPS)
+date: last-modified
+bibliography: references.bib
+csl: diabetologia.csl
+---
+
+# Introduction
+
+## What is CJ?
+
+In *comparative judgment* (CJ) studies [@Thurstone_1927a; @Thurstone_1927b]:
+
+::: incremental
+- judges assess a specific trait or attribute
+- across different stimuli
+- by performing pairwise comparisons
+- producing a dichotomous outcome
+:::
+
+. . . 
+
+e.g., when assessing writing quality, judges compare pairs of written texts (the stimuli) to determine the relative writing quality each text exhibit (the trait) 
+
+---
+
+## Is it succesful?
+
+Numerous studies document the method's effectiveness in assessing traits and competencies. They have focus on three aspects:
+
+::: incremental
+- Reliability
+- Validity
+- Practical applicability
+:::
+
+---
+
+## Introduction (cont.)
+
+Result on **reliability:**
+
+::: incremental
+- CJ needs a modest number of pairwise comparisons [@Verhavert_et_al_2019; @Crompvoets_et_al_2022] 
+- CJ can generate precise and consistent trait scores compared to other assessment methods [@Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023].
+- CJ has equal, if not superior, time efficiency than other assessment methods [@Pollitt_2012b; @Verhavert_et_al_2022; @Mikhailiuk_et_al_2021].
+:::
+
+::: {.notes}
+Third point: when employing adaptive comparison algorithms 
+:::
+
+---
+
+## Introduction (cont.)
+
+Result on *validity:**
+
+::: incremental
+- CJ scores represent accurately the traits under measurement [@Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018_thesis; @Bartholomew_et_al_2018; @Bouwer_et_al_2023].
+:::
+
+---
+
+## Introduction (cont.)
+
+Result on *practical applicability:**
+
+::: incremental
+- CJ is versatile across both educational and non-educational contexts [@Kimbell_2012; @Jones_et_al_2015; @Bartholomew_et_al_2018; @Jones_et_al_2019; @Marshall_et_al_2020; @Bartholomew_et_al_2020; @Boonen_et_al_2020].
+:::
+
+---
+
+# Two prominent issues in CJ literature
+
+## The Case V and the statistical analysis of CJ data
+
+![Thurstones cases and their asumptions](/images/thurstone_cases.png){#tbl-thurstone_cases .absolute top=200 left=0}
+---
+
+### The assumption of equal dispersions between stimuli
+
+
+---
+
+### The assumption of zero correlation between stimuli
+
+---
+
+## The disconnect between trait measurement and hypothesis testing
+
+---
+
+# Extending Thurstone's theory
+
+---
+
+## The conceptual-population model
+
+---
+
+## The sample-comparison model
+
+---
+
+# Abandoning the BTL model
+
+---
+
+# Discussion
+
+---
+
+## Findings
+
+---
+
+## Limitations and further research
+
+---
+
+# Conclusion
+
+---
+
+## References  
+
+:::{#refs}
+
+:::
