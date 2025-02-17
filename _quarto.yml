@@ -16,10 +16,9 @@ execute:
 format:
   revealjs: 
     slide-number: true
-    chalkboard: 
-      buttons: false
+    chalkboard: true
     preview-links: auto
     logo: images/logo-uantwerpen-sw-en-cmyk-pos.png
-    footer: '[Online manuscript](https://jriveraespejo.github.io/paper2_manuscript/)'
+    footer: '[Online manuscript (work in progress)](https://jriveraespejo.github.io/paper2_manuscript/)'
 resources:
   - 'UK group meeting.pdf'
