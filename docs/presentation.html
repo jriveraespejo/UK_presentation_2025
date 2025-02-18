@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-02-17">
+  <meta name="dcterms.date" content="2025-02-18">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -54,6 +54,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -352,7 +353,6 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Let’s talk about Thurstone &amp; Co.</h1>
-  <p class="subtitle">An information-theoretical model for comparative judgments, and its statistical translation</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -401,76 +401,39 @@
     </div>
 </div>
 
-  <p class="date">2025-02-17</p>
-</section>
-<section class="slide level2">
-
-<!-- commands for d-separation -->
+  <p class="date">2025-02-18</p>
 </section>
 <section>
-<section id="introduction" class="title-slide slide level1 center">
-<h1>1. Introduction</h1>
-
+<section id="motivating-example" class="title-slide slide level1 center">
+<h1>1. Motivating example</h1>
+<!-- commands for d-separation -->
 </section>
-<section id="introduction-1" class="slide level2">
-<h2>1. Introduction</h2>
-<div class="fragment">
-<p>In <em>comparative judgments</em> (CJ) studies <span class="citation" data-cites="Thurstone_1927a Thurstone_1927b">[<a href="#/references" role="doc-biblioref" onclick="">1</a>, <a href="#/references" role="doc-biblioref" onclick="">2</a>]</span></p>
-</div>
-<div class="fragment">
+<section id="motivating-example-1" class="slide level2" style="font-size:80%;">
+<h2>1. Motivating example</h2>
 <div>
+<ol type="1">
+<li class="fragment"><strong>Research question:</strong> “To what extent do different teaching methods influence students’ ability to produce high-quality written texts?”</li>
+<li class="fragment"><strong>Method:</strong> Randomization and a CJ experiment, specifically:</li>
+</ol>
+<div>
+<div style="font-size:80%;">
 <ul>
-<li class="fragment">judges assess a specific trait or attribute</li>
-<li class="fragment">across different stimuli</li>
-<li class="fragment">by performing pairwise comparisons</li>
-<li class="fragment">producing a dichotomous outcome</li>
+<li class="fragment">Researchers randomly assign students to <strong>two</strong> different teaching method</li>
+<li class="fragment">Students write one or more texts</li>
+<li class="fragment">Researchers collect students’ written texts</li>
+<li class="fragment">Researchers randomly assign judges to compare pairs of students’ written texts</li>
+<li class="fragment">Judges produce a dichotomous outcome, reflecting the relative quality of each text</li>
 </ul>
 </div>
+</div>
+<ol start="3" type="1">
+<li class="fragment"><p><strong>Estimand:</strong> “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?”</p></li>
+<li class="fragment"><p><strong>Estimator:</strong> the BTL model</p></li>
+<li class="fragment"><p><strong>Estimates:</strong> estimated BTL scores, or their transformations</p></li>
+</ol>
 </div>
 <aside class="notes">
-<p>e.g., when assessing writing quality, judges compare pairs of written texts (the stimuli) to determine the relative writing quality each text exhibit (the trait)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="introduction-2" class="slide level2">
-<h2>1. Introduction</h2>
-<div class="fragment">
-<p>Literature have documented the effectiveness of CJ on three aspects:</p>
-<div>
-<ul>
-<li class="fragment">Reliability</li>
-<li class="fragment">Validity</li>
-<li class="fragment">Practical applicability</li>
-</ul>
-</div>
-</div>
-<div class="fragment">
-<p>But the methodology have <strong>some issues</strong> …</p>
-</div>
-<aside class="notes">
-<p>Result on <strong>reliability:</strong></p>
-<ul>
-<li>CJ needs a modest number of pairwise comparisons <span class="citation" data-cites="Verhavert_et_al_2019 Crompvoets_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">3</a>, <a href="#/references" role="doc-biblioref" onclick="">4</a>]</span></li>
-<li>CJ can generate precise and consistent trait scores compared to other assessment methods <span class="citation" data-cites="Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">5</a>–<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>.</li>
-<li>CJ has equal, if not superior, time efficiency than other assessment methods when employing adaptive comparison algorithms <span class="citation" data-cites="Pollitt_2012b Verhavert_et_al_2022 Mikhailiuk_et_al_2021">[<a href="#/references" role="doc-biblioref" onclick="">8</a>–<a href="#/references" role="doc-biblioref" onclick="">10</a>]</span>.</li>
-</ul>
-<p>Result on <strong>validity:</strong></p>
-<ul>
-<li>CJ scores represent accurately the traits under measurement <span class="citation" data-cites="Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018_thesis Bartholomew_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">7</a>, <a href="#/references" role="doc-biblioref" onclick="">11</a>–<a href="#/references" role="doc-biblioref" onclick="">14</a>]</span>.</li>
-</ul>
-<p>Result on <strong>practical applicability:</strong></p>
-<ul>
-<li>CJ is versatile across both educational and non-educational contexts <span class="citation" data-cites="Kimbell_2012 Jones_et_al_2015 Bartholomew_et_al_2018 Jones_et_al_2019 Marshall_et_al_2020 Bartholomew_et_al_2020 Boonen_et_al_2020">[<a href="#/references" role="doc-biblioref" onclick="">14</a>–<a href="#/references" role="doc-biblioref" onclick="">20</a>]</span>.</li>
-</ul>
+<p>Following current CJ practices</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -488,72 +451,60 @@
 <h1>2. Some theory to remember</h1>
 
 </section>
-<section id="some-theory-to-remember-1" class="slide level2">
+<section id="some-theory-to-remember-1" class="slide level2" style="font-size:80%;">
 <h2>2. Some theory to remember</h2>
-<div class="fragment">
 <div id="fig-thurstone_theory" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-thurstone_theory" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-discriminal_process" class="quarto-figure quarto-figure-center quarto-float">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-discriminal_process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/discriminal_process.png" id="fig-discriminal_process" style="width:100.0%" data-ref-parent="fig-thurstone_theory">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/discriminal_process.png" style="width:100.0%"></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-discriminal_process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="fragment quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-thurstone_theory" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-discriminal_difference" class="quarto-figure quarto-figure-center quarto-float" width="100%">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-discriminal_difference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/discriminal_difference.png" id="fig-discriminal_difference" style="width:100.0%" data-ref-parent="fig-thurstone_theory">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-discriminal_difference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/discriminal_difference.png" style="width:100.0%"></p>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Hypothetical discriminal processes and discriminant difference along a quality trait continuum for two written texts. Panel (a) illustrates the discriminal processes associated with two written texts. Panel (b) depicts their discriminal difference.
+Figure&nbsp;1: Hypothetical discriminal processes and discriminant difference along a quality trait continuum for two written texts. <em>Left panel</em> illustrates the discriminal processes associated with two written texts. <em>Right panel</em> depicts their discriminal difference.
 </figcaption>
 </figure>
 </div>
-</div>
 </section></section>
 <section>
-<section id="what-are-the-issues" class="title-slide slide level1 center">
-<h1>3. What are the issues?</h1>
+<section id="some-issues-with-the-theory" class="title-slide slide level1 center">
+<h1>3. Some issues with the theory</h1>
 
 </section>
-<section id="what-are-the-issues-1" class="slide level2">
-<h2>3. What are the issues?</h2>
-<div>
-<ol type="1">
-<li class="fragment">Excessive reliance on Case V for the analysis of CJ data</li>
-<li class="fragment">Disconnect between trait measurement and hypothesis testing</li>
-</ol>
-</div>
-</section>
-<section id="case-v-and-statistical-analysis" class="slide level2">
-<h2>3.1 Case V and statistical analysis</h2>
-<div class="fragment" style="text-align:center;">
+<section id="some-issues-with-the-theory-1" class="slide level2" style="font-size:80%;">
+<h2>3. Some issues with the theory</h2>
+<div style="text-align:center">
 <div id="tbl-thurstone_cases" class="quarto-float">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Thurstones cases and their asumptions
 </figcaption>
 <div aria-describedby="tbl-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/thurstone_cases.png" style="width:90.0%">
+<img data-src="./images/thurstone_cases.png" style="width:80.0%">
 </div>
 </figure>
+</div>
+</div>
+<div class="fragment">
+<p>Problems:</p>
+<div>
+<div style="font-size:80%;">
+<ol type="1">
+<li class="fragment">Excessive reliance on Case V for the analysis of CJ data</li>
+<li class="fragment">Disconnect between trait measurement and hypothesis testing</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Thus, it is intuitive to think that:</p>
+<div class="fragment" style="font-size:80%;">
+<p>The outcome’s ability to reflect the “true” differences between texts <strong><em>largely depends on the validity of the model’s assumptions</em></strong> <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">1</a>]</span>.</p>
 </div>
 </div>
 <aside class="notes">
@@ -577,137 +528,28 @@ Table&nbsp;1: Thurstones cases and their asumptions
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section class="slide level2">
+</section></section>
+<section>
+<section id="case-v-and-statistical-analysis" class="title-slide slide level1 center">
+<h1>3.1 Case V and statistical analysis</h1>
 
-<h3 id="the-assumption-of-equal-dispersions-between-stimuli">3.1.1 The assumption of equal dispersions between stimuli</h3>
-<div class="fragment" style="text-align:center;">
-<div id="fig-dispersion" class="quarto-figure quarto-figure-center quarto-float">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/dispersion.png" style="width:60.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dispersion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The effect of dispersion discrepancies on the distribution of the discriminal difference.
-</figcaption>
-</figure>
-</div>
-</div>
-<aside class="notes">
-<ul>
-<li><span class="math inline">\(\sigma^{2}_{A}\)</span> remains fixed</li>
-<li><span class="math inline">\(\rho = 0\)</span></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section class="slide level2">
-
-<h3 id="the-assumption-of-zero-correlation-between-stimuli">3.1.2 The assumption of zero correlation between stimuli</h3>
-<div class="fragment" style="text-align:center;">
-<div id="fig-correlation" class="quarto-figure quarto-figure-center quarto-float">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/correlation.png" style="width:60.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: The effect of stimulus correlation on the distribution of the discriminal difference.
-</figcaption>
-</figure>
-</div>
-</div>
-<aside class="notes">
-<ul>
-<li><span class="math inline">\(\sigma^{2}_{A}\)</span> and <span class="math inline">\(\sigma^{2}_{B}\)</span> remain fixed</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<h3 id="but-this-is-not-how-things-happen">But this is not how things happen</h3>
-<div class="fragment">
-<p>In experimental practice, the experiment occurs in reverse:</p>
+<section id="case-v-and-statistical-analysis-1" class="slide level2" style="font-size:80%;">
+<h2>3.1 Case V and statistical analysis</h2>
+<p>But, are Case V assumptions violated?</p>
 <div>
 <ol type="1">
-<li class="fragment">Researchers observe the comparison outcome</li>
-<li class="fragment">Researchers use the BTL model to produce estimates of <span class="citation" data-cites="Thurstone_1927a">[<a href="#/references" role="doc-biblioref" onclick="">1</a>]</span>:</li>
+<li class="fragment"><p>Thurstone: equal dispersion <strong>may not be applicable</strong> when researchers assess complex traits or heterogeneous stimuli</p>
+<p><span class="math inline">\(\longrightarrow\)</span> Evidence of this can be found in misfit statistics?</p></li>
+<li class="fragment"><p>Zero correlation is <strong>almost certainly invalid</strong> in two scenarios:</p>
+<p><span class="math inline">\(\longrightarrow\)</span> when intricate aspects of stimuli cause judges’ biases, ultimately introducing dependencies between stimuli.</p>
+<p><span class="math inline">\(\longrightarrow\)</span> when an additional hierarchical structure is relevant to the stimuli.</p></li>
 </ol>
-<div>
-<div style="font-size:80%;">
-<ul>
-<li class="fragment">the discriminal difference between the stimuli</li>
-<li class="fragment">their discriminal processes</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Therefore, the outcome’s ability to reflect the “true” differences between stimuli <strong><em>largely depends on the validity of the model’s assumptions</em></strong> <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">21</a>]</span>.</p>
-</div>
-<aside class="notes">
-<p><strong>particularly the assumption of equal dispersions and zero correlation</strong></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<h3 id="so-are-case-v-assumptions-violated">So, are Case V assumptions violated?</h3>
-<div>
-<ol type="1">
-<li class="fragment">Equal dispersion <strong>may not be applicable</strong> when researchers assess complex traits or heterogeneous stimuli</li>
-</ol>
-<div>
-<div style="font-size:80%;">
-<ul>
-<li class="fragment">Evidence of this can be found in misfit statistics?</li>
-</ul>
-</div>
-</div>
-<ol start="2" type="1">
-<li class="fragment">Zero correlation is <strong>almost certainly invalid</strong> in two scenarios:</li>
-</ol>
-<div>
-<div style="font-size:80%;">
-<ul>
-<li class="fragment">when comparison involves multidimensional, complex traits with heterogeneous stimuli</li>
-<li class="fragment">when an additional hierarchical structure is relevant to the stimuli.</li>
-</ul>
-</div>
-</div>
 </div>
 <aside class="notes">
 <p><strong>Equal dispersion:</strong></p>
 <ul>
-<li>“misfits” texts are texts with more judgment discrepancies than others <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">12</a>, <a href="#/references" role="doc-biblioref" onclick="">22</a>]</span></li>
+<li>“misfits” texts are texts with more judgment discrepancies than others <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">2</a>–<a href="#/references" role="doc-biblioref" onclick="">5</a>]</span></li>
 <li>“misfit” judges are judges who deviate substantially from the shared consensus.</li>
 </ul>
 <p><strong>Zero correlation:</strong></p>
@@ -727,19 +569,19 @@ Figure&nbsp;3: The effect of stimulus correlation on the distribution of the dis
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2">
-
-<h3 id="so-what-are-the-problems-then">So, what are the problems then?</h3>
+<section id="case-v-and-statistical-analysis-2" class="slide level2" style="font-size:80%;">
+<h2>3.1 Case V and statistical analysis</h2>
+<p>But, what are the problems with this?</p>
 <div>
 <ol type="a">
 <li class="fragment"><p>Different dispersions, neglecting judges’ biases and hierarchical structures</p>
 <p><span class="math inline">\(\longrightarrow\)</span> reduce precision of parameter estimates</p>
 <p><span class="math inline">\(\longrightarrow\)</span> overestimation of trait’s reliability</p>
-<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p></li>
-<li class="fragment"><p>Discarding ‘misfit’ observations <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">12</a>, <a href="#/references" role="doc-biblioref" onclick="">22</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span></p></li>
+<li class="fragment"><p>Discarding ‘misfit’ observations <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">2</a>–<a href="#/references" role="doc-biblioref" onclick="">5</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> discard valuable information</p>
-<p><span class="math inline">\(\longrightarrow\)</span> introduce bias into trait estimates <span class="citation" data-cites="Zimmerman_1994 McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">23</a>, <a href="#/references" role="doc-biblioref" onclick="">24</a>]</span></p>
-<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p></li>
+<p><span class="math inline">\(\longrightarrow\)</span> introduce bias into trait estimates <span class="citation" data-cites="Zimmerman_1994 McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">7</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span></p></li>
 </ol>
 </div>
 <aside class="notes">
@@ -758,29 +600,75 @@ Figure&nbsp;3: The effect of stimulus correlation on the distribution of the dis
           display:block!important;
       }</style></aside>
 </section>
-<section id="measurement-and-hypothesis-tests" class="slide level2">
+<section id="case-v-and-statistical-analysis-3" class="slide level2" style="font-size:80%;">
+<h2>3.1 Case V and statistical analysis</h2>
+<div id="fig-thurstone_theory" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/dispersion.png" style="width:100.0%"></p>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/correlation.png" style="width:100.0%"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on the distribution of the discriminal difference. <em>Left panel</em> illustrates the effect of dispersion discrepancies. <em>Right panel</em> depicts the effect of stimuli correlation.
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>Left panel</p>
+<ul>
+<li><span class="math inline">\(\sigma^{2}_{A}\)</span> remains fixed</li>
+<li><span class="math inline">\(\rho = 0\)</span></li>
+</ul>
+<p>Right panel</p>
+<ul>
+<li><span class="math inline">\(\sigma^{2}_{A}\)</span> and <span class="math inline">\(\sigma^{2}_{B}\)</span> remain fixed</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="measurement-and-hypothesis-tests" class="title-slide slide level1 center">
+<h1>3.2 Measurement and hypothesis tests</h1>
+
+</section>
+<section id="measurement-and-hypothesis-tests-1" class="slide level2" style="font-size:80%;">
 <h2>3.2 Measurement and hypothesis tests</h2>
-<p>Researchers use the BTL model as a <strong>measurement model</strong> for CJ <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018_thesis Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">5</a>–<a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">11</a>–<a href="#/references" role="doc-biblioref" onclick="">13</a>, <a href="#/references" role="doc-biblioref" onclick="">25</a>]</span>, i.e., they use the <strong>estimated BTL scores</strong>, or their transformations, to conduct additional analyses or hypothesis tests, for example:</p>
+<p>Researchers use the BTL model as a <strong>measurement model</strong> for CJ <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018_thesis Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">3</a>–<a href="#/references" role="doc-biblioref" onclick="">5</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>–<a href="#/references" role="doc-biblioref" onclick="">12</a>]</span>, i.e., they use the <strong>estimated BTL scores</strong>, or their transformations, to conduct additional analyses or hypothesis tests, for example:</p>
 <div>
 <div style="font-size:80%;">
 <ul>
-<li class="fragment">Identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">12</a>]</span></li>
-<li class="fragment">Detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">[<a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">26</a>]</span></li>
-<li class="fragment">Calculate correlations with other assessment methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>,</li>
-<li class="fragment">Test hypotheses related to the underlying trait of interest <span class="citation" data-cites="Casalicchio_et_al_2015 Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">[<a href="#/references" role="doc-biblioref" onclick="">7</a>, <a href="#/references" role="doc-biblioref" onclick="">17</a>, <a href="#/references" role="doc-biblioref" onclick="">20</a>, <a href="#/references" role="doc-biblioref" onclick="">27</a>–<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span></li>
+<li class="fragment">Identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">3</a>–<a href="#/references" role="doc-biblioref" onclick="">5</a>]</span></li>
+<li class="fragment">Detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">[<a href="#/references" role="doc-biblioref" onclick="">3</a>, <a href="#/references" role="doc-biblioref" onclick="">13</a>]</span></li>
+<li class="fragment">Calculate correlations with other assessment methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">5</a>, <a href="#/references" role="doc-biblioref" onclick="">12</a>]</span>,</li>
+<li class="fragment">Test hypotheses related to the underlying trait of interest <span class="citation" data-cites="Casalicchio_et_al_2015 Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">[<a href="#/references" role="doc-biblioref" onclick="">12</a>, <a href="#/references" role="doc-biblioref" onclick="">14</a>–<a href="#/references" role="doc-biblioref" onclick="">19</a>]</span></li>
 </ul>
 </div>
 </div>
 </section>
-<section class="slide level2">
-
-<h3 id="so-what-are-the-problems-then-1">So, what are the problems then?</h3>
+<section id="measurement-and-hypothesis-tests-2" class="slide level2" style="font-size:80%;">
+<h2>3.2 Measurement and hypothesis tests</h2>
+<p>But, what are the problems with this?</p>
 <div>
 <ol type="a">
 <li class="fragment"><p>Ignoring uncertainty of BTL scores</p>
-<p><span class="math inline">\(\longrightarrow\)</span> bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">31</a>, <a href="#/references" role="doc-biblioref" onclick="">32</a>]</span></p>
-<p><span class="math inline">\(\longrightarrow\)</span> diminishing their statistical power</p>
-<p><span class="math inline">\(\longrightarrow\)</span> increasing likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p></li>
+<p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">20</a>, <a href="#/references" role="doc-biblioref" onclick="">21</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> diminish statistical power of tests</p>
+<p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span>, i.e., drawing spurious conclusions.</p></li>
 </ol>
 </div>
 <aside class="notes">
@@ -798,140 +686,83 @@ Figure&nbsp;3: The effect of stimulus correlation on the distribution of the dis
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="measurement-and-hypothesis-tests-3" class="slide level2" style="font-size:80%;">
+<h2>3.2 Measurement and hypothesis tests</h2>
+<div id="fig-measurement_error" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-measurement_error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="./images/measurement_error1.png" style="width:100.0%"></p>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="./images/measurement_error2.png" style="width:100.0%"></p>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="./images/measurement_error3.png" style="width:100.0%"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement_error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The effect of measurement error on the estimation of a regression parameter <span class="math inline">\(\beta\)</span>. Measurement error increases from the left to the right panel.
+</figcaption>
+</figure>
+</div>
 </section></section>
 <section>
 <section id="extending-thurstones-theory" class="title-slide slide level1 center">
 <h1>4. Extending Thurstone’s theory</h1>
 
 </section>
-<section id="extending-thurstones-theory-1" class="slide level2">
+<section id="extending-thurstones-theory-1" class="slide level2" style="font-size:80%;">
 <h2>4. Extending Thurstone’s theory</h2>
-<div class="fragment">
-<p>We use the <strong><em>structural approach</em></strong> to causal inference <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Gross_et_al_2018 Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">33</a>–<a href="#/references" role="doc-biblioref" onclick="">36</a>]</span> to formally and graphically representing the assumed (causal) structure of the CJ system. Specifically we use:</p>
+<p>We use the <strong><em>structural approach</em></strong> to causal inference <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Gross_et_al_2018 Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">22</a>–<a href="#/references" role="doc-biblioref" onclick="">25</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> formally and graphically representing the assumed (causal) structure of the CJ system. Specifically we develop:</p>
 <div>
-<ol type="a">
-<li class="fragment">Structural Causal Models (SCMs) and</li>
-<li class="fragment">Directed Acyclic Graphs (DAGs)</li>
+<ol type="1">
+<li class="fragment">A <strong>conceptual-population</strong> model:</li>
+<li class="fragment">A <strong>sample-comparison</strong> model:</li>
 </ol>
 </div>
-</div>
-<aside class="notes">
-<ul>
-<li>Essentially, SCMs and DAGs function as <em>conceptual models</em> on which identification analysis rests <span class="citation" data-cites="Schuessler_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">37</a>]</span>.</li>
-<li><em>Identification analysis</em> helps researchers to determine whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability <span class="citation" data-cites="Schuessler_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">37</a>]</span>.</li>
-<li>Identification is crucial because it is a necessary condition for ensuring consistent estimators.</li>
-<li><em>Consistency</em> refers to the property of an estimator whose estimates converge to the “true” value of the estimand as the data size approaches infinity <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">38</a>]</span>.</li>
-<li>Without identification, consistency cannot be achieved, even with “infinite” and error-free data. Thus, deriving meaningful insights from finite data becomes impossible <span class="citation" data-cites="Schuessler_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">37</a>]</span>.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</section></section>
+<section>
+<section id="the-conceptual-population-model" class="title-slide slide level1 center">
+<h1>4.1 The conceptual-population model</h1>
+
 </section>
-<section id="extending-thurstones-theory-2" class="slide level2">
-<h2>4. Extending Thurstone’s theory</h2>
-<div class="fragment">
-<p><strong>Motivating example:</strong> “To what extent do different teaching methods influence students’ ability to produce high-quality written texts?”</p>
-</div>
-<div class="fragment">
-<p><strong>Solution:</strong> Researchers design a CJ experiment.</p>
-</div>
-<div class="fragment">
-<p><strong>Assume:</strong></p>
-<div>
-<div style="font-size:80%;">
-<ol type="a">
-<li class="fragment">researcher randomly assign students to two groups, each receiving a different teaching method.</li>
-<li class="fragment">judges then compare pairs of students’ written texts</li>
-<li class="fragment">judges produce a dichotomous outcome, reflecting the relative quality of each text</li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="the-conceptual-population-model" class="slide level2">
+<section id="the-conceptual-population-model-1" class="slide level2" style="font-size:80%;">
 <h2>4.1 The conceptual-population model</h2>
-<div class="fragment" style="font-size:60%;">
-<div id="fig-cj03" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-cj03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj03" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj03_scm" class="quarto-figure quarto-figure-center quarto-float">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj03_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><span class="math display">\[
-\begin{aligned}
-  O^{cp}_{hiabjk} &amp; := f_{O}(D_{hiabjk}) \\
-  D_{hiabjk} &amp; := f_{D}(T_{ha}, T_{ib}, B_{jk})
-\end{aligned}
-\]</span></p>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj03_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="fragment quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj03" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj03_dag" class="quarto-figure quarto-figure-center quarto-float" width="70%">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj03_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/CJ_TM_03.png" id="fig-cj03_dag" style="width:70.0%" data-ref-parent="fig-cj03">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj03_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Conceptual-population model, scalar form. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG.
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="the-conceptual-population-model-1" class="slide level2">
-<h2>4.1 The conceptual-population model</h2>
-<div class="fragment">
-<p>Assuming we have access to comparison data from a conceptual population, that is, data representing:</p>
-</div>
+<p>Assuming that we can access to:</p>
 <div>
 <div style="font-size:80%;">
 <ol type="a">
 <li class="fragment">all repeated judgments</li>
 <li class="fragment">made by every available judge</li>
-<li class="fragment">for each pair of stimuli</li>
-<li class="fragment">produced by each pair of individuals</li>
+<li class="fragment">for each pair of texts</li>
+<li class="fragment">produced by each pair of students</li>
 </ol>
 </div>
 </div>
-</section>
-<section id="the-conceptual-population-model-2" class="slide level2">
-<h2>4.1 The conceptual-population model</h2>
+<div class="fragment">
+<p>Then:</p>
 <div>
-<div style="font-size:60%;">
+<div style="font-size:80%;">
 <ul>
-<li class="fragment"><span class="math inline">\(n_{I}\)</span> represents the number of individuals</li>
-<li class="fragment"><span class="math inline">\(n_{A}\)</span> denotes the number of stimuli available per individual</li>
+<li class="fragment"><span class="math inline">\(n_{I}\)</span> represents the number of students</li>
+<li class="fragment"><span class="math inline">\(n_{A}\)</span> denotes the number of texts available per students</li>
 <li class="fragment"><span class="math inline">\(n_{J}\)</span> indicates the total number of judges, and</li>
 <li class="fragment"><span class="math inline">\(n_{K}\)</span> represents the number of judgments each judge performs</li>
+<li class="fragment"><span class="math inline">\({n_{I} \cdot n_{A} \choose 2} = \frac{ (n_{I} \cdot n_{A})! }{ 2! (n_{I} \cdot n_{A} - 2)! }\)</span> represents the total number of comparisons</li>
+<li class="fragment"><span class="math inline">\(n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\)</span> denotes the total number of observation in the data</li>
 </ul>
 </div>
 </div>
-<div class="fragment">
-<div style="font-size:45%;">
-<p><span id="eq-mat12"><span class="math display">\[
+</div>
+</section>
+<section id="the-conceptual-population-model-2" class="slide level2" style="font-size:80%;">
+<h2>4.1 The conceptual-population model</h2>
+<p><span class="math display">\[
 I_{n_{I}} = \begin{bmatrix}
 1 \\
 2 \\
@@ -975,24 +806,7 @@ j &amp; k \\
 \vdots &amp; \vdots \\
 n_{J} &amp; n_{K}-1 \\
 n_{J} &amp; n_{K} \\
-\end{bmatrix}
-\qquad(1)\]</span></span></p>
-</div>
-</div>
-</section>
-<section id="the-conceptual-population-model-3" class="slide level2">
-<h2>4.1 The conceptual-population model</h2>
-<div>
-<div style="font-size:60%;">
-<ul>
-<li class="fragment"><span class="math inline">\({n_{I} \cdot n_{A} \choose 2} = \frac{ (n_{I} \cdot n_{A})! }{ 2! (n_{I} \cdot n_{A} - 2)! }\)</span></li>
-<li class="fragment"><span class="math inline">\(n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\)</span></li>
-</ul>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size:45%;">
-<p><span id="eq-mat3"><span class="math display">\[
+\end{bmatrix} ; \;
 RPUV_{n \times 6} = \begin{bmatrix}
 1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\
 1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; 2 \\
@@ -1007,67 +821,16 @@ n_{I} &amp; n_{I} &amp; n_{A}-1 &amp; n_{A} &amp; n_{J} &amp; 2 \\
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
 n_{I} &amp; n_{I} &amp; n_{A}-1 &amp; n_{A} &amp; n_{J} &amp; n_{K}-1 \\
 n_{I} &amp; n_{I} &amp; n_{A}-1 &amp; n_{A} &amp; n_{J} &amp; n_{K} \\
-\end{bmatrix} \in \mathbb{N}
-\qquad(2)\]</span></span></p>
-</div>
-</div>
-</section>
-<section id="the-conceptual-population-model-4" class="slide level2">
-<h2>4.1 The conceptual-population model</h2>
-<div class="fragment" style="font-size:60%;">
-<div id="fig-cj04" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-cj04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj04" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj04_scm" class="quarto-figure quarto-figure-center quarto-float">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj04_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><span class="math display">\[
-\begin{aligned}
-  O^{cp}_{RPUV} &amp; := f_{O}(D_{RPUV}) \\
-  D_{RPUV} &amp; := f_{D}(T_{IA}, B_{JK})
-\end{aligned}
+\end{bmatrix}
 \]</span></p>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj04_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="fragment quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj04" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj04_dag" class="quarto-figure quarto-figure-center quarto-float" width="80%">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj04_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/CJ_TM_04.png" id="fig-cj04_dag" style="width:80.0%" data-ref-parent="fig-cj04">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj04_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Conceptual-population model, vectorized form. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG.
-</figcaption>
-</figure>
-</div>
-</div>
 </section>
-<section id="the-conceptual-population-model-5" class="slide level2">
+<section id="the-conceptual-population-model-3" class="slide level2" style="font-size:80%;">
 <h2>4.1 The conceptual-population model</h2>
-<div class="fragment" style="font-size:60%;">
 <div id="fig-cj09" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cj09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj09" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj09_scm" class="quarto-figure quarto-figure-center quarto-float">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj09_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
   O^{cp}_{RPUV} &amp; := f_{O}(D_{RPUV}) \\
@@ -1082,117 +845,47 @@ Figure&nbsp;5: Conceptual-population model, vectorized form. Panel (a) illustrat
 \end{aligned}
 \]</span></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj09_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="fragment quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj09" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj09_dag" class="quarto-figure quarto-figure-center quarto-float" width="100%">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj09_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/CJ_TM_09.png" id="fig-cj09_dag" style="width:100.0%" data-ref-parent="fig-cj09">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj09_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/CJ_TM_09.png" style="width:100.0%"></p>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Conceptual-population model, final vectorized form. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG.
+Figure&nbsp;4: Conceptual-population model, final vectorized form. <em>Left panel</em> illustrates the SCM. <em>Right panel </em> depicts the associated DAG.
 </figcaption>
 </figure>
 </div>
-</div>
+</section></section>
+<section>
+<section id="the-sample-comparison-model" class="title-slide slide level1 center">
+<h1>4.2 The sample-comparison model</h1>
+
 </section>
-<section id="the-sample-comparison-model" class="slide level2">
+<section id="the-sample-comparison-model-1" class="slide level2" style="font-size:80%;">
 <h2>4.2 The sample-comparison model</h2>
-<div class="fragment">
 <p>Assuming a more realistic scenario where we have access to:</p>
-</div>
 <div>
 <div style="font-size:80%;">
 <ol type="a">
-<li class="fragment">a sample of all repeated judgments</li>
-<li class="fragment">a sample of judges</li>
-<li class="fragment">a sample of stimuli</li>
-<li class="fragment">a sample of individuals</li>
+<li class="fragment">sample of all repeated judgments</li>
+<li class="fragment">sample of judges</li>
+<li class="fragment">sample of texts</li>
+<li class="fragment">sample of students</li>
 </ol>
 </div>
 </div>
 </section>
-<section id="the-sample-comparison-model-1" class="slide level2">
+<section id="the-sample-comparison-model-2" class="slide level2" style="font-size:80%;">
 <h2>4.2 The sample-comparison model</h2>
-<div class="fragment">
-<div id="fig-cj12" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-cj12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj12" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj12_scm" class="quarto-figure quarto-figure-center quarto-float" style="font-size:50%;">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj12_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><span class="math display">\[
-\begin{aligned}
-  O^{sc}_{RPUV} &amp; := f_{O}(O^{cp}_{RPUV}, S_{RPUV}) \\
-  O^{cp}_{RPUV} &amp; := f_{O}(D_{RPUV}) \\
-  D_{RPUV} &amp; := f_{D}(T_{IA}, B_{JK}) \\
-  T_{IA} &amp; := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
-  T_{I} &amp; := f_{T}(X_{I}, e_{I}) \\
-  B_{JK} &amp; := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
-  B_{J} &amp; := f_{B}(Z_{J}, e_{J}) \\
-  e_{IA} &amp; \:\bot\:\{ e_{I}, e_{JK}, e_{J} \} \\
-  e_{I} &amp; \:\bot\:\{ e_{JK}, e_{J} \} \\
-  e_{JK} &amp; \:\bot\:e_{J}
-\end{aligned}
-\]</span></p>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj12_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="fragment quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj12" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj12_dag" class="quarto-figure quarto-figure-center quarto-float" width="100%">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj12_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/CJ_TM_12.png" id="fig-cj12_dag" style="width:100.0%" data-ref-parent="fig-cj12">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj12_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Sample-comparison model including sampling mechanism. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG.
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="the-sample-comparison-model-2" class="slide level2">
-<h2>4.2 The sample-comparison model</h2>
-<div class="fragment">
 <div id="fig-cj14" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cj14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj14" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj14_scm" class="quarto-figure quarto-figure-center quarto-float" style="font-size:40%;">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj14_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
   O_{RPUV} &amp; := f_{C}(O^{sc}_{RPUV}, C) \\
-  O^{sc}_{RPUV} &amp; := f_{O}(O^{cp}_{RPUV}, S_{RPUV}) \\
+  O^{sc}_{RPUV} &amp; := f_{S}(O^{cp}_{RPUV}, S_{RPUV}) \\
   O^{cp}_{RPUV} &amp; := f_{O}(D_{RPUV}) \\
   D_{RPUV} &amp; := f_{D}(T_{IA}, B_{JK}) \\
   T_{IA} &amp; := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
@@ -1205,31 +898,15 @@ Figure&nbsp;7: Sample-comparison model including sampling mechanism. Panel (a) i
 \end{aligned}
 \]</span></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj14_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="fragment quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj14" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj14_dag" class="quarto-figure quarto-figure-center quarto-float" width="100%">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj14_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="./images/CJ_TM_14.png" id="fig-cj14_dag" style="width:100.0%" data-ref-parent="fig-cj14">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj14_dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/CJ_TM_14.png" style="width:100.0%"></p>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Sample-comparison model including sample and comparison mechanisms. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG.
+Figure&nbsp;5: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the SCM. <em>Right panel </em> depicts the associated DAG.
 </figcaption>
 </figure>
-</div>
 </div>
 </section></section>
 <section>
@@ -1237,17 +914,13 @@ Figure&nbsp;8: Sample-comparison model including sample and comparison mechanism
 <h1>5. Abandoning the BTL model</h1>
 
 </section>
-<section id="abandoning-the-btl-model-1" class="slide level2">
+<section id="abandoning-the-btl-model-1" class="slide level2" style="font-size:80%;">
 <h2>5. Abandoning the BTL model</h2>
-<div class="fragment">
 <div id="fig-cj15" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cj15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj15" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj15_stat" class="quarto-figure quarto-figure-center quarto-float" style="font-size:40%;">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj15_stat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
   O_{RPUV} &amp; = O^{sc}_{RPUV} \odot C \\
@@ -1265,20 +938,11 @@ Figure&nbsp;8: Sample-comparison model including sample and comparison mechanism
 \end{aligned}
 \]</span></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj15_stat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="fragment quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-cj15" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-cj15_scm" class="quarto-figure quarto-figure-center quarto-float" style="font-size:40%;">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-cj15_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
   O_{RPUV} &amp; := f_{C}(O^{sc}_{RPUV}, C) \\
-  O^{sc}_{RPUV} &amp; := f_{O}(O^{cp}_{RPUV}, S_{R}, S_{P}, S_{U}, S_{V}) \\
+  O^{sc}_{RPUV} &amp; := f_{S}(O^{cp}_{RPUV}, S_{RPUV}) \\
   O^{cp}_{RPUV} &amp; := f_{O}(D_{RPUV}) \\
   D_{RPUV} &amp; := f_{D}(T_{IA}, B_{JK}) \\
   T_{IA} &amp; := f_{T}(T_{I}, X_{A}, e_{IA}) \\
@@ -1291,159 +955,123 @@ Figure&nbsp;8: Sample-comparison model including sample and comparison mechanism
 \end{aligned}
 \]</span></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cj15_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
-</div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Sample-comparison model including sample and comparison mechanisms. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG.
+Figure&nbsp;6: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the statistical model. <em>Right panel</em> depicts the sample-comparison SCM.
 </figcaption>
 </figure>
 </div>
-</div>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
 <section id="discussion" class="title-slide slide level1 center">
 <h1>6. Discussion</h1>
 
 </section>
-<section id="findings" class="slide level2">
-<h2>6.1 Findings</h2>
-</section>
-<section id="limitations-and-further-research" class="slide level2">
-<h2>6.2 Limitations and further research</h2>
-</section>
-<section class="slide level2">
+<section id="discussion-1" class="slide level2" style="font-size:80%;">
+<h2>6. Discussion</h2>
+</section></section>
+<section>
+<section id="findings" class="title-slide slide level1 center">
+<h1>6.1 Findings</h1>
 
+</section>
+<section id="findings-1" class="slide level2" style="font-size:80%;">
+<h2>6.1 Findings</h2>
+</section></section>
+<section>
+<section id="limitations-and-further-research" class="title-slide slide level1 center">
+<h1>6.2 Limitations and further research</h1>
+
+</section>
+<section id="limitations-and-further-research-1" class="slide level2" style="font-size:80%;">
+<h2>6.2 Limitations and further research</h2>
 </section></section>
 <section>
 <section id="conclusion" class="title-slide slide level1 center">
 <h1>7. Conclusion</h1>
 
 </section>
-<section id="references" class="slide level2 smaller scrollable">
+<section id="conclusion-1" class="slide level2" style="font-size:80%;">
+<h2>7. Conclusion</h2>
+</section>
+<section id="references" class="slide level2 smaller scrollable" style="font-size:80%;">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body" role="list">
-<div id="ref-Thurstone_1927a" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Thurstone L (1927) <a href="">Psychophysical analysis</a>. American Journal of Psychology (38):368–89</div>
-</div>
-<div id="ref-Thurstone_1927b" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Thurstone L (1927) A law of comparative judgment. Psychological Review 34(4):482–499. <a href="https://doi.org/10.1037/h0070288">https://doi.org/10.1037/h0070288</a></div>
-</div>
-<div id="ref-Verhavert_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Verhavert S, Bouwer R, Donche V, De Maeyer S (2019) A meta-analysis on the reliability of comparative judgement. Assessment in Education: Principles, Policy and Practice 26(5):541–562. <a href="https://doi.org/10.1080/0969594X.2019.1602027">https://doi.org/10.1080/0969594X.2019.1602027</a></div>
-</div>
-<div id="ref-Crompvoets_et_al_2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Crompvoets E, Béguin A, Sijtsma K (2022) On the bias and stability of the results of comparative judgment. Frontiers in Education 6. <a href="https://doi.org/10.3389/feduc.2021.788202">https://doi.org/10.3389/feduc.2021.788202</a></div>
-</div>
-<div id="ref-Coertjens_et_al_2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Coertjens L, Lesterhuis M, Verhavert S, Van Gasse R, De Maeyer S (2017) <a href="">Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering</a>. Pedagogische Studien 94:283–303</div>
-</div>
-<div id="ref-Goossens_et_al_2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Goossens M, De Maeyer S (2018) <a href="https://doi.org/10.1007/978-3-319-97807-9_2">How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement</a>. In: Ras E, Guerrero Roldán A (eds) Technology enhanced assessment. Springer International Publishing, pp 13–25</div>
-</div>
-<div id="ref-Bouwer_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Bouwer R, Lesterhuis M, De Smedt F, Van Keer H, De Maeyer S (2023) Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement. Journal of Writing Research 15(3):497–518. <a href="https://doi.org/10.17239/jowr-2024.15.03.03">https://doi.org/10.17239/jowr-2024.15.03.03</a></div>
-</div>
-<div id="ref-Pollitt_2012b" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Pollitt A (2012) The method of adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 19(3):281--300. <a href="https://doi.org/10.1080/0969594X.2012.665354">https://doi.org/10.1080/0969594X.2012.665354</a></div>
-</div>
-<div id="ref-Verhavert_et_al_2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Verhavert S, Furlong A, Bouwer R (2022) The accuracy and efficiency of a reference-based adaptive selection algorithm for comparative judgment. Frontiers in Education 6. <a href="https://doi.org/10.3389/feduc.2021.785919">https://doi.org/10.3389/feduc.2021.785919</a></div>
-</div>
-<div id="ref-Mikhailiuk_et_al_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Mikhailiuk A, Wilmot C, Perez-Ortiz M, Yue D, Mantiuk R (2021) <a href="https://doi.org/10.1109/ICPR48806.2021.9412676">Active sampling for pairwise comparisons via approximate message passing and information gain maximization</a>. In: 2020 25th international conference on pattern recognition (ICPR). pp 2559–2566</div>
-</div>
-<div id="ref-Whitehouse_2012" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Whitehouse C (2012) <a href="https://filestore.aqa.org.uk/content/research/CERP_RP_CW_24102012_0.pdf?download=1">Testing the validity of judgements about geography essays using the adaptive comparative judgement method</a></div>
-</div>
-<div id="ref-vanDaal_et_al_2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, Donche V, De Maeyer S (2016) Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus. Assessment in Education: Principles, Policy &amp; Practice 26(1):59–74. <a href="https://doi.org/10.1080/0969594X.2016.1253542">https://doi.org/10.1080/0969594X.2016.1253542</a></div>
-</div>
-<div id="ref-Lesterhuis_2018_thesis" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Lesterhuis M (2018) <a href="https://hdl.handle.net/10067/1548280151162165141">The validity of comparative judgement for assessing text quality: An assessor’s perspective</a>. PhD thesis, University of Antwerp</div>
-</div>
-<div id="ref-Bartholomew_et_al_2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Bartholomew S, Nadelson L, Goodridge W, Reeve E (2018) Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities. Educational Assessment 23(2):85–101. <a href="https://doi.org/10.1080/10627197.2018.1444986">https://doi.org/10.1080/10627197.2018.1444986</a></div>
-</div>
-<div id="ref-Kimbell_2012" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Kimbell R (2012) Evolving project e-scape for national assessment. International Journal of Technology and Design Education 22:135–155. <a href="https://doi.org/10.1007/s10798-011-9190-4">https://doi.org/10.1007/s10798-011-9190-4</a></div>
-</div>
-<div id="ref-Jones_et_al_2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Jones I, Inglis M (2015) The problem of assessing problem solving: Can comparative judgement help? Educational Studies in Mathematics 89(3):337–355. <a href="https://doi.org/10.1007/s10649-015-9607-1">https://doi.org/10.1007/s10649-015-9607-1</a></div>
-</div>
-<div id="ref-Jones_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Jones I, Bisson M, Gilmore C, Inglis M (2019) Measuring conceptual understanding in randomised controlled trials: Can comparative judgement help? British Educational Research Journal 45(3):662–680. <a href="https://doi.org/10.1002/berj.3519">https://doi.org/10.1002/berj.3519</a></div>
-</div>
-<div id="ref-Marshall_et_al_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline">Marshall N, Shaw K, Hunter J, Jones I (2020) Assessment by comparative judgement: An application to secondary statistics and english in new zealand. New Zealand Journal of Educational Studies 55:49–71. <a href="https://doi.org/10.1007/s40841-020-00163-3">https://doi.org/10.1007/s40841-020-00163-3</a></div>
-</div>
-<div id="ref-Bartholomew_et_al_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline">Bartholomew S, Williams P (2020) <a href="https://doi.org/10.1007/978-3-030-52229-2_18">STEM skill assessment: An application of adaptive comparative judgment</a>. In: Anderson J, Li Y (eds) Integrated approaches to STEM education. Advances in STEM education. Springer, pp 331–349</div>
-</div>
-<div id="ref-Boonen_et_al_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline">Boonen N, Kloots H, Gillis S (2020) Rating the overall speech quality of hearing-impaired children by means of comparative judgements. Journal of Communication Disorders 83:1675–1687. <a href="https://doi.org/10.1016/j.jcomdis.2019.105969">https://doi.org/10.1016/j.jcomdis.2019.105969</a></div>
-</div>
 <div id="ref-Kohler_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline">Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/<a href="https://doi.org/10.1146/annurev-statistics-030718-104951">https://doi.org/10.1146/annurev-statistics-030718-104951</a></div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/<a href="https://doi.org/10.1146/annurev-statistics-030718-104951">https://doi.org/10.1146/annurev-statistics-030718-104951</a></div>
 </div>
 <div id="ref-Pollitt_2012a" class="csl-entry" role="listitem">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline">Pollitt A (2012) Comparative judgement for assessment. International Journal of Technology and Design Education 22(2):157--170. <a href="https://doi.org/10.1007/s10798-011-9189-x">https://doi.org/10.1007/s10798-011-9189-x</a></div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Pollitt A (2012) Comparative judgement for assessment. International Journal of Technology and Design Education 22(2):157--170. <a href="https://doi.org/10.1007/s10798-011-9189-x">https://doi.org/10.1007/s10798-011-9189-x</a></div>
+</div>
+<div id="ref-Pollitt_2012b" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Pollitt A (2012) The method of adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 19(3):281--300. <a href="https://doi.org/10.1080/0969594X.2012.665354">https://doi.org/10.1080/0969594X.2012.665354</a></div>
+</div>
+<div id="ref-vanDaal_et_al_2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, Donche V, De Maeyer S (2016) Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus. Assessment in Education: Principles, Policy &amp; Practice 26(1):59–74. <a href="https://doi.org/10.1080/0969594X.2016.1253542">https://doi.org/10.1080/0969594X.2016.1253542</a></div>
+</div>
+<div id="ref-Goossens_et_al_2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Goossens M, De Maeyer S (2018) <a href="https://doi.org/10.1007/978-3-319-97807-9_2">How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement</a>. In: Ras E, Guerrero Roldán A (eds) Technology enhanced assessment. Springer International Publishing, pp 13–25</div>
 </div>
 <div id="ref-McElreath_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline">McElreath R (2020) <a href="">Statistical rethinking: A bayesian course with examples in r and STAN</a>. Chapman; Hall/CRC</div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">McElreath R (2020) <a href="">Statistical rethinking: A bayesian course with examples in r and STAN</a>. Chapman; Hall/CRC</div>
 </div>
 <div id="ref-Zimmerman_1994" class="csl-entry" role="listitem">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline">Zimmerman D (1994) A note on the influence of outliers on parametric and nonparametric tests. The Journal of General Psychology 121(4):391–401. <a href="https://doi.org/10.1080/00221309.1994.9921213">https://doi.org/10.1080/00221309.1994.9921213</a></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Zimmerman D (1994) A note on the influence of outliers on parametric and nonparametric tests. The Journal of General Psychology 121(4):391–401. <a href="https://doi.org/10.1080/00221309.1994.9921213">https://doi.org/10.1080/00221309.1994.9921213</a></div>
 </div>
 <div id="ref-Laming_2004" class="csl-entry" role="listitem">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline">Laming D (2004) Marking university examinations: Some lessons from psychophysics. Psychology Learning &amp; Teaching 3(2):89–96. <a href="https://doi.org/10.2304/plat.2003.3.2.89">https://doi.org/10.2304/plat.2003.3.2.89</a></div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Laming D (2004) Marking university examinations: Some lessons from psychophysics. Psychology Learning &amp; Teaching 3(2):89–96. <a href="https://doi.org/10.2304/plat.2003.3.2.89">https://doi.org/10.2304/plat.2003.3.2.89</a></div>
+</div>
+<div id="ref-Whitehouse_2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Whitehouse C (2012) <a href="https://filestore.aqa.org.uk/content/research/CERP_RP_CW_24102012_0.pdf?download=1">Testing the validity of judgements about geography essays using the adaptive comparative judgement method</a></div>
+</div>
+<div id="ref-Lesterhuis_2018_thesis" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Lesterhuis M (2018) <a href="https://hdl.handle.net/10067/1548280151162165141">The validity of comparative judgement for assessing text quality: An assessor’s perspective</a>. PhD thesis, University of Antwerp</div>
+</div>
+<div id="ref-Coertjens_et_al_2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Coertjens L, Lesterhuis M, Verhavert S, Van Gasse R, De Maeyer S (2017) <a href="">Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering</a>. Pedagogische Studien 94:283–303</div>
+</div>
+<div id="ref-Bouwer_et_al_2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Bouwer R, Lesterhuis M, De Smedt F, Van Keer H, De Maeyer S (2023) Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement. Journal of Writing Research 15(3):497–518. <a href="https://doi.org/10.17239/jowr-2024.15.03.03">https://doi.org/10.17239/jowr-2024.15.03.03</a></div>
 </div>
 <div id="ref-Pollitt_et_al_2003" class="csl-entry" role="listitem">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline">Pollitt A, Elliott G (2003) <a href="https://www.cambridgeassessment.org.uk/Images/109707-monitoring-and-investigating-comparability-a-proper-role-for-human-judgement.pdf">Finding a proper role for human judgement in the examination system.</a></div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Pollitt A, Elliott G (2003) <a href="https://www.cambridgeassessment.org.uk/Images/109707-monitoring-and-investigating-comparability-a-proper-role-for-human-judgement.pdf">Finding a proper role for human judgement in the examination system.</a></div>
 </div>
 <div id="ref-Casalicchio_et_al_2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline">Casalicchio G, Tutz G, Schauberger G (2015) Subject-specific bradley–terry–luce models with implicit variable selection. Statistical Modelling 15(6):526–547. <a href="https://doi.org/10.1177/1471082X15571817">https://doi.org/10.1177/1471082X15571817</a></div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Casalicchio G, Tutz G, Schauberger G (2015) Subject-specific bradley–terry–luce models with implicit variable selection. Statistical Modelling 15(6):526–547. <a href="https://doi.org/10.1177/1471082X15571817">https://doi.org/10.1177/1471082X15571817</a></div>
 </div>
 <div id="ref-Bramley_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline">Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 71(9):1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a></div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 71(9):1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a></div>
+</div>
+<div id="ref-Boonen_et_al_2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Boonen N, Kloots H, Gillis S (2020) Rating the overall speech quality of hearing-impaired children by means of comparative judgements. Journal of Communication Disorders 83:1675–1687. <a href="https://doi.org/10.1016/j.jcomdis.2019.105969">https://doi.org/10.1016/j.jcomdis.2019.105969</a></div>
 </div>
 <div id="ref-vanDaal_et_al_2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, van de Kamp MT, Donche V, De Maeyer S (2017) The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy. Frontiers in Education 2. <a href="https://doi.org/10.3389/feduc.2017.00044">https://doi.org/10.3389/feduc.2017.00044</a></div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, van de Kamp MT, Donche V, De Maeyer S (2017) The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy. Frontiers in Education 2. <a href="https://doi.org/10.3389/feduc.2017.00044">https://doi.org/10.3389/feduc.2017.00044</a></div>
+</div>
+<div id="ref-Jones_et_al_2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">Jones I, Bisson M, Gilmore C, Inglis M (2019) Measuring conceptual understanding in randomised controlled trials: Can comparative judgement help? British Educational Research Journal 45(3):662–680. <a href="https://doi.org/10.1002/berj.3519">https://doi.org/10.1002/berj.3519</a></div>
 </div>
 <div id="ref-Gijsen_et_al_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline">Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a></div>
+<div class="csl-left-margin">19. </div><div class="csl-right-inline">Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a></div>
 </div>
 <div id="ref-Kline_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">31. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
+<div class="csl-left-margin">20. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
 </div>
 <div id="ref-Hoyle_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
 </div>
 <div id="ref-Pearl_2009" class="csl-entry" role="listitem">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline">Pearl J (2009) <a href="">Causality: Models, reasoning and inference</a>. Cambrige University Press</div>
+<div class="csl-left-margin">22. </div><div class="csl-right-inline">Pearl J (2009) <a href="">Causality: Models, reasoning and inference</a>. Cambrige University Press</div>
 </div>
 <div id="ref-Pearl_et_al_2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline">Pearl J, Glymour M, Jewell N (2016) <a href="">Causal inference in statistics: A primer</a>. John Wiley &amp; Sons, Inc.</div>
+<div class="csl-left-margin">23. </div><div class="csl-right-inline">Pearl J, Glymour M, Jewell N (2016) <a href="">Causal inference in statistics: A primer</a>. John Wiley &amp; Sons, Inc.</div>
 </div>
 <div id="ref-Gross_et_al_2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">35. </div><div class="csl-right-inline">Gross J, Yellen J, Anderson M (2018) <a href="https://doi.org/10.1201/9780429425134 ">Graph theory and its applications</a>. Chapman; Hall/CRC</div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline">Gross J, Yellen J, Anderson M (2018) <a href="https://doi.org/10.1201/9780429425134 ">Graph theory and its applications</a>. Chapman; Hall/CRC</div>
 </div>
 <div id="ref-Neal_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">36. </div><div class="csl-right-inline">Neal B (2020) <a href="https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf">Introduction to causal inference from a machine learning perspective</a></div>
-</div>
-<div id="ref-Schuessler_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">37. </div><div class="csl-right-inline">Schuessler J, Selb P (2023) Graphical causal models for survey inference. Sociological Methods and Research 0(0). <a href="https://doi.org/10.1177/00491241231176851">https://doi.org/10.1177/00491241231176851</a></div>
-</div>
-<div id="ref-Everitt_et_al_2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">38. </div><div class="csl-right-inline">Everitt B, Skrondal A (2010) <a href="">The cambridge dictionary of statistics</a>. Cambridge University Press</div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline">Neal B (2020) <a href="https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf">Introduction to causal inference from a machine learning perspective</a></div>
 </div>
 </div>
 

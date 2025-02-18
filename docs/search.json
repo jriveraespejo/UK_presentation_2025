@@ -1,149 +1,149 @@
 [
   {
-    "objectID": "presentation.html#introduction-1",
-    "href": "presentation.html#introduction-1",
+    "objectID": "presentation.html#motivating-example-1",
+    "href": "presentation.html#motivating-example-1",
     "title": "Let’s talk about Thurstone & Co.",
-    "section": "1. Introduction",
-    "text": "1. Introduction\n\nIn comparative judgments (CJ) studies [1, 2]\n\n\n\n\njudges assess a specific trait or attribute\nacross different stimuli\nby performing pairwise comparisons\nproducing a dichotomous outcome\n\n\n\n\ne.g., when assessing writing quality, judges compare pairs of written texts (the stimuli) to determine the relative writing quality each text exhibit (the trait)"
-  },
-  {
-    "objectID": "presentation.html#introduction-2",
-    "href": "presentation.html#introduction-2",
-    "title": "Let’s talk about Thurstone & Co.",
-    "section": "1. Introduction",
-    "text": "1. Introduction\n\nLiterature have documented the effectiveness of CJ on three aspects:\n\n\nReliability\nValidity\nPractical applicability\n\n\n\n\nBut the methodology have some issues …\n\n\nResult on reliability:\n\nCJ needs a modest number of pairwise comparisons [3, 4]\nCJ can generate precise and consistent trait scores compared to other assessment methods [5–7].\nCJ has equal, if not superior, time efficiency than other assessment methods when employing adaptive comparison algorithms [8–10].\n\nResult on validity:\n\nCJ scores represent accurately the traits under measurement [7, 11–14].\n\nResult on practical applicability:\n\nCJ is versatile across both educational and non-educational contexts [14–20]."
+    "section": "1. Motivating example",
+    "text": "1. Motivating example\n\n\nResearch question: “To what extent do different teaching methods influence students’ ability to produce high-quality written texts?”\nMethod: Randomization and a CJ experiment, specifically:\n\n\n\n\nResearchers randomly assign students to two different teaching method\nStudents write one or more texts\nResearchers collect students’ written texts\nResearchers randomly assign judges to compare pairs of students’ written texts\nJudges produce a dichotomous outcome, reflecting the relative quality of each text\n\n\n\n\nEstimand: “On average, is there a difference in the ability to produce high-quality written texts between the two groups of students?”\nEstimator: the BTL model\nEstimates: estimated BTL scores, or their transformations\n\n\n\nFollowing current CJ practices"
   },
   {
     "objectID": "presentation.html#some-theory-to-remember-1",
     "href": "presentation.html#some-theory-to-remember-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "2. Some theory to remember",
-    "text": "2. Some theory to remember\n\n\n\n\n\n\n\n\n\n\n\n\n(a)\n\n\n\n\n\n\n\n\n\n\n\n(b)\n\n\n\n\n\n\n\nFigure 1: Hypothetical discriminal processes and discriminant difference along a quality trait continuum for two written texts. Panel (a) illustrates the discriminal processes associated with two written texts. Panel (b) depicts their discriminal difference."
+    "text": "2. Some theory to remember\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Hypothetical discriminal processes and discriminant difference along a quality trait continuum for two written texts. Left panel illustrates the discriminal processes associated with two written texts. Right panel depicts their discriminal difference."
   },
   {
-    "objectID": "presentation.html#what-are-the-issues-1",
-    "href": "presentation.html#what-are-the-issues-1",
+    "objectID": "presentation.html#some-issues-with-the-theory-1",
+    "href": "presentation.html#some-issues-with-the-theory-1",
     "title": "Let’s talk about Thurstone & Co.",
-    "section": "3. What are the issues?",
-    "text": "3. What are the issues?\n\n\nExcessive reliance on Case V for the analysis of CJ data\nDisconnect between trait measurement and hypothesis testing"
+    "section": "3. Some issues with the theory",
+    "text": "3. Some issues with the theory\n\n\n\n\nTable 1: Thurstones cases and their asumptions\n\n\n\n\n\n\n\n\nProblems:\n\n\n\nExcessive reliance on Case V for the analysis of CJ data\nDisconnect between trait measurement and hypothesis testing\n\n\n\n\n\nThus, it is intuitive to think that:\n\nThe outcome’s ability to reflect the “true” differences between texts largely depends on the validity of the model’s assumptions [1].\n\n\n\nCircle the assumptions of General form:\n\ncorrelation (one per pair)\n\nCircle the assumptions of Case V:\n\nEqual discriminal dispersion\nZero correlation"
   },
   {
-    "objectID": "presentation.html#case-v-and-statistical-analysis",
-    "href": "presentation.html#case-v-and-statistical-analysis",
+    "objectID": "presentation.html#case-v-and-statistical-analysis-1",
+    "href": "presentation.html#case-v-and-statistical-analysis-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "3.1 Case V and statistical analysis",
-    "text": "3.1 Case V and statistical analysis\n\n\n\n\nTable 1: Thurstones cases and their asumptions\n\n\n\n\n\n\n\n\nCircle the assumptions of General form:\n\ncorrelation (one per pair)\n\nCircle the assumptions of Case V:\n\nEqual discriminal dispersion\nZero correlation"
+    "text": "3.1 Case V and statistical analysis\nBut, are Case V assumptions violated?\n\n\nThurstone: equal dispersion may not be applicable when researchers assess complex traits or heterogeneous stimuli\n\\(\\longrightarrow\\) Evidence of this can be found in misfit statistics?\nZero correlation is almost certainly invalid in two scenarios:\n\\(\\longrightarrow\\) when intricate aspects of stimuli cause judges’ biases, ultimately introducing dependencies between stimuli.\n\\(\\longrightarrow\\) when an additional hierarchical structure is relevant to the stimuli.\n\n\n\nEqual dispersion:\n\n“misfits” texts are texts with more judgment discrepancies than others [2–5]\n“misfit” judges are judges who deviate substantially from the shared consensus.\n\nZero correlation:\n\nadditional relevant characteristics, exert an uneven influence on judges’ perceptions, creating biases. Since the discriminal difference of the stimuli becomes an observable outcome only through the judges’ perceptions, these biases introduce dependencies between the stimuli.\nthe shared context created by additional hierarchical structures introduce dependencies between stimuli (clustering) Not properly handled"
   },
   {
-    "objectID": "presentation.html#measurement-and-hypothesis-tests",
-    "href": "presentation.html#measurement-and-hypothesis-tests",
+    "objectID": "presentation.html#case-v-and-statistical-analysis-2",
+    "href": "presentation.html#case-v-and-statistical-analysis-2",
+    "title": "Let’s talk about Thurstone & Co.",
+    "section": "3.1 Case V and statistical analysis",
+    "text": "3.1 Case V and statistical analysis\nBut, what are the problems with this?\n\n\nDifferent dispersions, neglecting judges’ biases and hierarchical structures\n\\(\\longrightarrow\\) reduce precision of parameter estimates\n\\(\\longrightarrow\\) overestimation of trait’s reliability\n\\(\\longrightarrow\\) drawing spurious conclusions [6]\nDiscarding ‘misfit’ observations [2–5]\n\\(\\longrightarrow\\) discard valuable information\n\\(\\longrightarrow\\) introduce bias into trait estimates [6, 7]\n\\(\\longrightarrow\\) drawing spurious conclusions [6]\n\n\n\n\ndiscarding ‘misfit’ observations is a conventional practice in CJ"
+  },
+  {
+    "objectID": "presentation.html#case-v-and-statistical-analysis-3",
+    "href": "presentation.html#case-v-and-statistical-analysis-3",
+    "title": "Let’s talk about Thurstone & Co.",
+    "section": "3.1 Case V and statistical analysis",
+    "text": "3.1 Case V and statistical analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: The effect of dispersion discrepancies and stimuli correlation on the distribution of the discriminal difference. Left panel illustrates the effect of dispersion discrepancies. Right panel depicts the effect of stimuli correlation.\n\n\n\n\nLeft panel\n\n\\(\\sigma^{2}_{A}\\) remains fixed\n\\(\\rho = 0\\)\n\nRight panel\n\n\\(\\sigma^{2}_{A}\\) and \\(\\sigma^{2}_{B}\\) remain fixed"
+  },
+  {
+    "objectID": "presentation.html#measurement-and-hypothesis-tests-1",
+    "href": "presentation.html#measurement-and-hypothesis-tests-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "3.2 Measurement and hypothesis tests",
-    "text": "3.2 Measurement and hypothesis tests\nResearchers use the BTL model as a measurement model for CJ [5–8, 11–13, 25], i.e., they use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests, for example:\n\n\n\nIdentify ‘misfit’ judges and stimuli [6, 8, 12]\nDetect biases in judges’ ratings [8, 26]\nCalculate correlations with other assessment methods [6, 7],\nTest hypotheses related to the underlying trait of interest [7, 17, 20, 27–30]"
+    "text": "3.2 Measurement and hypothesis tests\nResearchers use the BTL model as a measurement model for CJ [3–5, 8–12], i.e., they use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests, for example:\n\n\n\nIdentify ‘misfit’ judges and stimuli [3–5]\nDetect biases in judges’ ratings [3, 13]\nCalculate correlations with other assessment methods [5, 12],\nTest hypotheses related to the underlying trait of interest [12, 14–19]"
+  },
+  {
+    "objectID": "presentation.html#measurement-and-hypothesis-tests-2",
+    "href": "presentation.html#measurement-and-hypothesis-tests-2",
+    "title": "Let’s talk about Thurstone & Co.",
+    "section": "3.2 Measurement and hypothesis tests",
+    "text": "3.2 Measurement and hypothesis tests\nBut, what are the problems with this?\n\n\nIgnoring uncertainty of BTL scores\n\\(\\longrightarrow\\) introduce bias + reduce the precision of hypothesis tests [20, 21]\n\\(\\longrightarrow\\) diminish statistical power of tests\n\\(\\longrightarrow\\) increase likelihood of type-I or type-II errors [6], i.e., drawing spurious conclusions.\n\n\n\n\nWe need a more systematic and integrated framework that enhances statistical accuracy while strengthening measurement reliability and validity."
+  },
+  {
+    "objectID": "presentation.html#measurement-and-hypothesis-tests-3",
+    "href": "presentation.html#measurement-and-hypothesis-tests-3",
+    "title": "Let’s talk about Thurstone & Co.",
+    "section": "3.2 Measurement and hypothesis tests",
+    "text": "3.2 Measurement and hypothesis tests\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: The effect of measurement error on the estimation of a regression parameter \\(\\beta\\). Measurement error increases from the left to the right panel."
   },
   {
     "objectID": "presentation.html#extending-thurstones-theory-1",
     "href": "presentation.html#extending-thurstones-theory-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4. Extending Thurstone’s theory",
-    "text": "4. Extending Thurstone’s theory\n\nWe use the structural approach to causal inference [33–36] to formally and graphically representing the assumed (causal) structure of the CJ system. Specifically we use:\n\n\nStructural Causal Models (SCMs) and\nDirected Acyclic Graphs (DAGs)\n\n\n\n\n\nEssentially, SCMs and DAGs function as conceptual models on which identification analysis rests [37].\nIdentification analysis helps researchers to determine whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability [37].\nIdentification is crucial because it is a necessary condition for ensuring consistent estimators.\nConsistency refers to the property of an estimator whose estimates converge to the “true” value of the estimand as the data size approaches infinity [38].\nWithout identification, consistency cannot be achieved, even with “infinite” and error-free data. Thus, deriving meaningful insights from finite data becomes impossible [37]."
-  },
-  {
-    "objectID": "presentation.html#extending-thurstones-theory-2",
-    "href": "presentation.html#extending-thurstones-theory-2",
-    "title": "Let’s talk about Thurstone & Co.",
-    "section": "4. Extending Thurstone’s theory",
-    "text": "4. Extending Thurstone’s theory\n\nMotivating example: “To what extent do different teaching methods influence students’ ability to produce high-quality written texts?”\n\n\nSolution: Researchers design a CJ experiment.\n\n\nAssume:\n\n\n\nresearcher randomly assign students to two groups, each receiving a different teaching method.\njudges then compare pairs of students’ written texts\njudges produce a dichotomous outcome, reflecting the relative quality of each text"
-  },
-  {
-    "objectID": "presentation.html#the-conceptual-population-model",
-    "href": "presentation.html#the-conceptual-population-model",
-    "title": "Let’s talk about Thurstone & Co.",
-    "section": "4.1 The conceptual-population model",
-    "text": "4.1 The conceptual-population model\n\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O^{cp}_{hiabjk} & := f_{O}(D_{hiabjk}) \\\\\n  D_{hiabjk} & := f_{D}(T_{ha}, T_{ib}, B_{jk})\n\\end{aligned}\n\\]\n\n\n(a)\n\n\n\n\n\n\n\n\n\n\n\n(b)\n\n\n\n\n\n\n\nFigure 4: Conceptual-population model, scalar form. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG."
+    "text": "4. Extending Thurstone’s theory\nWe use the structural approach to causal inference [22–25]\n\\(\\longrightarrow\\) formally and graphically representing the assumed (causal) structure of the CJ system. Specifically we develop:\n\n\nA conceptual-population model:\nA sample-comparison model:"
   },
   {
     "objectID": "presentation.html#the-conceptual-population-model-1",
     "href": "presentation.html#the-conceptual-population-model-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4.1 The conceptual-population model",
-    "text": "4.1 The conceptual-population model\n\nAssuming we have access to comparison data from a conceptual population, that is, data representing:\n\n\n\n\nall repeated judgments\nmade by every available judge\nfor each pair of stimuli\nproduced by each pair of individuals"
+    "text": "4.1 The conceptual-population model\nAssuming that we can access to:\n\n\n\nall repeated judgments\nmade by every available judge\nfor each pair of texts\nproduced by each pair of students\n\n\n\n\nThen:\n\n\n\n\\(n_{I}\\) represents the number of students\n\\(n_{A}\\) denotes the number of texts available per students\n\\(n_{J}\\) indicates the total number of judges, and\n\\(n_{K}\\) represents the number of judgments each judge performs\n\\({n_{I} \\cdot n_{A} \\choose 2} = \\frac{ (n_{I} \\cdot n_{A})! }{ 2! (n_{I} \\cdot n_{A} - 2)! }\\) represents the total number of comparisons\n\\(n = {n_{I} \\cdot n_{A} \\choose 2} \\cdot n_{J} \\cdot n_{K}\\) denotes the total number of observation in the data"
   },
   {
     "objectID": "presentation.html#the-conceptual-population-model-2",
     "href": "presentation.html#the-conceptual-population-model-2",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4.1 The conceptual-population model",
-    "text": "4.1 The conceptual-population model\n\n\n\n\\(n_{I}\\) represents the number of individuals\n\\(n_{A}\\) denotes the number of stimuli available per individual\n\\(n_{J}\\) indicates the total number of judges, and\n\\(n_{K}\\) represents the number of judgments each judge performs\n\n\n\n\n\n\\[\nI_{n_{I}} = \\begin{bmatrix}\n1 \\\\\n2 \\\\\n\\vdots \\\\\nh \\\\\n\\vdots \\\\\ni \\\\\n\\vdots \\\\\nn_{I}\n\\end{bmatrix} ; \\;\nIA_{(n_{I} \\cdot n_{A}) \\times 2} = \\begin{bmatrix}\n1 & 1 \\\\\n1 & 2 \\\\\n\\vdots & \\vdots \\\\\n1 & n_{A}-1 \\\\\n1 & n_{A} \\\\\n\\vdots & \\vdots \\\\\nh & a \\\\\n\\vdots & \\vdots \\\\\ni & b \\\\\n\\vdots & \\vdots \\\\\nn_{I} & n_{A}-1 \\\\\nn_{I} & n_{A} \\\\\n\\end{bmatrix} ; \\;\nJ_{n_{J}} = \\begin{bmatrix}\n1 \\\\\n2 \\\\\n\\vdots \\\\\nj \\\\\n\\vdots \\\\\nn_{J}\n\\end{bmatrix} ; \\;\nJK_{(n_{J} \\cdot n_{K}) \\times 2} = \\begin{bmatrix}\n1 & 1 \\\\\n1 & 2 \\\\\n\\vdots & \\vdots \\\\\n1 & n_{K}-1 \\\\\n1 & n_{K} \\\\\n\\vdots & \\vdots \\\\\nj & k \\\\\n\\vdots & \\vdots \\\\\nn_{J} & n_{K}-1 \\\\\nn_{J} & n_{K} \\\\\n\\end{bmatrix}\n\\qquad(1)\\]"
+    "text": "4.1 The conceptual-population model\n\\[\nI_{n_{I}} = \\begin{bmatrix}\n1 \\\\\n2 \\\\\n\\vdots \\\\\nh \\\\\n\\vdots \\\\\ni \\\\\n\\vdots \\\\\nn_{I}\n\\end{bmatrix} ; \\;\nIA_{(n_{I} \\cdot n_{A}) \\times 2} = \\begin{bmatrix}\n1 & 1 \\\\\n1 & 2 \\\\\n\\vdots & \\vdots \\\\\n1 & n_{A}-1 \\\\\n1 & n_{A} \\\\\n\\vdots & \\vdots \\\\\nh & a \\\\\n\\vdots & \\vdots \\\\\ni & b \\\\\n\\vdots & \\vdots \\\\\nn_{I} & n_{A}-1 \\\\\nn_{I} & n_{A} \\\\\n\\end{bmatrix} ; \\;\nJ_{n_{J}} = \\begin{bmatrix}\n1 \\\\\n2 \\\\\n\\vdots \\\\\nj \\\\\n\\vdots \\\\\nn_{J}\n\\end{bmatrix} ; \\;\nJK_{(n_{J} \\cdot n_{K}) \\times 2} = \\begin{bmatrix}\n1 & 1 \\\\\n1 & 2 \\\\\n\\vdots & \\vdots \\\\\n1 & n_{K}-1 \\\\\n1 & n_{K} \\\\\n\\vdots & \\vdots \\\\\nj & k \\\\\n\\vdots & \\vdots \\\\\nn_{J} & n_{K}-1 \\\\\nn_{J} & n_{K} \\\\\n\\end{bmatrix} ; \\;\nRPUV_{n \\times 6} = \\begin{bmatrix}\n1 & 1 & 1 & 2 & 1 & 1 \\\\\n1 & 1 & 1 & 2 & 1 & 2 \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\n1 & 1 & 1 & 2 & 1 & n_{K}-1 \\\\\n1 & 1 & 1 & 2 & 1 & n_{K} \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\nh & i & a & b & j & k \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & 1 \\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & 2 \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & n_{K}-1 \\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & n_{K} \\\\\n\\end{bmatrix}\n\\]"
   },
   {
     "objectID": "presentation.html#the-conceptual-population-model-3",
     "href": "presentation.html#the-conceptual-population-model-3",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4.1 The conceptual-population model",
-    "text": "4.1 The conceptual-population model\n\n\n\n\\({n_{I} \\cdot n_{A} \\choose 2} = \\frac{ (n_{I} \\cdot n_{A})! }{ 2! (n_{I} \\cdot n_{A} - 2)! }\\)\n\\(n = {n_{I} \\cdot n_{A} \\choose 2} \\cdot n_{J} \\cdot n_{K}\\)\n\n\n\n\n\n\\[\nRPUV_{n \\times 6} = \\begin{bmatrix}\n1 & 1 & 1 & 2 & 1 & 1 \\\\\n1 & 1 & 1 & 2 & 1 & 2 \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\n1 & 1 & 1 & 2 & 1 & n_{K}-1 \\\\\n1 & 1 & 1 & 2 & 1 & n_{K} \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\nh & i & a & b & j & k \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & 1 \\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & 2 \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots\\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & n_{K}-1 \\\\\nn_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & n_{K} \\\\\n\\end{bmatrix} \\in \\mathbb{N}\n\\qquad(2)\\]"
-  },
-  {
-    "objectID": "presentation.html#the-conceptual-population-model-4",
-    "href": "presentation.html#the-conceptual-population-model-4",
-    "title": "Let’s talk about Thurstone & Co.",
-    "section": "4.1 The conceptual-population model",
-    "text": "4.1 The conceptual-population model\n\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK})\n\\end{aligned}\n\\]\n\n\n(a)\n\n\n\n\n\n\n\n\n\n\n\n(b)\n\n\n\n\n\n\n\nFigure 5: Conceptual-population model, vectorized form. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG."
-  },
-  {
-    "objectID": "presentation.html#the-conceptual-population-model-5",
-    "href": "presentation.html#the-conceptual-population-model-5",
-    "title": "Let’s talk about Thurstone & Co.",
-    "section": "4.1 The conceptual-population model",
-    "text": "4.1 The conceptual-population model\n\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\\\\n  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\\\\n  T_{I} & := f_{T}(X_{I}, e_{I}) \\\\\n  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\\\\n  B_{J} & := f_{B}(Z_{J}, e_{J}) \\\\\n  e_{IA} & \\:\\bot\\:\\{ e_{I}, e_{JK}, e_{J} \\} \\\\\n  e_{I} & \\:\\bot\\:\\{ e_{JK}, e_{J} \\} \\\\\n  e_{JK} & \\:\\bot\\:e_{J}\n\\end{aligned}\n\\]\n\n\n(a)\n\n\n\n\n\n\n\n\n\n\n\n(b)\n\n\n\n\n\n\n\nFigure 6: Conceptual-population model, final vectorized form. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG."
-  },
-  {
-    "objectID": "presentation.html#the-sample-comparison-model",
-    "href": "presentation.html#the-sample-comparison-model",
-    "title": "Let’s talk about Thurstone & Co.",
-    "section": "4.2 The sample-comparison model",
-    "text": "4.2 The sample-comparison model\n\nAssuming a more realistic scenario where we have access to:\n\n\n\n\na sample of all repeated judgments\na sample of judges\na sample of stimuli\na sample of individuals"
+    "text": "4.1 The conceptual-population model\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\\\\n  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\\\\n  T_{I} & := f_{T}(X_{I}, e_{I}) \\\\\n  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\\\\n  B_{J} & := f_{B}(Z_{J}, e_{J}) \\\\\n  e_{IA} & \\:\\bot\\:\\{ e_{I}, e_{JK}, e_{J} \\} \\\\\n  e_{I} & \\:\\bot\\:\\{ e_{JK}, e_{J} \\} \\\\\n  e_{JK} & \\:\\bot\\:e_{J}\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\nFigure 4: Conceptual-population model, final vectorized form. Left panel illustrates the SCM. Right panel  depicts the associated DAG."
   },
   {
     "objectID": "presentation.html#the-sample-comparison-model-1",
     "href": "presentation.html#the-sample-comparison-model-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4.2 The sample-comparison model",
-    "text": "4.2 The sample-comparison model\n\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{RPUV}) \\\\\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\\\\n  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\\\\n  T_{I} & := f_{T}(X_{I}, e_{I}) \\\\\n  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\\\\n  B_{J} & := f_{B}(Z_{J}, e_{J}) \\\\\n  e_{IA} & \\:\\bot\\:\\{ e_{I}, e_{JK}, e_{J} \\} \\\\\n  e_{I} & \\:\\bot\\:\\{ e_{JK}, e_{J} \\} \\\\\n  e_{JK} & \\:\\bot\\:e_{J}\n\\end{aligned}\n\\]\n\n\n(a)\n\n\n\n\n\n\n\n\n\n\n\n(b)\n\n\n\n\n\n\n\nFigure 7: Sample-comparison model including sampling mechanism. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG."
+    "text": "4.2 The sample-comparison model\nAssuming a more realistic scenario where we have access to:\n\n\n\nsample of all repeated judgments\nsample of judges\nsample of texts\nsample of students"
   },
   {
     "objectID": "presentation.html#the-sample-comparison-model-2",
     "href": "presentation.html#the-sample-comparison-model-2",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4.2 The sample-comparison model",
-    "text": "4.2 The sample-comparison model\n\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\\\\n  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{RPUV}) \\\\\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\\\\n  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\\\\n  T_{I} & := f_{T}(X_{I}, e_{I}) \\\\\n  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\\\\n  B_{J} & := f_{B}(Z_{J}, e_{J}) \\\\\n  e_{IA} & \\:\\bot\\:\\{ e_{I}, e_{JK}, e_{J} \\} \\\\\n  e_{I} & \\:\\bot\\:\\{ e_{JK}, e_{J} \\} \\\\\n  e_{JK} & \\:\\bot\\:e_{J}\n\\end{aligned}\n\\]\n\n\n(a)\n\n\n\n\n\n\n\n\n\n\n\n(b)\n\n\n\n\n\n\n\nFigure 8: Sample-comparison model including sample and comparison mechanisms. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG."
+    "text": "4.2 The sample-comparison model\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\\\\n  O^{sc}_{RPUV} & := f_{S}(O^{cp}_{RPUV}, S_{RPUV}) \\\\\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\\\\n  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\\\\n  T_{I} & := f_{T}(X_{I}, e_{I}) \\\\\n  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\\\\n  B_{J} & := f_{B}(Z_{J}, e_{J}) \\\\\n  e_{IA} & \\:\\bot\\:\\{ e_{I}, e_{JK}, e_{J} \\} \\\\\n  e_{I} & \\:\\bot\\:\\{ e_{JK}, e_{J} \\} \\\\\n  e_{JK} & \\:\\bot\\:e_{J}\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\nFigure 5: Sample-comparison model including sample and comparison mechanisms. Left panel illustrates the SCM. Right panel  depicts the associated DAG."
   },
   {
     "objectID": "presentation.html#abandoning-the-btl-model-1",
     "href": "presentation.html#abandoning-the-btl-model-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "5. Abandoning the BTL model",
-    "text": "5. Abandoning the BTL model\n\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O_{RPUV} & = O^{sc}_{RPUV} \\odot C \\\\\n  O^{sc}_{RPUV} & = O^{cp}_{RPUV} \\odot S_{RPUV} \\\\\n  O^{cp}_{RPUV} & \\sim \\text{Bernoulli} \\left[ \\text{inv_logit}( D_{RPUV} ) \\right] \\\\\n  D_{RPUV} & = \\left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \\right) + B_{JK}[U,V] \\\\\n  T_{IA} & = T_{I} + \\beta_{XA} X_{IA} + e_{IA} \\\\\n  T_{I} & = \\beta_{XI} X_{I} + e_{I} \\\\\n  B_{JK} & = B_{J} + \\beta_{ZK} Z_{JK} + e_{JK} \\\\\n  B_{J} & = \\beta_{ZJ} Z_{J} + e_{J} \\\\\n  e_{IA} & \\sim \\text{Normal}(0, p_{IA}) \\\\  \n  e_{I} & \\sim \\text{Normal}(0,1) \\\\\n  e_{JK} & \\sim \\text{Normal}(0, p_{JK}) \\\\\n  e_{J} & \\sim \\text{Normal}(0,1)\n\\end{aligned}\n\\]\n\n\n(a)\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\\\\n  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{R}, S_{P}, S_{U}, S_{V}) \\\\\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\\\\n  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\\\\n  T_{I} & := f_{T}(X_{I}, e_{I}) \\\\\n  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\\\\n  B_{J} & := f_{B}(Z_{J}, e_{J}) \\\\\n  e_{IA} & \\:\\bot\\:\\{ e_{I}, e_{JK}, e_{J} \\} \\\\\n  e_{I} & \\:\\bot\\:\\{ e_{JK}, e_{J} \\} \\\\\n  e_{JK} & \\:\\bot\\:e_{J}\n\\end{aligned}\n\\]\n\n\n(b)\n\n\n\n\n\n\n\nFigure 9: Sample-comparison model including sample and comparison mechanisms. Panel (a) illustrates the SCM. Panel (b) depicts the associated DAG."
+    "text": "5. Abandoning the BTL model\n\n\n\n\n\n\\[\n\\begin{aligned}\n  O_{RPUV} & = O^{sc}_{RPUV} \\odot C \\\\\n  O^{sc}_{RPUV} & = O^{cp}_{RPUV} \\odot S_{RPUV} \\\\\n  O^{cp}_{RPUV} & \\sim \\text{Bernoulli} \\left[ \\text{inv_logit}( D_{RPUV} ) \\right] \\\\\n  D_{RPUV} & = \\left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \\right) + B_{JK}[U,V] \\\\\n  T_{IA} & = T_{I} + \\beta_{XA} X_{IA} + e_{IA} \\\\\n  T_{I} & = \\beta_{XI} X_{I} + e_{I} \\\\\n  B_{JK} & = B_{J} + \\beta_{ZK} Z_{JK} + e_{JK} \\\\\n  B_{J} & = \\beta_{ZJ} Z_{J} + e_{J} \\\\\n  e_{IA} & \\sim \\text{Normal}(0, p_{IA}) \\\\  \n  e_{I} & \\sim \\text{Normal}(0,1) \\\\\n  e_{JK} & \\sim \\text{Normal}(0, p_{JK}) \\\\\n  e_{J} & \\sim \\text{Normal}(0,1)\n\\end{aligned}\n\\]\n\n\n\\[\n\\begin{aligned}\n  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\\\\n  O^{sc}_{RPUV} & := f_{S}(O^{cp}_{RPUV}, S_{RPUV}) \\\\\n  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\\\\n  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\\\\n  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\\\\n  T_{I} & := f_{T}(X_{I}, e_{I}) \\\\\n  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\\\\n  B_{J} & := f_{B}(Z_{J}, e_{J}) \\\\\n  e_{IA} & \\:\\bot\\:\\{ e_{I}, e_{JK}, e_{J} \\} \\\\\n  e_{I} & \\:\\bot\\:\\{ e_{JK}, e_{J} \\} \\\\\n  e_{JK} & \\:\\bot\\:e_{J}\n\\end{aligned}\n\\]\n\n\n\n\nFigure 6: Sample-comparison model including sample and comparison mechanisms. Left panel illustrates the statistical model. Right panel depicts the sample-comparison SCM."
   },
   {
-    "objectID": "presentation.html#findings",
-    "href": "presentation.html#findings",
+    "objectID": "presentation.html#discussion-1",
+    "href": "presentation.html#discussion-1",
+    "title": "Let’s talk about Thurstone & Co.",
+    "section": "6. Discussion",
+    "text": "6. Discussion"
+  },
+  {
+    "objectID": "presentation.html#findings-1",
+    "href": "presentation.html#findings-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "6.1 Findings",
     "text": "6.1 Findings"
   },
   {
-    "objectID": "presentation.html#limitations-and-further-research",
-    "href": "presentation.html#limitations-and-further-research",
+    "objectID": "presentation.html#limitations-and-further-research-1",
+    "href": "presentation.html#limitations-and-further-research-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "6.2 Limitations and further research",
     "text": "6.2 Limitations and further research"
+  },
+  {
+    "objectID": "presentation.html#conclusion-1",
+    "href": "presentation.html#conclusion-1",
+    "title": "Let’s talk about Thurstone & Co.",
+    "section": "7. Conclusion",
+    "text": "7. Conclusion"
   },
   {
     "objectID": "presentation.html#references",
     "href": "presentation.html#references",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "References",
-    "text": "References\n\n\n1. Thurstone L (1927) Psychophysical analysis. American Journal of Psychology (38):368–89\n\n\n2. Thurstone L (1927) A law of comparative judgment. Psychological Review 34(4):482–499. https://doi.org/10.1037/h0070288\n\n\n3. Verhavert S, Bouwer R, Donche V, De Maeyer S (2019) A meta-analysis on the reliability of comparative judgement. Assessment in Education: Principles, Policy and Practice 26(5):541–562. https://doi.org/10.1080/0969594X.2019.1602027\n\n\n4. Crompvoets E, Béguin A, Sijtsma K (2022) On the bias and stability of the results of comparative judgment. Frontiers in Education 6. https://doi.org/10.3389/feduc.2021.788202\n\n\n5. Coertjens L, Lesterhuis M, Verhavert S, Van Gasse R, De Maeyer S (2017) Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering. Pedagogische Studien 94:283–303\n\n\n6. Goossens M, De Maeyer S (2018) How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement. In: Ras E, Guerrero Roldán A (eds) Technology enhanced assessment. Springer International Publishing, pp 13–25\n\n\n7. Bouwer R, Lesterhuis M, De Smedt F, Van Keer H, De Maeyer S (2023) Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement. Journal of Writing Research 15(3):497–518. https://doi.org/10.17239/jowr-2024.15.03.03\n\n\n8. Pollitt A (2012) The method of adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 19(3):281--300. https://doi.org/10.1080/0969594X.2012.665354\n\n\n9. Verhavert S, Furlong A, Bouwer R (2022) The accuracy and efficiency of a reference-based adaptive selection algorithm for comparative judgment. Frontiers in Education 6. https://doi.org/10.3389/feduc.2021.785919\n\n\n10. Mikhailiuk A, Wilmot C, Perez-Ortiz M, Yue D, Mantiuk R (2021) Active sampling for pairwise comparisons via approximate message passing and information gain maximization. In: 2020 25th international conference on pattern recognition (ICPR). pp 2559–2566\n\n\n11. Whitehouse C (2012) Testing the validity of judgements about geography essays using the adaptive comparative judgement method\n\n\n12. van Daal T, Lesterhuis M, Coertjens L, Donche V, De Maeyer S (2016) Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus. Assessment in Education: Principles, Policy & Practice 26(1):59–74. https://doi.org/10.1080/0969594X.2016.1253542\n\n\n13. Lesterhuis M (2018) The validity of comparative judgement for assessing text quality: An assessor’s perspective. PhD thesis, University of Antwerp\n\n\n14. Bartholomew S, Nadelson L, Goodridge W, Reeve E (2018) Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities. Educational Assessment 23(2):85–101. https://doi.org/10.1080/10627197.2018.1444986\n\n\n15. Kimbell R (2012) Evolving project e-scape for national assessment. International Journal of Technology and Design Education 22:135–155. https://doi.org/10.1007/s10798-011-9190-4\n\n\n16. Jones I, Inglis M (2015) The problem of assessing problem solving: Can comparative judgement help? Educational Studies in Mathematics 89(3):337–355. https://doi.org/10.1007/s10649-015-9607-1\n\n\n17. Jones I, Bisson M, Gilmore C, Inglis M (2019) Measuring conceptual understanding in randomised controlled trials: Can comparative judgement help? British Educational Research Journal 45(3):662–680. https://doi.org/10.1002/berj.3519\n\n\n18. Marshall N, Shaw K, Hunter J, Jones I (2020) Assessment by comparative judgement: An application to secondary statistics and english in new zealand. New Zealand Journal of Educational Studies 55:49–71. https://doi.org/10.1007/s40841-020-00163-3\n\n\n19. Bartholomew S, Williams P (2020) STEM skill assessment: An application of adaptive comparative judgment. In: Anderson J, Li Y (eds) Integrated approaches to STEM education. Advances in STEM education. Springer, pp 331–349\n\n\n20. Boonen N, Kloots H, Gillis S (2020) Rating the overall speech quality of hearing-impaired children by means of comparative judgements. Journal of Communication Disorders 83:1675–1687. https://doi.org/10.1016/j.jcomdis.2019.105969\n\n\n21. Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/https://doi.org/10.1146/annurev-statistics-030718-104951\n\n\n22. Pollitt A (2012) Comparative judgement for assessment. International Journal of Technology and Design Education 22(2):157--170. https://doi.org/10.1007/s10798-011-9189-x\n\n\n23. McElreath R (2020) Statistical rethinking: A bayesian course with examples in r and STAN. Chapman; Hall/CRC\n\n\n24. Zimmerman D (1994) A note on the influence of outliers on parametric and nonparametric tests. The Journal of General Psychology 121(4):391–401. https://doi.org/10.1080/00221309.1994.9921213\n\n\n25. Laming D (2004) Marking university examinations: Some lessons from psychophysics. Psychology Learning & Teaching 3(2):89–96. https://doi.org/10.2304/plat.2003.3.2.89\n\n\n26. Pollitt A, Elliott G (2003) Finding a proper role for human judgement in the examination system.\n\n\n27. Casalicchio G, Tutz G, Schauberger G (2015) Subject-specific bradley–terry–luce models with implicit variable selection. Statistical Modelling 15(6):526–547. https://doi.org/10.1177/1471082X15571817\n\n\n28. Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 71(9):1–25. https://doi.org/10.1080/0969594X.2017.1418734\n\n\n29. van Daal T, Lesterhuis M, Coertjens L, van de Kamp MT, Donche V, De Maeyer S (2017) The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy. Frontiers in Education 2. https://doi.org/10.3389/feduc.2017.00044\n\n\n30. Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. https://doi.org/10.3389/feduc.2020.582800\n\n\n31. Kline R (2023) Principles and practice of structural equation modeling. Guilford Press\n\n\n32. Hoyle R(eds) (2023) Handbook of structural equation modeling. Guilford Press\n\n\n33. Pearl J (2009) Causality: Models, reasoning and inference. Cambrige University Press\n\n\n34. Pearl J, Glymour M, Jewell N (2016) Causal inference in statistics: A primer. John Wiley & Sons, Inc.\n\n\n35. Gross J, Yellen J, Anderson M (2018) Graph theory and its applications. Chapman; Hall/CRC\n\n\n36. Neal B (2020) Introduction to causal inference from a machine learning perspective\n\n\n37. Schuessler J, Selb P (2023) Graphical causal models for survey inference. Sociological Methods and Research 0(0). https://doi.org/10.1177/00491241231176851\n\n\n38. Everitt B, Skrondal A (2010) The cambridge dictionary of statistics. Cambridge University Press\n\n\n\n\n\n\nOnline manuscript (work in progress)"
+    "text": "References\n\n\n1. Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/https://doi.org/10.1146/annurev-statistics-030718-104951\n\n\n2. Pollitt A (2012) Comparative judgement for assessment. International Journal of Technology and Design Education 22(2):157--170. https://doi.org/10.1007/s10798-011-9189-x\n\n\n3. Pollitt A (2012) The method of adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 19(3):281--300. https://doi.org/10.1080/0969594X.2012.665354\n\n\n4. van Daal T, Lesterhuis M, Coertjens L, Donche V, De Maeyer S (2016) Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus. Assessment in Education: Principles, Policy & Practice 26(1):59–74. https://doi.org/10.1080/0969594X.2016.1253542\n\n\n5. Goossens M, De Maeyer S (2018) How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement. In: Ras E, Guerrero Roldán A (eds) Technology enhanced assessment. Springer International Publishing, pp 13–25\n\n\n6. McElreath R (2020) Statistical rethinking: A bayesian course with examples in r and STAN. Chapman; Hall/CRC\n\n\n7. Zimmerman D (1994) A note on the influence of outliers on parametric and nonparametric tests. The Journal of General Psychology 121(4):391–401. https://doi.org/10.1080/00221309.1994.9921213\n\n\n8. Laming D (2004) Marking university examinations: Some lessons from psychophysics. Psychology Learning & Teaching 3(2):89–96. https://doi.org/10.2304/plat.2003.3.2.89\n\n\n9. Whitehouse C (2012) Testing the validity of judgements about geography essays using the adaptive comparative judgement method\n\n\n10. Lesterhuis M (2018) The validity of comparative judgement for assessing text quality: An assessor’s perspective. PhD thesis, University of Antwerp\n\n\n11. Coertjens L, Lesterhuis M, Verhavert S, Van Gasse R, De Maeyer S (2017) Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering. Pedagogische Studien 94:283–303\n\n\n12. Bouwer R, Lesterhuis M, De Smedt F, Van Keer H, De Maeyer S (2023) Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement. Journal of Writing Research 15(3):497–518. https://doi.org/10.17239/jowr-2024.15.03.03\n\n\n13. Pollitt A, Elliott G (2003) Finding a proper role for human judgement in the examination system.\n\n\n14. Casalicchio G, Tutz G, Schauberger G (2015) Subject-specific bradley–terry–luce models with implicit variable selection. Statistical Modelling 15(6):526–547. https://doi.org/10.1177/1471082X15571817\n\n\n15. Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 71(9):1–25. https://doi.org/10.1080/0969594X.2017.1418734\n\n\n16. Boonen N, Kloots H, Gillis S (2020) Rating the overall speech quality of hearing-impaired children by means of comparative judgements. Journal of Communication Disorders 83:1675–1687. https://doi.org/10.1016/j.jcomdis.2019.105969\n\n\n17. van Daal T, Lesterhuis M, Coertjens L, van de Kamp MT, Donche V, De Maeyer S (2017) The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy. Frontiers in Education 2. https://doi.org/10.3389/feduc.2017.00044\n\n\n18. Jones I, Bisson M, Gilmore C, Inglis M (2019) Measuring conceptual understanding in randomised controlled trials: Can comparative judgement help? British Educational Research Journal 45(3):662–680. https://doi.org/10.1002/berj.3519\n\n\n19. Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. https://doi.org/10.3389/feduc.2020.582800\n\n\n20. Kline R (2023) Principles and practice of structural equation modeling. Guilford Press\n\n\n21. Hoyle R(eds) (2023) Handbook of structural equation modeling. Guilford Press\n\n\n22. Pearl J (2009) Causality: Models, reasoning and inference. Cambrige University Press\n\n\n23. Pearl J, Glymour M, Jewell N (2016) Causal inference in statistics: A primer. John Wiley & Sons, Inc.\n\n\n24. Gross J, Yellen J, Anderson M (2018) Graph theory and its applications. Chapman; Hall/CRC\n\n\n25. Neal B (2020) Introduction to causal inference from a machine learning perspective\n\n\n\n\n\n\nOnline manuscript (work in progress)"
   }
 ]
