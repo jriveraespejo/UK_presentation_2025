@@ -642,7 +642,7 @@ b. The comparison mechanism is a generator of **missing data**,
 ## 6.2 Discussion: Limitations {style="font-size:80%;"}
 
 ::: incremental
-1. Not tested **yet?** (context dependent)
+1. Tested **only** in simulation scenarios (context dependent)
 2. Researcher need a deep knowledge of **Causal inference**
 
     $\longrightarrow$ e.g., what does it mean for predictor variables $X_{IA}, X_{I}, Z_{JK}, Z_{J}$ to be part of the *sufficient adjustment set*.
