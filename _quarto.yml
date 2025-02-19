@@ -16,6 +16,8 @@ execute:
 format:
   revealjs: 
     slide-number: true
+    #number-sections: true
+    #number-depth: 2
     chalkboard: true
     preview-links: auto
     csl: diabetologia.csl
