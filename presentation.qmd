@@ -51,14 +51,7 @@ date: last-modified
 bibliography: references.bib
 ---
 
-# 1. Motivating example
-
-<!-- commands for d-separation -->
-\newcommand{\dsep}{\:\bot\:}
-\newcommand{\ndsep}{\:\not\bot\:}
-\newcommand{\cond}{\:|\:}
-
----
+--- 
 
 ## 1. Motivating example {style="font-size:80%;"}
 
@@ -68,11 +61,11 @@ bibliography: references.bib
 
 ::: incremental
 ::: {style="font-size:80%;"}
-- Researchers randomly assign students to **two** different teaching method
-- Students write one or more texts
-- Researchers collect students' written texts
-- Researchers randomly assign judges to compare pairs of students' written texts
-- Judges produce a dichotomous outcome, reflecting the relative quality of each text
+- Assign students to **two** different teaching method
+- Students will write preferably more than one text
+- We will collect these texts
+- We will assign judges to compare random pairs of texts
+- Judges will produce a dichotomous outcome, reflecting the relative quality of each text
 :::
 :::
 
@@ -91,9 +84,6 @@ Following current CJ practices
 
 
 
-
-
-# 2. Some theory to remember
 
 ---
 
@@ -132,45 +122,32 @@ Circle the assumptions of **Case V**:
 
 
 
-
-# 3. Some issues with the theory
-
 ---
 
-## 3. Some issues with the theory {style="font-size:80%;"}
+## 3. Some issues with this practice {style="font-size:80%;"}
 
-It is intuitive to think that: 
-
-::: {.fragment style="font-size:80%;"}
-The outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
-:::
-
-::: {.fragment}
-So, what are the **issues**:
+What are the **issues** with this practice?:
 
 ::: incremental
 ::: {style="font-size:80%;"}
 1. Excessive reliance on Case V's assumptions for the analysis of CJ data
     
-    $\longrightarrow$ the assumption of **equal dispersion**, and **zero correlation** between stimuli
+    $\longrightarrow$ the assumption of **equal dispersion** between stimuli
+    
+    $\longrightarrow$ the assumption of **zero correlation** between stimuli
 
 2. Disconnect between trait measurement and hypothesis testing
 :::
 :::
 
-:::
 
 
-
-
-
-# 3.1 Case V and statistical analysis
 
 ---
 
-## 3.1 Case V and statistical analysis {style="font-size:80%;"}
+## Issue 1: Case V and statistical analysis {style="font-size:80%;"}
 
-But, are Case V assumptions violated?
+So, are Case V assumptions violated?
 
 ::: incremental
 1. Thurstone: equal dispersion **may not be applicable** when researchers assess complex traits or heterogeneous stimuli, like texts!
@@ -199,9 +176,9 @@ But, are Case V assumptions violated?
 
 ---
 
-## 3.1 Case V and statistical analysis {style="font-size:80%;"}
+## Issue 1: Case V and statistical analysis {style="font-size:80%;"}
 
-But, what are the problems with this?
+But, what problems result from the violations of assumptions?
 
 ::: {#fig-thurstone_theory layout-ncol=2 style="text-align:center;"}
 
@@ -214,6 +191,9 @@ But, what are the problems with this?
 The effect of dispersion discrepancies and stimuli correlation on the distribution of the discriminal difference. *Left panel* illustrates the effect of dispersion discrepancies. *Right panel* depicts the effect of stimuli correlation.
 :::
 
+::: {.fragment style="font-size:80%;"}
+The outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
+:::
 
 ::: {.notes}
 a. Different dispersions, neglecting judges' biases and hierarchical structures
@@ -249,12 +229,9 @@ Right panel
 
 
 
-
-# 3.2 Measurement and hypothesis tests
-
 ---
 
-## 3.2 Measurement and hypothesis tests {style="font-size:80%;"}
+## Issue 2: Measurement and hypothesis tests {style="font-size:80%;"}
 
 Researchers use the BTL model as a **measurement model** for CJ [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018_thesis; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023], i.e., they use the **estimated BTL scores**, or their transformations, to conduct additional analyses or hypothesis tests, for example:
 
@@ -269,9 +246,9 @@ Researchers use the BTL model as a **measurement model** for CJ [@Laming_2004; @
 
 ---
 
-## 3.2 Measurement and hypothesis tests {style="font-size:80%;"}
+## Issue 2: Measurement and hypothesis tests {style="font-size:80%;"}
 
-But, what are the problems with this?
+So, what are the problems with this?
 
 ::: {#fig-measurement_error layout-ncol=3 style="text-align:center;"}
 
@@ -285,7 +262,7 @@ But, what are the problems with this?
 ![](/images/measurement_error3.png){width=100%}
 :::
 
-The effect of measurement error on the estimation of a regression parameter $\beta$. Measurement error increases from the left to the right panel.
+The effect of measurement error on the estimation of a regression parameter $\beta$. Measurement error increases from left to right.
 :::
 
 
@@ -303,9 +280,6 @@ a. Ignoring uncertainty of BTL scores
 :::
 
 
-
-# 4. Extending Thurstone's theory
-
 ---
 
 ## 4. Extending Thurstone's theory {style="font-size:80%;"}
@@ -322,9 +296,6 @@ $\longrightarrow$ formally and graphically represent the assumed (causal) struct
 
 
 
-
-
-# 4.1 The conceptual-population model
 
 ---
 
@@ -344,6 +315,11 @@ d. produced by each pair of students
 ---
 
 ## 4.1 The conceptual-population model {style="font-size:80%;"}
+
+<!-- commands for d-separation -->
+\newcommand{\dsep}{\:\bot\:}
+\newcommand{\ndsep}{\:\not\bot\:}
+\newcommand{\cond}{\:|\:}
 
 ::: {#fig-cj09 layout-ncol=2}
 
@@ -371,14 +347,11 @@ Conceptual-population model, final vectorized form. *Left panel* illustrates the
 
 
 
-
-# 4.2 The sample-comparison model
-
 ---
 
 ## 4.2 The sample-comparison model {style="font-size:80%;"}
 
-Assuming a more realistic scenario where we have access to a sample of:
+Assuming a more realistic scenario where we have access to **a sample** of:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -422,110 +395,11 @@ Sample-comparison model including sample and comparison mechanisms. *Left panel*
 
 
 
-
-# 5. Abandoning the BTL model
-
 ---
 
 ## 5. Abandoning the BTL model {style="font-size:80%;"}
 
-With **Bayesian inference** we convert the extension into a statistical model\
-
-$\longrightarrow$ this model addresses all issues raised so far, *except one!*, can you spot it?
-
-::: {#fig-cj15 layout-ncol=2}
-
-$$
-\begin{aligned}
-  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
-  O^{sc}_{RPUV} & := f_{S}(O^{cp}_{RPUV}, S_{RPUV}) \\
-  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
-  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
-  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
-  T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
-  e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
-  e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
-  e_{JK} & \dsep e_{J}
-\end{aligned}
-$$
-
-::: {.fragment .fade-left}
-$$
-\begin{aligned}
-  O_{RPUV} & = O^{sc}_{RPUV} \odot C \\
-  O^{sc}_{RPUV} & = O^{cp}_{RPUV} \odot S_{RPUV} \\
-  O^{cp}_{RPUV} & \sim \text{Bernoulli} \left[ \text{inv_logit}( D_{RPUV} ) \right] \\
-  D_{RPUV} & = \left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \right) + B_{JK}[U,V] \\
-  T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
-  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
-  B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{IA} & \sim \text{Normal}(0, p_{IA}) \\  
-  e_{I} & \sim \text{Normal}(0,1) \\
-  e_{JK} & \sim \text{Normal}(0, p_{JK}) \\
-  e_{J} & \sim \text{Normal}(0,1)
-\end{aligned}
-$$
-:::
-
-Sample-comparison model including sample and comparison mechanisms. *Left panel* illustrates the sample-comparison SCM. *Right panel* depicts the statistical model.
-:::
-
----
-
-## 5. Abandoning the BTL model {style="font-size:80%;"}
-
-There is still **one** discriminal dispersion for all students,\
-
-$\longrightarrow$ we still assume equal dispersions for texts
-
-::: {#fig-cj15 layout-ncol=2}
-
-$$
-\begin{aligned}
-  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
-  O^{sc}_{RPUV} & := f_{S}(O^{cp}_{RPUV}, S_{RPUV}) \\
-  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
-  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
-  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
-  T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
-  e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
-  e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
-  e_{JK} & \dsep e_{J}
-\end{aligned}
-$$
-
-::: {.fragment .fade-left}
-$$
-\begin{aligned}
-  O_{RPUV} & = O^{sc}_{RPUV} \odot C \\
-  O^{sc}_{RPUV} & = O^{cp}_{RPUV} \odot S_{RPUV} \\
-  O^{cp}_{RPUV} & \sim \text{Bernoulli} \left[ \text{inv_logit}( D_{RPUV} ) \right] \\
-  D_{RPUV} & = \left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \right) + B_{JK}[U,V] \\
-  T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
-  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
-  B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{IA} & \sim \text{Normal}(0, p_{IA}) \\  
-  e_{I} & \sim \text{Normal}(0, \color{red}{1}) \color{red}{\longleftarrow} \\
-  e_{JK} & \sim \text{Normal}(0, p_{JK}) \\
-  e_{J} & \sim \text{Normal}(0, \color{red}{1}) \color{red}{\longleftarrow}
-\end{aligned}
-$$
-:::
-
-Sample-comparison model including sample and comparison mechanisms. *Left panel* illustrates the sample-comparison SCM. *Right panel* depicts the statistical model.
-:::
-
----
-
-## 5. Abandoning the BTL model {style="font-size:80%;"}
-
-But we can address **the problem of equal discriminal dispersions!**, how?:
+With **Bayesian inference** we convert the SCM into a statistical model\
 
 ::: {#fig-cj15 layout-ncol=2}
 
@@ -573,9 +447,6 @@ Sample-comparison model including sample and comparison mechanisms. *Left panel*
 
 
 
-
-# 6. Discussion
-
 ---
 
 ## 6.1 Discussion: Findings {style="font-size:80%;"}
@@ -612,7 +483,7 @@ i. Multidimensional traits **(new)**$^{1}$
 We have proposed a model that:
 
 ::: incremental
-2. Clarify interactions among actors involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
+2. Clarify interactions **among actors** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -621,17 +492,12 @@ b. Judges and judgments **(new)**
 :::
 :::
 
-3. Clarify interactions among processes involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
+3. Clarify the **processes** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
 
 ::: incremental
 ::: {style="font-size:80%;"}
 a. The sample mechanism is a generator of **missing data**,
-
-    $\longrightarrow$ with the sample size of students, text, and judges, and how to work with random and non-random samples **(new)**
-    
 b. The comparison mechanism is a generator of **missing data**,
-
-    $\longrightarrow$ with the number of judgments per judge, do repeated judgments bring benefits?, is there a benefit in adaptive comparative algorithms? **(new)**
 :::
 :::
 
@@ -647,7 +513,7 @@ b. The comparison mechanism is a generator of **missing data**,
 
     $\longrightarrow$ e.g., what does it mean for predictor variables $X_{IA}, X_{I}, Z_{JK}, Z_{J}$ to be part of the *sufficient adjustment set*.
 
-3. Researcher need knowledge of Probabilistic programming languages
+3. Researcher need knowledge of **Probabilistic Programming Languages (PPL)**
 4. Researcher need knowledge of **Bayesian inference** methods
 :::
 
@@ -663,7 +529,7 @@ Naturally, the validity of causal claims now hinges on the assumption that these
 
 ::: incremental
 1. Model testing trough simulation and power analysis (context dependent)
-2. Replication studies:
+2. Apply the model to, for instance, replication studies:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -671,8 +537,10 @@ a. "New" rules of thumb for sample sizes
 b. "New" rules of thumb for number of comparisons
 c. Are there benefits of adaptive comparative algorithms?
 d. Effects of predictor variables on students, texts, judges, and judgments
-e. Are additive better than multiplicative judges' biases (akin to discrimination parameter in IRT)
-f. **etc. etc. etc.**
+e. Do repeated judgments bring benefits?
+f. Are additive better than multiplicative judges' biases (akin to discrimination parameter in IRT)
+g. How to work with random and non-random samples
+h. **etc. etc. etc.**
 :::
 :::
 
