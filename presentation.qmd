@@ -80,7 +80,7 @@ bibliography: references.bib
 
 4. **Estimator:** the BTL model
 
-5. **Estimates:** estimated BTL scores, or their transformations
+5. **Estimates:** BTL scores, or their transformations
 
 :::
 
