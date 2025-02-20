@@ -1,5 +1,9 @@
 ---
-title: "Let's talk about Thurstone & Co."
+title: |
+  Let's talk about Thurstone & Co.
+subtitle: | 
+  UK Rasch and Psychometrics User Group Meeting \
+  Cambridge, UK, 2025
 author:
   - name: 
       given: Jose(ma)
@@ -51,7 +55,6 @@ date: last-modified
 bibliography: references.bib
 ---
 
---- 
 
 ## 1. Motivating example {style="font-size:80%;"}
 
@@ -508,6 +511,7 @@ b. The comparison mechanism is a generator of **missing data**,
 ## 6.2 Discussion: Limitations {style="font-size:80%;"}
 
 ::: incremental
+1. No epistemological considerations for the connection between the quantitative and theoretical latent trait
 1. Tested **only** in simulation scenarios (context dependent)
 2. Researcher need a deep knowledge of **Causal inference**
 
