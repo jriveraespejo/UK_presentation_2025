@@ -152,7 +152,7 @@ Circle the assumptions of **Case V**:
 
 ---
 
-## 3. Some issues with this practice {style="font-size:80%;"}
+## 3. Issues with this practice {style="font-size:80%;"}
 
 What are the **issues** with this practice?:
 
@@ -328,7 +328,7 @@ a. Ignoring uncertainty of BTL scores
 
 ---
 
-## 3. Some issues with this practice {style="font-size:80%;"}
+## 3. Issues with this practice {style="font-size:80%;"}
 
 So, it is intuitive to think that:
 

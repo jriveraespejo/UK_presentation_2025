@@ -21,11 +21,11 @@
     "text": "2. Some theory to remember\n\n\n\n\nTable 1: Thurstones cases and their asumptions\n\n\n\n\n\n\n\n\ne.g., if the experiment has five texts to compare. Thus, under the General form:\n\n\n\none judge will make \\({ 5 \\choose 2} = 10\\) comparisons (data set)\nthe model has to estimate: \\(5\\) modes \\(+\\) \\(5\\) dispersions \\(+\\) \\(10\\) correlations = \\(20\\) parameters\n\n\n\n\n\nwhile, under Case V:\n\n\n\none judge will make \\({ 5 \\choose 2} = 10\\) comparisons (data set)\nthe model has to estimate: \\(5\\) modes \\(+\\) \\(1\\) dispersion \\(+\\) \\(0\\) correlations = \\(6\\) parameters\nbut now, data also comes from multiple judges\n\n\n\n\n\nCircle the assumptions of General form:\n\ncorrelation (one per pair)\n\nCircle the assumptions of Case V:\n\nEqual discriminal dispersion\nZero correlation"
   },
   {
-    "objectID": "presentation.html#some-issues-with-this-practice",
-    "href": "presentation.html#some-issues-with-this-practice",
+    "objectID": "presentation.html#issues-with-this-practice",
+    "href": "presentation.html#issues-with-this-practice",
     "title": "Let’s talk about Thurstone & Co.",
-    "section": "3. Some issues with this practice",
-    "text": "3. Some issues with this practice\nWhat are the issues with this practice?:\n\n\n\nExcessive reliance on Case V’s assumptions for the analysis of CJ data, specifically on,\n\\(\\longrightarrow\\) the assumption of equal dispersion between stimuli\n\\(\\longrightarrow\\) the assumption of zero correlation between stimuli\nDisconnect between trait measurement and hypothesis testing"
+    "section": "3. Issues with this practice",
+    "text": "3. Issues with this practice\nWhat are the issues with this practice?:\n\n\n\nExcessive reliance on Case V’s assumptions for the analysis of CJ data, specifically on,\n\\(\\longrightarrow\\) the assumption of equal dispersion between stimuli\n\\(\\longrightarrow\\) the assumption of zero correlation between stimuli\nDisconnect between trait measurement and hypothesis testing"
   },
   {
     "objectID": "presentation.html#issue-1-case-v-and-statistical-analysis",
@@ -63,11 +63,11 @@
     "text": "Issue 2: Measurement and hypothesis tests\nSo, what are the problems with this?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: The effect of measurement error on the estimation of a regression parameter \\(\\beta\\). Measurement error increases from left to right.\n\n\n\n\n\nIgnoring uncertainty of BTL scores\n\\(\\longrightarrow\\) introduce bias + reduce the precision of hypothesis tests [22, 23]\n\\(\\longrightarrow\\) diminish statistical power of tests\n\\(\\longrightarrow\\) increase likelihood of type-I or type-II errors [7], i.e., drawing spurious conclusions."
   },
   {
-    "objectID": "presentation.html#some-issues-with-this-practice-1",
-    "href": "presentation.html#some-issues-with-this-practice-1",
+    "objectID": "presentation.html#issues-with-this-practice-1",
+    "href": "presentation.html#issues-with-this-practice-1",
     "title": "Let’s talk about Thurstone & Co.",
-    "section": "3. Some issues with this practice",
-    "text": "3. Some issues with this practice\nSo, it is intuitive to think that:\n\nThe outcome’s ability to reflect the “true” differences between texts largely depends on the validity of the model’s assumptions [24]."
+    "section": "3. Issues with this practice",
+    "text": "3. Issues with this practice\nSo, it is intuitive to think that:\n\nThe outcome’s ability to reflect the “true” differences between texts largely depends on the validity of the model’s assumptions [24]."
   },
   {
     "objectID": "presentation.html#extending-thurstones-theory",
