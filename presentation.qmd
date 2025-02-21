@@ -64,7 +64,7 @@ bibliography: references.bib
 
 ::: incremental
 ::: {style="font-size:80%;"}
-- Assign students to **two** different teaching method
+- Assign students to **two** different teaching method $X=\{1,2\}$
 - Students will write preferably more than one text
 - We will collect these texts
 - We will assign judges to compare random pairs of texts
@@ -74,7 +74,7 @@ bibliography: references.bib
 
 3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
 
-4. **Estimator:** the BTL model
+4. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
 
 5. **Estimates:** BTL scores, or their transformations
 
@@ -111,6 +111,31 @@ Hypothetical discriminal processes and discriminant difference along a quality t
 ![Thurstones cases and their asumptions](/images/thurstone_cases.png){#tbl-thurstone_cases width=80%}
 :::
 
+::: {.fragment}
+e.g., if the experiment has five texts to compare. Thus, under the **General form**:
+
+::: incremental
+::: {style="font-size:80%;"}
+1. one judge will make ${ 5 \choose 2} = 10$ comparisons (data set)
+2. the model has to estimate: $5$ modes $+$ $5$ dispersions $+$ $10$ correlations = $20$ parameters
+:::
+:::
+
+:::
+
+::: {.fragment}
+while, under **Case V**:
+
+::: incremental
+::: {style="font-size:80%;"}
+1. one judge will make ${ 5 \choose 2} = 10$ comparisons (data set)
+2. the model has to estimate: $5$ modes $+$ $1$ dispersion $+$ $0$ correlations = $6$ parameters
+3. but now, data also comes from multiple judges
+:::
+:::
+
+:::
+
 ::: {.notes}
 Circle the assumptions of **General form**:
 
@@ -133,7 +158,7 @@ What are the **issues** with this practice?:
 
 ::: incremental
 ::: {style="font-size:80%;"}
-1. Excessive reliance on Case V's assumptions for the analysis of CJ data
+1. Excessive reliance on Case V's assumptions for the analysis of CJ data, specifically on,
     
     $\longrightarrow$ the assumption of **equal dispersion** between stimuli
     
@@ -144,33 +169,48 @@ What are the **issues** with this practice?:
 :::
 
 
-
-
 ---
 
 ## Issue 1: Case V and statistical analysis {style="font-size:80%;"}
 
-So, are Case V assumptions violated?
+So, are the assumptions of **equal dispersion** and **zero correlation** violated?
 
 ::: incremental
 1. Thurstone: equal dispersion **may not be applicable** when researchers assess complex traits or heterogeneous stimuli, like texts!
 
-    $\longrightarrow$ Evidence of this can be found in misfit statistics?
-
-2. Zero correlation is **almost certainly invalid** in two scenarios: 
-
-    $\longrightarrow$ when intricate aspects of texts generate judges' biases, ultimately introducing dependencies between texts.
+    $\longrightarrow$ Evidence staring at us in the form of 'misfit' statistics?
     
-    $\longrightarrow$ when an additional hierarchical structure is relevant to the texts.
+::: {.fragment style="text-align:center;"}
+![](/images/discriminal_process.png){width=50%}
 :::
 
+:::
 
 ::: {.notes}
 **Equal dispersion:**
 
 - "misfits" texts are texts with more judgment discrepancies than others [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018]
 - "misfit" judges are judges who deviate substantially from the shared consensus.
+:::
 
+---
+
+## Issue 1: Case V and statistical analysis {style="font-size:80%;"}
+
+So, are the assumptions of **equal dispersion** and **zero correlation** violated?
+
+1. Thurstone: equal dispersion **may not be applicable** when researchers assess complex traits or heterogeneous stimuli, like texts!
+
+    $\longrightarrow$ Evidence staring at us in the form of 'misfit' statistics?
+
+2. Zero correlation is **almost certainly invalid** in two scenarios: 
+
+    $\longrightarrow$ when intricate aspects of texts generate judges' biases,
+    
+    $\longrightarrow$ when there is clustering in the texts
+
+
+::: {.notes}
 **Zero correlation:**
 
 - additional relevant characteristics, exert an uneven influence on judges' perceptions, creating biases. Since the discriminal difference of the stimuli becomes an observable outcome only through the judges' perceptions, these biases introduce dependencies between the stimuli.
@@ -192,10 +232,6 @@ But, what problems result from the violations of assumptions?
 :::
 
 The effect of dispersion discrepancies and stimuli correlation on the distribution of the discriminal difference. *Left panel* illustrates the effect of dispersion discrepancies. *Right panel* depicts the effect of stimuli correlation.
-:::
-
-::: {.fragment style="font-size:80%;"}
-The outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
 :::
 
 ::: {.notes}
@@ -236,7 +272,9 @@ Right panel
 
 ## Issue 2: Measurement and hypothesis tests {style="font-size:80%;"}
 
-Researchers use the BTL model as a **measurement model** for CJ [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018_thesis; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023], i.e., they use the **estimated BTL scores**, or their transformations, to conduct additional analyses or hypothesis tests, for example:
+The BTL model is the **measurement model** for CJ [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018_thesis; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023]
+
+$\longrightarrow$ The literature uses BTL scores (**point estimates**), or their transformations, to conduct additional analyses, such as:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -245,6 +283,14 @@ Researchers use the BTL model as a **measurement model** for CJ [@Laming_2004; @
 - Calculate correlations with other assessment methods [@Goossens_et_al_2018; @Bouwer_et_al_2023], 
 - Test hypotheses related to the underlying trait of interest [@Casalicchio_et_al_2015; @Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021]
 :::
+:::
+
+::: {.fragment}
+But, this ignores the uncertainty of BTL **point estimates**
+:::
+
+::: {.notes}
+A measurement model specifies how manifest variables contribute to the estimation of latent variables [@Everitt_et_al_2010]
 :::
 
 ---
@@ -277,9 +323,17 @@ a. Ignoring uncertainty of BTL scores
     $\longrightarrow$ diminish statistical power of tests 
     
     $\longrightarrow$ increase likelihood of type-I or type-II errors [@McElreath_2020], i.e., drawing spurious conclusions.
+:::
 
 
-- We need a more systematic and integrated framework that enhances statistical accuracy while strengthening measurement reliability and validity.
+---
+
+## 3. Some issues with this practice {style="font-size:80%;"}
+
+So, it is intuitive to think that:
+
+::: {.fragment style="text-align:center;"}
+The outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
 :::
 
 
@@ -287,7 +341,7 @@ a. Ignoring uncertainty of BTL scores
 
 ## 4. Extending Thurstone's theory {style="font-size:80%;"}
 
-We use the **_structural approach_** to causal inference [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] 
+Thus, to address these issues in a more systematic and integrated way, we use the **_structural approach_** to causal inference [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]
 
 $\longrightarrow$ formally and graphically represent the assumed (causal) structure of the CJ system. Specifically we develop:
 
@@ -295,9 +349,6 @@ $\longrightarrow$ formally and graphically represent the assumed (causal) struct
 1. A **conceptual-population** model:
 2. A **sample-comparison** model:
 :::
-
-
-
 
 
 ---
@@ -499,8 +550,8 @@ b. Judges and judgments **(new)**
 
 ::: incremental
 ::: {style="font-size:80%;"}
-a. The sample mechanism is a generator of **missing data**,
-b. The comparison mechanism is a generator of **missing data**,
+a. The sample mechanism is a **generator** of *missing data* (MCAR, MAR, MNAR) 
+b. The comparison mechanism is a **generator** of *missing data* (MCAR, MAR, MNAR)
 :::
 :::
 
@@ -512,13 +563,13 @@ b. The comparison mechanism is a generator of **missing data**,
 
 ::: incremental
 1. No epistemological considerations for the connection between the quantitative and theoretical latent trait
-1. Tested **only** in simulation scenarios (context dependent)
-2. Researcher need a deep knowledge of **Causal inference**
+1. Tested **only** in simulation scenarios (*context dependent*)
+2. You need a deep knowledge of **Causal inference**
 
-    $\longrightarrow$ e.g., what does it mean for predictor variables $X_{IA}, X_{I}, Z_{JK}, Z_{J}$ to be part of the *sufficient adjustment set*.
+    $\longrightarrow$ e.g., what does it mean for predictor variables $X_{IA}, X_{I}, Z_{JK}, Z_{J}$ to be part of the *sufficient adjustment set*?
 
-3. Researcher need knowledge of **Probabilistic Programming Languages (PPL)**
-4. Researcher need knowledge of **Bayesian inference** methods
+3. You need knowledge of **Probabilistic Programming Languages (PPL)**
+4. You need knowledge of **Bayesian inference** methods
 :::
 
 ::: {.notes}
@@ -532,19 +583,18 @@ Naturally, the validity of causal claims now hinges on the assumption that these
 ## 6.2 Discussion: Further research {style="font-size:80%;"}
 
 ::: incremental
-1. Model testing trough simulation and power analysis (context dependent)
+1. Model testing trough simulation and power analysis (*context dependent*)
 2. Apply the model to, for instance, replication studies:
 
 ::: incremental
 ::: {style="font-size:80%;"}
-a. "New" rules of thumb for sample sizes
-b. "New" rules of thumb for number of comparisons
-c. Are there benefits of adaptive comparative algorithms?
-d. Effects of predictor variables on students, texts, judges, and judgments
-e. Do repeated judgments bring benefits?
-f. Are additive better than multiplicative judges' biases (akin to discrimination parameter in IRT)
-g. How to work with random and non-random samples
-h. **etc. etc. etc.**
+a. "New" rules of thumb for sample sizes or number of comparisons (*if you're into this*)
+b. Are there benefits of adaptive comparative algorithms?
+c. Effects of predictor variables on students, texts, judges, and judgments
+d. Do repeated judgments bring benefits? (*repeated measures design* [@Lawson_2015, pp. 366-376])
+e. Are additive better than multiplicative judges' biases (akin to *discrimination* in 2-PL IRT model)
+f. How to work with random and non-random samples
+g. **etc. etc. etc.**
 :::
 :::
 
