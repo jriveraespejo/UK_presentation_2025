@@ -286,7 +286,7 @@ $\longrightarrow$ The literature uses BTL scores (**point estimates**), or their
 :::
 
 ::: {.fragment}
-But, this ignores the uncertainty of BTL **point estimates**
+But, this ignores the **uncertainty** of the BTL scores
 :::
 
 ::: {.notes}
