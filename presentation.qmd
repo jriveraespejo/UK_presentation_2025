@@ -53,14 +53,22 @@ author:
         group: Centre for computational linguistics, psycholinguistics, and sociolinguistics (CLiPS)
 date: last-modified
 bibliography: references.bib
+title-slide-attributes: 
+  data-notes: | 
+    Lets talk about Thurstone and co. 
+    
+    Specificaly, let's talk about if we should take for granted the assumption of his model when analyzing CJ data?
+    
+    In order to do this 
 ---
 
 
 ## 1. Motivating example {style="font-size:80%;"}
 
 ::: incremental
-1. **Research question:** "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
-2. **Method:** Randomization and a CJ experiment, specifically:
+1. **Context:** Writing exercise
+2. **Research question:** "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
+3. **Method:** Randomization and a CJ experiment, specifically:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -72,11 +80,11 @@ bibliography: references.bib
 :::
 :::
 
-3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
+4. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
 
-4. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
+5. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
 
-5. **Estimates:** BTL scores, or their transformations
+6. **Estimates:** BTL scores, or their transformations
 
 :::
 
@@ -112,7 +120,7 @@ Hypothetical discriminal processes and discriminant difference along a quality t
 :::
 
 ::: {.fragment}
-e.g., if the experiment has five texts to compare. Thus, under the **General form**:
+e.g., if the experiment has five texts to compare, under the **General form**:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -168,6 +176,9 @@ What are the **issues** with this practice?:
 :::
 :::
 
+::: {.notes}
+But, what the literature has done so far, is it sufficient?
+:::
 
 ---
 
@@ -328,7 +339,7 @@ a. Ignoring uncertainty of BTL scores
 
 ---
 
-## 3. Issues with this practice {style="font-size:80%;"}
+## 4. Extending Thurstone's theory {style="font-size:80%;"}
 
 So, it is intuitive to think that:
 
@@ -336,20 +347,34 @@ So, it is intuitive to think that:
 The outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
 :::
 
-
----
-
-## 4. Extending Thurstone's theory {style="font-size:80%;"}
-
-Thus, to address these issues in a more systematic and integrated way, we use the **_structural approach_** to causal inference [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]
-
-$\longrightarrow$ formally and graphically represent the assumed (causal) structure of the CJ system. Specifically we develop:
+::: {.fragment}
+Thus:
 
 ::: incremental
-1. A **conceptual-population** model:
-2. A **sample-comparison** model:
+1. To address these issues
+2. Strengthening measurement reliability and validity [@Perron_et_al_2015, pp. 2]
+3. Enhance the statistical accuracy of the hypotheses test
+:::
 :::
 
+
+::: {.fragment}
+We use the **_structural approach to causal inference_** [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]
+
+$\longrightarrow$ formally and graphically represent the (causal) structure of the CJ system. 
+
+Specifically, we developed:
+
+::: incremental
+1. A **conceptual-population** model
+2. A **sample-comparison** model
+:::
+
+:::
+
+::: {.notes}
+more systematic and integrated way
+:::
 
 ---
 
@@ -485,12 +510,12 @@ $$
   B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
   B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
   e_{IA} & \sim \text{Normal}(0, p_{IA}) \\  
-  e_{I} & \sim \text{Normal}(0, \color{red}{s^{g}_{I}} ) \color{red}{\longleftarrow} \\
+  e_{I} & \sim \text{Normal}(0, \color{blue}{s^{g}_{I}} ) \color{blue}{\longleftarrow} \\
   e_{JK} & \sim \text{Normal}(0, p_{JK}) \\
-  e_{J} & \sim \text{Normal}(0, \color{red}{s^{g}_{J}} ) \color{red}{\longleftarrow} \\
+  e_{J} & \sim \text{Normal}(0, \color{blue}{s^{g}_{J}} ) \color{blue}{\longleftarrow} \\
   \\
   & \text{contraints:} \\
-  & \sum_{g=1}^{G_{I}} s^{g}_{I}/G_{I} = 1 ; \quad \sum_{g=1}^{G_{J}} s^{g}_{J}/G_{J} = 1
+  & \sum_{g=1}^{G_{I}} \color{blue}{s^{g}_{I}}/G_{I} = 1 ; \quad \sum_{g=1}^{G_{J}} \color{blue}{s^{g}_{J}}/G_{J} = 1
 \end{aligned}
 $$
 :::
@@ -515,12 +540,12 @@ We have proposed a model that:
 a. Zero correlation between texts
 b. Separate process for trait measurement and hypothesis testing
 c. Equal dispersions between students or texts
-d. No judgment biases **(new)**
-e. Dichotomous outcome **(new)**
-f. Need for removal of 'misfit' observations **(new)**
-g. Normal $e_{IA}, e_{I}, e_{JK},e_{J}$ idiosyncrasies **(new)**$^{1}$
-h. Only two hierarchical components **(new)**$^{1}$
-i. Multidimensional traits **(new)**$^{1}$
+d. [No judgment biases]{style="color:blue;"}
+e. [Dichotomous outcome]{style="color:blue;"}
+f. [Need for removal of 'misfit' observations]{style="color:blue;"}
+g. [Normal $e_{IA}, e_{I}, e_{JK},e_{J}$ idiosyncrasies$^{1}$]{style="color:blue;"}
+h. [Only two hierarchical components$^{1}$]{style="color:blue;"}
+i. [Multidimensional traits$^{1}$]{style="color:blue;"}
 :::
 :::
 
@@ -542,7 +567,7 @@ We have proposed a model that:
 ::: incremental
 ::: {style="font-size:80%;"}
 a. Students and texts
-b. Judges and judgments **(new)**
+b. [Judges and judgments]{style="color:blue;"}
 :::
 :::
 
@@ -550,8 +575,8 @@ b. Judges and judgments **(new)**
 
 ::: incremental
 ::: {style="font-size:80%;"}
-a. The sample mechanism is a **generator** of *missing data* (MCAR, MAR, MNAR) 
-b. The comparison mechanism is a **generator** of *missing data* (MCAR, MAR, MNAR)
+a. The sample mechanism is a [**generator** of *missing data* (MCAR, MAR, MNAR)]{style="color:blue;"} 
+b. The comparison mechanism is a [**generator** of *missing data* (MCAR, MAR, MNAR)]{style="color:blue;"}
 :::
 :::
 
@@ -562,7 +587,7 @@ b. The comparison mechanism is a **generator** of *missing data* (MCAR, MAR, MNA
 ## 6.2 Discussion: Limitations {style="font-size:80%;"}
 
 ::: incremental
-1. No epistemological considerations for the connection between the quantitative and theoretical latent trait
+1. **No epistemological** considerations for the connection between the quantitative and theoretical latent trait
 1. Tested **only** in simulation scenarios (*context dependent*)
 2. You need a deep knowledge of **Causal inference**
 
