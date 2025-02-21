@@ -66,30 +66,25 @@ title-slide-attributes:
 ## 1. Motivating example {style="font-size:80%;"}
 
 ::: incremental
-1. **Context:** Writing exercise
-2. **Research question:** "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
-3. **Method:** Randomization and a CJ experiment, specifically:
+1. **Research question:** In a writing exercise, "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
 
-::: incremental
-::: {style="font-size:80%;"}
+2. **Method:** Randomization and a CJ experiment
+
+3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
+:::
+
+
+::: {.notes}
 - Assign students to **two** different teaching method $X=\{1,2\}$
 - Students will write preferably more than one text
 - We will collect these texts
 - We will assign judges to compare random pairs of texts
 - Judges will produce a dichotomous outcome, reflecting the relative quality of each text
-:::
-:::
 
-4. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
+4. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
 
-5. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
+5. **Estimates:** BTL scores, or their transformations
 
-6. **Estimates:** BTL scores, or their transformations
-
-:::
-
-
-::: {.notes}
 Following current CJ practices
 :::
 
@@ -155,30 +150,6 @@ Circle the assumptions of **Case V**:
 - Zero correlation
 :::
 
-
-
-
----
-
-## 3. Issues with this practice {style="font-size:80%;"}
-
-What are the **issues** with this practice?:
-
-::: incremental
-::: {style="font-size:80%;"}
-1. Excessive reliance on Case V's assumptions for the analysis of CJ data, specifically on,
-    
-    $\longrightarrow$ the assumption of **equal dispersion** between stimuli
-    
-    $\longrightarrow$ the assumption of **zero correlation** between stimuli
-
-2. Disconnect between trait measurement and hypothesis testing
-:::
-:::
-
-::: {.notes}
-But, what the literature has done so far, is it sufficient?
-:::
 
 ---
 
@@ -297,7 +268,13 @@ $\longrightarrow$ The literature uses BTL scores (**point estimates**), or their
 :::
 
 ::: {.fragment}
-But, this ignores the **uncertainty** of the BTL scores
+But, this ignores the **uncertainty** of the BTL scores. Problems?:
+
+$\longrightarrow$ introduce bias + reduce the precision of hypothesis tests [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]
+    
+$\longrightarrow$ diminish statistical power of tests 
+    
+$\longrightarrow$ increase likelihood of type-I or type-II errors [@McElreath_2020].
 :::
 
 ::: {.notes}
@@ -306,40 +283,7 @@ A measurement model specifies how manifest variables contribute to the estimatio
 
 ---
 
-## Issue 2: Measurement and hypothesis tests {style="font-size:80%;"}
-
-So, what are the problems with this?
-
-::: {#fig-measurement_error layout-ncol=3 style="text-align:center;"}
-
-![](/images/measurement_error1.png){width=100%}
-
-::: {.fragment .fade-left}
-![](/images/measurement_error2.png){width=100%}
-:::
-
-::: {.fragment .fade-left}
-![](/images/measurement_error3.png){width=100%}
-:::
-
-The effect of measurement error on the estimation of a regression parameter $\beta$. Measurement error increases from left to right.
-:::
-
-
-::: {.notes}
-a. Ignoring uncertainty of BTL scores
-    
-    $\longrightarrow$ introduce bias + reduce the precision of hypothesis tests [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]
-    
-    $\longrightarrow$ diminish statistical power of tests 
-    
-    $\longrightarrow$ increase likelihood of type-I or type-II errors [@McElreath_2020], i.e., drawing spurious conclusions.
-:::
-
-
----
-
-## 4. Extending Thurstone's theory {style="font-size:80%;"}
+## 4. Extending Thurstone's general form {style="font-size:80%;"}
 
 So, it is intuitive to think that:
 
@@ -353,7 +297,7 @@ Thus:
 ::: incremental
 1. To address these issues
 2. Strengthening measurement reliability and validity [@Perron_et_al_2015, pp. 2]
-3. Enhance the statistical accuracy of the hypotheses test
+3. Enhance the statistical accuracy of the hypotheses tests
 :::
 :::
 
@@ -584,7 +528,7 @@ b. The comparison mechanism is a [**generator** of *missing data* (MCAR, MAR, MN
 
 ---
 
-## 6.2 Discussion: Limitations {style="font-size:80%;"}
+## 6.2 Discussion: Limitations and challenges {style="font-size:80%;"}
 
 ::: incremental
 1. **No epistemological** considerations for the connection between the quantitative and theoretical latent trait
@@ -609,7 +553,8 @@ Naturally, the validity of causal claims now hinges on the assumption that these
 
 ::: incremental
 1. Model testing trough simulation and power analysis (*context dependent*)
-2. Apply the model to, for instance, replication studies:
+2. Package development
+3. Apply the model to, for instance, replication studies:
 
 ::: incremental
 ::: {style="font-size:80%;"}

@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-02-21">
+  <meta name="dcterms.date" content="2025-02-22">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -405,34 +405,29 @@ Cambridge, UK, 2025</p><p></p>
     </div>
 </div>
 
-  <p class="date">2025-02-21</p>
+  <p class="date">2025-02-22</p>
 </section>
 <section id="motivating-example" class="slide level2" style="font-size:80%;">
 <h2>1. Motivating example</h2>
 <div>
 <ol type="1">
-<li class="fragment"><strong>Context:</strong> Writing exercise</li>
-<li class="fragment"><strong>Research question:</strong> “To what extent do different teaching methods influence students’ ability to produce high-quality written texts?”</li>
-<li class="fragment"><strong>Method:</strong> Randomization and a CJ experiment, specifically:</li>
-</ol>
-<div>
-<div style="font-size:80%;">
-<ul>
-<li class="fragment">Assign students to <strong>two</strong> different teaching method <span class="math inline">\(X=\{1,2\}\)</span></li>
-<li class="fragment">Students will write preferably more than one text</li>
-<li class="fragment">We will collect these texts</li>
-<li class="fragment">We will assign judges to compare random pairs of texts</li>
-<li class="fragment">Judges will produce a dichotomous outcome, reflecting the relative quality of each text</li>
-</ul>
-</div>
-</div>
-<ol start="4" type="1">
+<li class="fragment"><p><strong>Research question:</strong> In a writing exercise, “To what extent do different teaching methods influence students’ ability to produce high-quality written texts?”</p></li>
+<li class="fragment"><p><strong>Method:</strong> Randomization and a CJ experiment</p></li>
 <li class="fragment"><p><strong>Estimand:</strong> “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?”</p></li>
-<li class="fragment"><p><strong>Estimator:</strong> the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">[<a href="#/references" role="doc-biblioref" onclick="">1</a>, <a href="#/references" role="doc-biblioref" onclick="">2</a>]</span></p></li>
-<li class="fragment"><p><strong>Estimates:</strong> BTL scores, or their transformations</p></li>
 </ol>
 </div>
 <aside class="notes">
+<ul>
+<li>Assign students to <strong>two</strong> different teaching method <span class="math inline">\(X=\{1,2\}\)</span></li>
+<li>Students will write preferably more than one text</li>
+<li>We will collect these texts</li>
+<li>We will assign judges to compare random pairs of texts</li>
+<li>Judges will produce a dichotomous outcome, reflecting the relative quality of each text</li>
+</ul>
+<ol start="4" type="1">
+<li><p><strong>Estimator:</strong> the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">[<a href="#/references" role="doc-biblioref" onclick="">1</a>, <a href="#/references" role="doc-biblioref" onclick="">2</a>]</span></p></li>
+<li><p><strong>Estimates:</strong> BTL scores, or their transformations</p></li>
+</ol>
 <p>Following current CJ practices</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -513,33 +508,6 @@ Table&nbsp;1: Thurstones cases and their asumptions
 <li>Equal discriminal dispersion</li>
 <li>Zero correlation</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="issues-with-this-practice" class="slide level2" style="font-size:80%;">
-<h2>3. Issues with this practice</h2>
-<p>What are the <strong>issues</strong> with this practice?:</p>
-<div>
-<div style="font-size:80%;">
-<ol type="1">
-<li class="fragment"><p>Excessive reliance on Case V’s assumptions for the analysis of CJ data, specifically on,</p>
-<p><span class="math inline">\(\longrightarrow\)</span> the assumption of <strong>equal dispersion</strong> between stimuli</p>
-<p><span class="math inline">\(\longrightarrow\)</span> the assumption of <strong>zero correlation</strong> between stimuli</p></li>
-<li class="fragment"><p>Disconnect between trait measurement and hypothesis testing</p></li>
-</ol>
-</div>
-</div>
-<aside class="notes">
-<p>But, what the literature has done so far, is it sufficient?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -690,52 +658,13 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 </div>
 </div>
 <div class="fragment">
-<p>But, this ignores the <strong>uncertainty</strong> of the BTL scores</p>
-</div>
-<aside class="notes">
-<p>A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">21</a>]</span></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="issue-2-measurement-and-hypothesis-tests-1" class="slide level2" style="font-size:80%;">
-<h2>Issue 2: Measurement and hypothesis tests</h2>
-<p>So, what are the problems with this?</p>
-<div id="fig-measurement_error" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-measurement_error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img data-src="./images/measurement_error1.png" style="width:100.0%"></p>
-</div>
-<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img data-src="./images/measurement_error2.png" style="width:100.0%"></p>
-</div>
-<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img data-src="./images/measurement_error3.png" style="width:100.0%"></p>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement_error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: The effect of measurement error on the estimation of a regression parameter <span class="math inline">\(\beta\)</span>. Measurement error increases from left to right.
-</figcaption>
-</figure>
-</div>
-<aside class="notes">
-<ol type="a">
-<li><p>Ignoring uncertainty of BTL scores</p>
-<p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">22</a>, <a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p>
+<p>But, this ignores the <strong>uncertainty</strong> of the BTL scores. Problems?:</p>
+<p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">21</a>, <a href="#/references" role="doc-biblioref" onclick="">22</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> diminish statistical power of tests</p>
-<p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>, i.e., drawing spurious conclusions.</p></li>
-</ol>
+<p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>.</p>
+</div>
+<aside class="notes">
+<p>A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -748,8 +677,8 @@ Figure&nbsp;3: The effect of measurement error on the estimation of a regression
           display:block!important;
       }</style></aside>
 </section>
-<section id="extending-thurstones-theory" class="slide level2" style="font-size:80%;">
-<h2>4. Extending Thurstone’s theory</h2>
+<section id="extending-thurstones-general-form" class="slide level2" style="font-size:80%;">
+<h2>4. Extending Thurstone’s general form</h2>
 <p>So, it is intuitive to think that:</p>
 <div class="fragment" style="text-align:center;">
 <p>The outcome’s ability to reflect the “true” differences between texts <strong><em>largely depends on the validity of the model’s assumptions</em></strong> <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">24</a>]</span>.</p>
@@ -760,7 +689,7 @@ Figure&nbsp;3: The effect of measurement error on the estimation of a regression
 <ol type="1">
 <li class="fragment">To address these issues</li>
 <li class="fragment">Strengthening measurement reliability and validity <span class="citation" data-cites="Perron_et_al_2015">[<a href="#/references" role="doc-biblioref" onclick="">25</a>]</span></li>
-<li class="fragment">Enhance the statistical accuracy of the hypotheses test</li>
+<li class="fragment">Enhance the statistical accuracy of the hypotheses tests</li>
 </ol>
 </div>
 </div>
@@ -831,7 +760,7 @@ Figure&nbsp;3: The effect of measurement error on the estimation of a regression
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Conceptual-population model, final vectorized form. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
+Figure&nbsp;3: Conceptual-population model, final vectorized form. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
 </figcaption>
 </figure>
 </div>
@@ -880,7 +809,7 @@ Figure&nbsp;4: Conceptual-population model, final vectorized form. <em>Left pane
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
+Figure&nbsp;4: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
 </figcaption>
 </figure>
 </div>
@@ -934,7 +863,7 @@ Figure&nbsp;5: Sample-comparison model including sample and comparison mechanism
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the sample-comparison SCM. <em>Right panel</em> depicts the statistical model.
+Figure&nbsp;5: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the sample-comparison SCM. <em>Right panel</em> depicts the statistical model.
 </figcaption>
 </figure>
 </div>
@@ -1006,8 +935,8 @@ Figure&nbsp;6: Sample-comparison model including sample and comparison mechanism
 </div>
 </div>
 </section>
-<section id="discussion-limitations" class="slide level2" style="font-size:80%;">
-<h2>6.2 Discussion: Limitations</h2>
+<section id="discussion-limitations-and-challenges" class="slide level2" style="font-size:80%;">
+<h2>6.2 Discussion: Limitations and challenges</h2>
 <div>
 <ol type="1">
 <li class="fragment"><p><strong>No epistemological</strong> considerations for the connection between the quantitative and theoretical latent trait</p></li>
@@ -1038,6 +967,7 @@ Figure&nbsp;6: Sample-comparison model including sample and comparison mechanism
 <div>
 <ol type="1">
 <li class="fragment">Model testing trough simulation and power analysis (<em>context dependent</em>)</li>
+<li class="fragment">Package development</li>
 <li class="fragment">Apply the model to, for instance, replication studies:</li>
 </ol>
 <div>
@@ -1118,14 +1048,14 @@ Figure&nbsp;6: Sample-comparison model including sample and comparison mechanism
 <div id="ref-Gijsen_et_al_2021" class="csl-entry" role="listitem">
 <div class="csl-left-margin">20. </div><div class="csl-right-inline">Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a></div>
 </div>
-<div id="ref-Everitt_et_al_2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline">Everitt B, Skrondal A (2010) <a href="">The cambridge dictionary of statistics</a>. Cambridge University Press</div>
-</div>
 <div id="ref-Kline_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
 </div>
 <div id="ref-Hoyle_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
+<div class="csl-left-margin">22. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
+</div>
+<div id="ref-Everitt_et_al_2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline">Everitt B, Skrondal A (2010) <a href="">The cambridge dictionary of statistics</a>. Cambridge University Press</div>
 </div>
 <div id="ref-Kohler_et_al_2019" class="csl-entry" role="listitem">
 <div class="csl-left-margin">24. </div><div class="csl-right-inline">Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/<a href="https://doi.org/10.1146/annurev-statistics-030718-104951">https://doi.org/10.1146/annurev-statistics-030718-104951</a></div>
