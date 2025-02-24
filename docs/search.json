@@ -46,21 +46,21 @@
     "href": "presentation.html#issue-2-measurement-and-hypothesis-tests",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "Issue 2: Measurement and hypothesis tests",
-    "text": "Issue 2: Measurement and hypothesis tests\nThe BTL model is the measurement model for CJ [4–6, 9–13]\n\\(\\longrightarrow\\) The literature uses BTL scores (point estimates), or their transformations, to conduct additional analyses, such as:\n\n\n\nIdentify ‘misfit’ judges and stimuli [4–6]\nDetect biases in judges’ ratings [4, 14]\nCalculate correlations with other assessment methods [6, 13],\nTest hypotheses related to the underlying trait of interest [13, 15–20]\n\n\n\n\nBut, this ignores the uncertainty of the BTL scores. Problems?:\n\\(\\longrightarrow\\) introduce bias + reduce the precision of hypothesis tests [21, 22]\n\\(\\longrightarrow\\) diminish statistical power of tests\n\\(\\longrightarrow\\) increase likelihood of type-I or type-II errors [7].\n\n\nA measurement model specifies how manifest variables contribute to the estimation of latent variables [23]"
+    "text": "Issue 2: Measurement and hypothesis tests\nThe BTL model serves as the measurement model for CJ [4–6, 9–13]\n\\(\\longrightarrow\\) The literature uses BTL scores (point estimates), or their transformations, to conduct additional analyses, such as:\n\n\n\nIdentify ‘misfit’ judges and stimuli [4–6]\nDetect biases in judges’ ratings [4, 14]\nCalculate correlations with other assessment methods [6, 13],\nTest hypotheses related to the underlying trait of interest [13, 15–20]\n\n\n\n\nBut, this ignores the BTL scores’ uncertainty, which cause measurement error:\n\\(\\longrightarrow\\) introduce bias + reduce the precision of hypothesis tests [21, 22]\n\\(\\longrightarrow\\) diminish statistical power of tests\n\\(\\longrightarrow\\) increase likelihood of type-I or type-II errors [7].\n\n\nA measurement model specifies how manifest variables contribute to the estimation of latent variables [23]"
   },
   {
     "objectID": "presentation.html#extending-thurstones-general-form",
     "href": "presentation.html#extending-thurstones-general-form",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4. Extending Thurstone’s general form",
-    "text": "4. Extending Thurstone’s general form\nSo, it is intuitive to think that:\n\nThe outcome’s ability to reflect the “true” differences between texts largely depends on the validity of the model’s assumptions [24].\n\n\nThus:\n\n\nTo address these issues\nStrengthening measurement reliability and validity [25]\nEnhance the statistical accuracy of the hypotheses tests\n\n\n\n\nWe use the structural approach to causal inference [26–29]\n\\(\\longrightarrow\\) formally and graphically represent the (causal) structure of the CJ system.\nSpecifically, we developed:\n\n\nA conceptual-population model\nA sample-comparison model\n\n\n\n\nmore systematic and integrated way"
+    "text": "4. Extending Thurstone’s general form\nSo, it is intuitive to think that:\n\nThe outcome’s ability to reflect the “true” differences between texts largely depends on the validity of the model’s assumptions [24].\n\n\nThus:\n\n\nStrength measurement reliability and validity [25]\nEnhance the statistical accuracy of the hypotheses tests\n\n\n\n\nWe use the structural approach to causal inference [26–29]\n\\(\\longrightarrow\\) formally and graphically represent the (causal) structure of the CJ system.\nSpecifically, we developed:\n\n\nA conceptual-population model\nA sample-comparison model\n\n\n\n\nmore systematic and integrated way"
   },
   {
     "objectID": "presentation.html#the-conceptual-population-model",
     "href": "presentation.html#the-conceptual-population-model",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "4.1 The conceptual-population model",
-    "text": "4.1 The conceptual-population model\nAssuming that we can access to:\n\n\n\nall repeated judgments\nmade by every available judge\nfor each pair of texts\nproduced by each pair of students"
+    "text": "4.1 The conceptual-population model\nAssuming that we can access to census data, that is:\n\n\n\nall repeated judgments\nmade by every available judge\nfor each pair of texts\nproduced by each pair of students"
   },
   {
     "objectID": "presentation.html#the-conceptual-population-model-1",
