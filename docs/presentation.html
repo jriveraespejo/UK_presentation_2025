@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-02-24">
+  <meta name="dcterms.date" content="2025-02-25">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -405,7 +405,7 @@ Cambridge, UK, 2025</p><p></p>
     </div>
 </div>
 
-  <p class="date">2025-02-24</p>
+  <p class="date">2025-02-25</p>
 </section>
 <section id="motivating-example" class="slide level2" style="font-size:80%;">
 <h2>1. Motivating example</h2>
@@ -750,9 +750,9 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
   T_{I} &amp; := f_{T}(X_{I}, e_{I}) \\
   B_{JK} &amp; := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
   B_{J} &amp; := f_{B}(Z_{J}, e_{J}) \\
-  e_{IA} &amp; \:\bot\:\{ e_{I}, e_{JK}, e_{J} \} \\
-  e_{I} &amp; \:\bot\:\{ e_{JK}, e_{J} \} \\
-  e_{JK} &amp; \:\bot\:e_{J}
+  e_{I} &amp; \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
+  e_{J} &amp; \:\bot\:\{ e_{IA}, e_{JK} \} \\
+  e_{IA} &amp; \:\bot\:e_{JK}
 \end{aligned}
 \]</span></p>
 </div>
@@ -799,9 +799,9 @@ Figure&nbsp;3: Conceptual-population model, final vectorized form. <em>Left pane
   T_{I} &amp; := f_{T}(X_{I}, e_{I}) \\
   B_{JK} &amp; := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
   B_{J} &amp; := f_{B}(Z_{J}, e_{J}) \\
-  e_{IA} &amp; \:\bot\:\{ e_{I}, e_{JK}, e_{J} \} \\
-  e_{I} &amp; \:\bot\:\{ e_{JK}, e_{J} \} \\
-  e_{JK} &amp; \:\bot\:e_{J}
+  e_{I} &amp; \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
+  e_{J} &amp; \:\bot\:\{ e_{IA}, e_{JK} \} \\
+  e_{IA} &amp; \:\bot\:e_{JK}
 \end{aligned}
 \]</span></p>
 </div>
@@ -825,16 +825,16 @@ Figure&nbsp;4: Sample-comparison model including sample and comparison mechanism
 <p><span class="math display">\[
 \begin{aligned}
   O_{RPUV} &amp; := f_{C}(O^{sc}_{RPUV}, C) \\
-  O^{sc}_{RPUV} &amp; := f_{S}(O^{cp}_{RPUV}, S_{RPUV}) \\
+  O^{sc}_{RPUV} &amp; := f_{S}(O^{cp}_{RPUV}, S) \\
   O^{cp}_{RPUV} &amp; := f_{O}(D_{RPUV}) \\
   D_{RPUV} &amp; := f_{D}(T_{IA}, B_{JK}) \\
   T_{IA} &amp; := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} &amp; := f_{T}(X_{I}, e_{I}) \\
   B_{JK} &amp; := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
   B_{J} &amp; := f_{B}(Z_{J}, e_{J}) \\
-  e_{IA} &amp; \:\bot\:\{ e_{I}, e_{JK}, e_{J} \} \\
-  e_{I} &amp; \:\bot\:\{ e_{JK}, e_{J} \} \\
-  e_{JK} &amp; \:\bot\:e_{J}
+  e_{I} &amp; := f_{e}(X_{I}) \\
+  e_{J} &amp; := f_{e}(Z_{J}) \\
+  e_{IA} &amp; \:\bot\:e_{JK}
 \end{aligned}
 \]</span></p>
 </div>
@@ -849,13 +849,12 @@ Figure&nbsp;4: Sample-comparison model including sample and comparison mechanism
   T_{I} &amp; = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} &amp; = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
   B_{J} &amp; = \beta_{ZJ} Z_{J} + e_{J} \\
+  e_{I} &amp; \sim \text{Normal}(0, \color{blue}{s_{XI}} ) \color{blue}{\longleftarrow} \\
+  e_{J} &amp; \sim \text{Normal}(0, \color{blue}{s_{ZJ}} ) \color{blue}{\longleftarrow} \\
   e_{IA} &amp; \sim \text{Normal}(0, p_{IA}) \\  
-  e_{I} &amp; \sim \text{Normal}(0, \color{blue}{s^{g}_{I}} ) \color{blue}{\longleftarrow} \\
-  e_{JK} &amp; \sim \text{Normal}(0, p_{JK}) \\
-  e_{J} &amp; \sim \text{Normal}(0, \color{blue}{s^{g}_{J}} ) \color{blue}{\longleftarrow} \\
-  \\
-  &amp; \text{contraints:} \\
-  &amp; \sum_{g=1}^{G_{I}} \color{blue}{s^{g}_{I}}/G_{I} = 1 ; \quad \sum_{g=1}^{G_{J}} \color{blue}{s^{g}_{J}}/G_{J} = 1
+  e_{JK} &amp; \sim \text{Normal}(0, p_{JK}) \\ \\
+  &amp; \textbf{Contraints:} \\
+  &amp; \sum_{g=1}^{G_{XI}} \color{blue}{s_{XI}}/G_{XI} = 1 ; \quad \sum_{g=1}^{G_{ZJ}} \color{blue}{s_{ZJ}}/G_{ZJ} = 1
 \end{aligned}
 \]</span></p>
 </div>
