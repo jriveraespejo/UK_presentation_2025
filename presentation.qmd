@@ -207,7 +207,7 @@ So, are the assumptions of **equal dispersion** and **zero correlation** violate
 
 ## Issue 1: Case V and statistical analysis {style="font-size:80%;"}
 
-But, what are problems with this?
+But, what are the problems with this?
 
 ::: {.fragment}
 a. Assuming equal dispersions, neglecting judges' biases and hierarchical structures
@@ -252,7 +252,7 @@ A measurement model specifies how manifest variables contribute to the estimatio
 
 ## Issue 2: Measurement and hypothesis tests {style="font-size:80%;"}
 
-But, what are problems with this?
+But, what are the problems with this?
 
 ::: {.fragment}
 This ignores the BTL scores' *uncertainty* (**measurement error**):

@@ -39,7 +39,7 @@
     "href": "presentation.html#issue-1-case-v-and-statistical-analysis-2",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "Issue 1: Case V and statistical analysis",
-    "text": "Issue 1: Case V and statistical analysis\nBut, what are problems with this?\n\n\nAssuming equal dispersions, neglecting judges’ biases and hierarchical structures\n\\(\\longrightarrow\\) over- or underestimation of trait’s reliability\n\\(\\longrightarrow\\) drawing spurious conclusions [7]\n\n\n\n\nConventional practice of discarding ‘misfit’ observations [3–6]\n\\(\\longrightarrow\\) discard valuable information\n\\(\\longrightarrow\\) introduce bias into trait estimates [7, 8]\n\\(\\longrightarrow\\) drawing spurious conclusions [7]"
+    "text": "Issue 1: Case V and statistical analysis\nBut, what are the problems with this?\n\n\nAssuming equal dispersions, neglecting judges’ biases and hierarchical structures\n\\(\\longrightarrow\\) over- or underestimation of trait’s reliability\n\\(\\longrightarrow\\) drawing spurious conclusions [7]\n\n\n\n\nConventional practice of discarding ‘misfit’ observations [3–6]\n\\(\\longrightarrow\\) discard valuable information\n\\(\\longrightarrow\\) introduce bias into trait estimates [7, 8]\n\\(\\longrightarrow\\) drawing spurious conclusions [7]"
   },
   {
     "objectID": "presentation.html#issue-2-measurement-and-hypothesis-tests",
@@ -53,7 +53,7 @@
     "href": "presentation.html#issue-2-measurement-and-hypothesis-tests-1",
     "title": "Let’s talk about Thurstone & Co.",
     "section": "Issue 2: Measurement and hypothesis tests",
-    "text": "Issue 2: Measurement and hypothesis tests\nBut, what are problems with this?\n\nThis ignores the BTL scores’ uncertainty (measurement error):\n\\(\\longrightarrow\\) introduce bias + reduce the precision of hypothesis tests [22, 23]\n\\(\\longrightarrow\\) diminish statistical power of tests\n\\(\\longrightarrow\\) increase likelihood of type-I or type-II errors [7]."
+    "text": "Issue 2: Measurement and hypothesis tests\nBut, what are the problems with this?\n\nThis ignores the BTL scores’ uncertainty (measurement error):\n\\(\\longrightarrow\\) introduce bias + reduce the precision of hypothesis tests [22, 23]\n\\(\\longrightarrow\\) diminish statistical power of tests\n\\(\\longrightarrow\\) increase likelihood of type-I or type-II errors [7]."
   },
   {
     "objectID": "presentation.html#extending-thurstones-general-form",
