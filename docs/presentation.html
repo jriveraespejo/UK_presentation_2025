@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-02-25">
+  <meta name="dcterms.date" content="2025-02-26">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -405,25 +405,31 @@ Cambridge, UK, 2025</p><p></p>
     </div>
 </div>
 
-  <p class="date">2025-02-25</p>
+  <p class="date">2025-02-26</p>
 </section>
 <section id="motivating-example" class="slide level2" style="font-size:80%;">
 <h2>1. Motivating example</h2>
 <div>
 <ol type="1">
 <li class="fragment"><p><strong>Research question:</strong> In a writing exercise, “To what extent do different teaching methods influence students’ ability to produce high-quality written texts?”</p></li>
-<li class="fragment"><p><strong>Method:</strong> Randomization and a CJ experiment</p></li>
-<li class="fragment"><p><strong>Estimand:</strong> “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?”</p></li>
+<li class="fragment"><p><strong>Method:</strong> Randomization and a CJ experiment. Specifically,</p></li>
+</ol>
+<div>
+<div style="font-size:80%;">
+<ul>
+<li class="fragment">Assign students to <strong>two</strong> different teaching method</li>
+<li class="fragment">Students will write preferably more than one text</li>
+<li class="fragment">We will collect these texts</li>
+<li class="fragment">We will assign judges to compare random pairs of texts</li>
+<li class="fragment">Judges will produce a dichotomous outcome, reflecting the relative quality of each text</li>
+</ul>
+</div>
+</div>
+<ol start="3" type="1">
+<li class="fragment"><strong>Estimand:</strong> “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?”</li>
 </ol>
 </div>
 <aside class="notes">
-<ul>
-<li>Assign students to <strong>two</strong> different teaching method <span class="math inline">\(X=\{1,2\}\)</span></li>
-<li>Students will write preferably more than one text</li>
-<li>We will collect these texts</li>
-<li>We will assign judges to compare random pairs of texts</li>
-<li>Judges will produce a dichotomous outcome, reflecting the relative quality of each text</li>
-</ul>
 <ol start="4" type="1">
 <li><p><strong>Estimator:</strong> the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">[<a href="#/references" role="doc-biblioref" onclick="">1</a>, <a href="#/references" role="doc-biblioref" onclick="">2</a>]</span></p></li>
 <li><p><strong>Estimates:</strong> BTL scores, or their transformations</p></li>
@@ -658,7 +664,7 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 </div>
 </div>
 <div class="fragment">
-<p>But, this ignores the BTL scores’ <strong>uncertainty</strong>, which cause <strong>measurement error</strong>:</p>
+<p>But, this ignores the BTL scores’ <em>uncertainty</em> (<strong>measurement error</strong>):</p>
 <p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">21</a>, <a href="#/references" role="doc-biblioref" onclick="">22</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> diminish statistical power of tests</p>
 <p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>.</p>
@@ -719,7 +725,7 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 </section>
 <section id="the-conceptual-population-model" class="slide level2" style="font-size:80%;">
 <h2>4.1 The conceptual-population model</h2>
-<p>Assuming that we can access to <strong>census data</strong>, that is:</p>
+<p>Assuming that we can access to a <strong>census of comparative data</strong>, that is:</p>
 <div>
 <div style="font-size:80%;">
 <ol type="a">

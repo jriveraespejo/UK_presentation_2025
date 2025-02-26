@@ -68,19 +68,23 @@ title-slide-attributes:
 ::: incremental
 1. **Research question:** In a writing exercise, "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
 
-2. **Method:** Randomization and a CJ experiment
+2. **Method:** Randomization and a CJ experiment. Specifically,
+
+::: incremental 
+::: {style="font-size:80%;"}
+- Assign students to **two** different teaching method
+- Students will write preferably more than one text
+- We will collect these texts
+- We will assign judges to compare random pairs of texts
+- Judges will produce a dichotomous outcome, reflecting the relative quality of each text
+:::
+:::
 
 3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
 :::
 
 
 ::: {.notes}
-- Assign students to **two** different teaching method $X=\{1,2\}$
-- Students will write preferably more than one text
-- We will collect these texts
-- We will assign judges to compare random pairs of texts
-- Judges will produce a dichotomous outcome, reflecting the relative quality of each text
-
 4. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
 
 5. **Estimates:** BTL scores, or their transformations
@@ -268,7 +272,7 @@ $\longrightarrow$ The literature uses BTL scores (**point estimates**), or their
 :::
 
 ::: {.fragment}
-But, this ignores the BTL scores' **uncertainty**, which cause **measurement error**:
+But, this ignores the BTL scores' *uncertainty* (**measurement error**):
 
 $\longrightarrow$ introduce bias + reduce the precision of hypothesis tests [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]
     
@@ -323,7 +327,7 @@ more systematic and integrated way
 
 ## 4.1 The conceptual-population model {style="font-size:80%;"}
 
-Assuming that we can access to **census data**, that is:
+Assuming that we can access to a **census of comparative data**, that is:
 
 ::: incremental
 ::: {style="font-size:80%;"}
