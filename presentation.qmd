@@ -72,9 +72,8 @@ title-slide-attributes:
 
 ::: incremental 
 ::: {style="font-size:80%;"}
-- Assign students to **two** different teaching method
+- Randomly assign students to **two** different teaching method
 - Students will write preferably more than one text
-- We will collect these texts
 - We will assign judges to compare random pairs of texts
 - Judges will produce a dichotomous outcome, reflecting the relative quality of each text
 :::
@@ -560,12 +559,12 @@ Naturally, the validity of causal claims now hinges on the assumption that these
 
 ::: incremental
 ::: {style="font-size:80%;"}
-a. "New" rules of thumb for sample sizes or number of comparisons (*if you're into this*)
+a. "New" rules of thumb for sample sizes or number of comparisons
 b. Are there benefits of adaptive comparative algorithms?
 c. Effects of predictor variables on students, texts, judges, and judgments
 d. Do repeated judgments bring benefits? (*repeated measures design* [@Lawson_2015, pp. 366-376])
 e. Are additive better than multiplicative judges' biases (akin to *discrimination* in 2-PL IRT model)
-f. How to work with random and non-random samples
+f. How to work with random and non-random samples [@Bareinboim_et_al_2014]
 g. **etc. etc. etc.**
 :::
 :::
