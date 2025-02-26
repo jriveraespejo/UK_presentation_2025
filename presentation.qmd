@@ -160,16 +160,17 @@ Circle the assumptions of **Case V**:
 
 So, are the assumptions of **equal dispersion** and **zero correlation** violated?
 
-::: incremental
+::: {.fragment}
 1. Thurstone: equal dispersion **may not be applicable** when researchers assess complex traits or heterogeneous stimuli, like texts!
 
     $\longrightarrow$ Evidence staring at us in the form of 'misfit' statistics?
-    
+
 ::: {.fragment style="text-align:center;"}
 ![](/images/discriminal_process.png){width=50%}
 :::
 
 :::
+
 
 ::: {.notes}
 **Equal dispersion:**
@@ -187,13 +188,12 @@ So, are the assumptions of **equal dispersion** and **zero correlation** violate
 1. Thurstone: equal dispersion **may not be applicable** when researchers assess complex traits or heterogeneous stimuli, like texts!
 
     $\longrightarrow$ Evidence staring at us in the form of 'misfit' statistics?
-
+    
 2. Zero correlation is **almost certainly invalid** in two scenarios: 
 
     $\longrightarrow$ when intricate aspects of texts generate judges' biases,
     
     $\longrightarrow$ when there is clustering in the texts
-
 
 ::: {.notes}
 **Zero correlation:**
@@ -202,32 +202,22 @@ So, are the assumptions of **equal dispersion** and **zero correlation** violate
 - the shared context created by additional hierarchical structures introduce dependencies between stimuli (clustering) **Not properly handled**
 :::
 
+
 ---
 
 ## Issue 1: Case V and statistical analysis {style="font-size:80%;"}
 
-But, what problems result from the violations of assumptions?
+But, what are problems with this?
 
-::: {#fig-thurstone_theory layout-ncol=2 style="text-align:center;"}
-
-![](/images/dispersion.png){width=100%}
-
-::: {.fragment .fade-left}
-![](/images/correlation.png){width=100%}
-:::
-
-The effect of dispersion discrepancies and stimuli correlation on the distribution of the discriminal difference. *Left panel* illustrates the effect of dispersion discrepancies. *Right panel* depicts the effect of stimuli correlation.
-:::
-
-::: {.notes}
-a. Different dispersions, neglecting judges' biases and hierarchical structures
+::: {.fragment}
+a. Assuming equal dispersions, neglecting judges' biases and hierarchical structures
     
-    $\longrightarrow$ reduce precision of parameter estimates
-    
-    $\longrightarrow$ overestimation of trait's reliability 
+    $\longrightarrow$ over- or underestimation of trait's reliability 
 
     $\longrightarrow$ drawing spurious conclusions [@McElreath_2020, pp. 370]
+:::
 
+::: {.fragment}
 b. Conventional practice of discarding 'misfit' observations [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018] 
 
     $\longrightarrow$ discard valuable information 
@@ -235,23 +225,7 @@ b. Conventional practice of discarding 'misfit' observations [@Pollitt_2012a; @P
     $\longrightarrow$ introduce bias into trait estimates [@Zimmerman_1994; @McElreath_2020, chap. 12]
     
     $\longrightarrow$ drawing spurious conclusions [@McElreath_2020, pp. 370]
-
-Left panel 
-
-- $\sigma^{2}_{A}$ remains fixed
-- $\rho = 0$
-
-Right panel
-
-- $\sigma^{2}_{A}$ and $\sigma^{2}_{B}$ remain fixed
 :::
-
-::: {.notes}
-
-    
-:::
-
-
 
 ---
 
@@ -270,8 +244,18 @@ $\longrightarrow$ The literature uses BTL scores (**point estimates**), or their
 :::
 :::
 
+::: {.notes}
+A measurement model specifies how manifest variables contribute to the estimation of latent variables [@Everitt_et_al_2010]
+:::
+
+---
+
+## Issue 2: Measurement and hypothesis tests {style="font-size:80%;"}
+
+But, what are problems with this?
+
 ::: {.fragment}
-But, this ignores the BTL scores' *uncertainty* (**measurement error**):
+This ignores the BTL scores' *uncertainty* (**measurement error**):
 
 $\longrightarrow$ introduce bias + reduce the precision of hypothesis tests [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]
     
@@ -280,9 +264,6 @@ $\longrightarrow$ diminish statistical power of tests
 $\longrightarrow$ increase likelihood of type-I or type-II errors [@McElreath_2020].
 :::
 
-::: {.notes}
-A measurement model specifies how manifest variables contribute to the estimation of latent variables [@Everitt_et_al_2010]
-:::
 
 ---
 
@@ -290,7 +271,7 @@ A measurement model specifies how manifest variables contribute to the estimatio
 
 So, it is intuitive to think that:
 
-::: {.fragment style="text-align:center;"}
+::: {.fragment style="text-align:center; font-size:80%;"}
 The outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
 :::
 
@@ -298,11 +279,14 @@ The outcome's ability to reflect the "true" differences between texts **_largely
 Thus:
 
 ::: incremental
-1. Strength measurement reliability and validity [@Perron_et_al_2015, pp. 2]
-2. Enhance the statistical accuracy of the hypotheses tests
+:::{style="font-size:80%;"}
+1. To address these issues
+2. Strength measurement reliability and validity [@Perron_et_al_2015, pp. 2]
+3. Enhance the statistical accuracy of the hypotheses tests
 :::
 :::
 
+:::
 
 ::: {.fragment}
 We use the **_structural approach to causal inference_** [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]
@@ -312,8 +296,10 @@ $\longrightarrow$ formally and graphically represent the (causal) structure of t
 Specifically, we developed:
 
 ::: incremental
+:::{style="font-size:80%;"}
 1. A **conceptual-population** model
 2. A **sample-comparison** model
+:::
 :::
 
 :::
@@ -516,7 +502,7 @@ b. [Judges and judgments]{style="color:blue;"}
 :::
 :::
 
-3. Clarify the **processes** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
+3. Clarify **two addional processes** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
 
 ::: incremental
 ::: {style="font-size:80%;"}

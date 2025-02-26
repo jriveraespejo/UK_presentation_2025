@@ -528,9 +528,9 @@ Table&nbsp;1: Thurstones cases and their asumptions
 <section id="issue-1-case-v-and-statistical-analysis" class="slide level2" style="font-size:80%;">
 <h2>Issue 1: Case V and statistical analysis</h2>
 <p>So, are the assumptions of <strong>equal dispersion</strong> and <strong>zero correlation</strong> violated?</p>
-<div>
+<div class="fragment">
 <ol type="1">
-<li class="fragment"><p>Thurstone: equal dispersion <strong>may not be applicable</strong> when researchers assess complex traits or heterogeneous stimuli, like texts!</p>
+<li><p>Thurstone: equal dispersion <strong>may not be applicable</strong> when researchers assess complex traits or heterogeneous stimuli, like texts!</p>
 <p><span class="math inline">\(\longrightarrow\)</span> Evidence staring at us in the form of ‘misfit’ statistics?</p></li>
 </ol>
 <div class="fragment" style="text-align:center;">
@@ -585,68 +585,22 @@ Table&nbsp;1: Thurstones cases and their asumptions
 </section>
 <section id="issue-1-case-v-and-statistical-analysis-2" class="slide level2" style="font-size:80%;">
 <h2>Issue 1: Case V and statistical analysis</h2>
-<p>But, what problems result from the violations of assumptions?</p>
-<div id="fig-thurstone_theory" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="./images/dispersion.png" style="width:100.0%"></p>
-</div>
-<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="./images/correlation.png" style="width:100.0%"></p>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on the distribution of the discriminal difference. <em>Left panel</em> illustrates the effect of dispersion discrepancies. <em>Right panel</em> depicts the effect of stimuli correlation.
-</figcaption>
-</figure>
-</div>
-<aside class="notes">
+<p>But, what are problems with this?</p>
+<div class="fragment">
 <ol type="a">
-<li><p>Different dispersions, neglecting judges’ biases and hierarchical structures</p>
-<p><span class="math inline">\(\longrightarrow\)</span> reduce precision of parameter estimates</p>
-<p><span class="math inline">\(\longrightarrow\)</span> overestimation of trait’s reliability</p>
+<li><p>Assuming equal dispersions, neglecting judges’ biases and hierarchical structures</p>
+<p><span class="math inline">\(\longrightarrow\)</span> over- or underestimation of trait’s reliability</p>
 <p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span></p></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="a">
 <li><p>Conventional practice of discarding ‘misfit’ observations <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">3</a>–<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> discard valuable information</p>
 <p><span class="math inline">\(\longrightarrow\)</span> introduce bias into trait estimates <span class="citation" data-cites="Zimmerman_1994 McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span></p></li>
 </ol>
-<p>Left panel</p>
-<ul>
-<li><span class="math inline">\(\sigma^{2}_{A}\)</span> remains fixed</li>
-<li><span class="math inline">\(\rho = 0\)</span></li>
-</ul>
-<p>Right panel</p>
-<ul>
-<li><span class="math inline">\(\sigma^{2}_{A}\)</span> and <span class="math inline">\(\sigma^{2}_{B}\)</span> remain fixed</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
 <section id="issue-2-measurement-and-hypothesis-tests" class="slide level2" style="font-size:80%;">
 <h2>Issue 2: Measurement and hypothesis tests</h2>
@@ -662,14 +616,8 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 </ul>
 </div>
 </div>
-<div class="fragment">
-<p>But, this ignores the BTL scores’ <em>uncertainty</em> (<strong>measurement error</strong>):</p>
-<p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">21</a>, <a href="#/references" role="doc-biblioref" onclick="">22</a>]</span></p>
-<p><span class="math inline">\(\longrightarrow\)</span> diminish statistical power of tests</p>
-<p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>.</p>
-</div>
 <aside class="notes">
-<p>A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p>
+<p>A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">21</a>]</span></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -682,19 +630,32 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
           display:block!important;
       }</style></aside>
 </section>
+<section id="issue-2-measurement-and-hypothesis-tests-1" class="slide level2" style="font-size:80%;">
+<h2>Issue 2: Measurement and hypothesis tests</h2>
+<p>But, what are problems with this?</p>
+<div class="fragment">
+<p>This ignores the BTL scores’ <em>uncertainty</em> (<strong>measurement error</strong>):</p>
+<p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">22</a>, <a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> diminish statistical power of tests</p>
+<p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>.</p>
+</div>
+</section>
 <section id="extending-thurstones-general-form" class="slide level2" style="font-size:80%;">
 <h2>4. Extending Thurstone’s general form</h2>
 <p>So, it is intuitive to think that:</p>
-<div class="fragment" style="text-align:center;">
+<div class="fragment" style="text-align:center; font-size:80%;">
 <p>The outcome’s ability to reflect the “true” differences between texts <strong><em>largely depends on the validity of the model’s assumptions</em></strong> <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">24</a>]</span>.</p>
 </div>
 <div class="fragment">
 <p>Thus:</p>
 <div>
+<div style="font-size:80%;">
 <ol type="1">
+<li class="fragment">To address these issues</li>
 <li class="fragment">Strength measurement reliability and validity <span class="citation" data-cites="Perron_et_al_2015">[<a href="#/references" role="doc-biblioref" onclick="">25</a>]</span></li>
 <li class="fragment">Enhance the statistical accuracy of the hypotheses tests</li>
 </ol>
+</div>
 </div>
 </div>
 <div class="fragment">
@@ -702,10 +663,12 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 <p><span class="math inline">\(\longrightarrow\)</span> formally and graphically represent the (causal) structure of the CJ system.</p>
 <p>Specifically, we developed:</p>
 <div>
+<div style="font-size:80%;">
 <ol type="1">
 <li class="fragment">A <strong>conceptual-population</strong> model</li>
 <li class="fragment">A <strong>sample-comparison</strong> model</li>
 </ol>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -764,7 +727,7 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Conceptual-population model, final vectorized form. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
+Figure&nbsp;2: Conceptual-population model, final vectorized form. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
 </figcaption>
 </figure>
 </div>
@@ -813,7 +776,7 @@ Figure&nbsp;3: Conceptual-population model, final vectorized form. <em>Left pane
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
+Figure&nbsp;3: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
 </figcaption>
 </figure>
 </div>
@@ -866,7 +829,7 @@ Figure&nbsp;4: Sample-comparison model including sample and comparison mechanism
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the sample-comparison SCM. <em>Right panel</em> depicts the statistical model.
+Figure&nbsp;4: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the sample-comparison SCM. <em>Right panel</em> depicts the statistical model.
 </figcaption>
 </figure>
 </div>
@@ -926,7 +889,7 @@ Figure&nbsp;5: Sample-comparison model including sample and comparison mechanism
 </div>
 </div>
 <ol start="3" type="1">
-<li class="fragment">Clarify the <strong>processes</strong> involved in CJ experiments <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span>:</li>
+<li class="fragment">Clarify <strong>two addional processes</strong> involved in CJ experiments <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span>:</li>
 </ol>
 <div>
 <div style="font-size:80%;">
@@ -1051,14 +1014,14 @@ Figure&nbsp;5: Sample-comparison model including sample and comparison mechanism
 <div id="ref-Gijsen_et_al_2021" class="csl-entry" role="listitem">
 <div class="csl-left-margin">20. </div><div class="csl-right-inline">Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a></div>
 </div>
+<div id="ref-Everitt_et_al_2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">Everitt B, Skrondal A (2010) <a href="">The cambridge dictionary of statistics</a>. Cambridge University Press</div>
+</div>
 <div id="ref-Kline_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
+<div class="csl-left-margin">22. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
 </div>
 <div id="ref-Hoyle_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
-</div>
-<div id="ref-Everitt_et_al_2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline">Everitt B, Skrondal A (2010) <a href="">The cambridge dictionary of statistics</a>. Cambridge University Press</div>
+<div class="csl-left-margin">23. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
 </div>
 <div id="ref-Kohler_et_al_2019" class="csl-entry" role="listitem">
 <div class="csl-left-margin">24. </div><div class="csl-right-inline">Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/<a href="https://doi.org/10.1146/annurev-statistics-030718-104951">https://doi.org/10.1146/annurev-statistics-030718-104951</a></div>
