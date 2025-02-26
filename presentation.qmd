@@ -66,7 +66,7 @@ title-slide-attributes:
 ## 1. Motivating example {style="font-size:80%;"}
 
 ::: incremental
-1. **Research question:** In a writing exercise, "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
+1. **Research question:** "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
 
 2. **Method:** Randomization and a CJ experiment. Specifically,
 
