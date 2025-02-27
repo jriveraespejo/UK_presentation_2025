@@ -75,15 +75,19 @@ title-slide-attributes:
 - Randomly assign students to **two** different teaching method
 - Students will write preferably more than one text
 - We will assign judges to compare random pairs of texts
-- Judges will produce a dichotomous outcome, reflecting the relative quality of each text
+- Judges will make more than one judgment (comparison)
+- Judges will produce a dichotomous outcome per comparison
+
+    $\longrightarrow$ reflecting the relative quality of each text
 :::
 :::
 
-3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
 :::
 
 
 ::: {.notes}
+3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
+
 4. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
 
 5. **Estimates:** BTL scores, or their transformations
