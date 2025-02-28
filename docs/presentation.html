@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-02-27">
+  <meta name="dcterms.date" content="2025-02-28">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -405,7 +405,7 @@ Cambridge, UK, 2025</p><p></p>
     </div>
 </div>
 
-  <p class="date">2025-02-27</p>
+  <p class="date">2025-02-28</p>
 </section>
 <section id="motivating-example" class="slide level2" style="font-size:80%;">
 <h2>1. Motivating example</h2>
@@ -586,21 +586,53 @@ Table&nbsp;1: Thurstones cases and their asumptions
 <section id="issue-1-case-v-and-statistical-analysis-2" class="slide level2" style="font-size:80%;">
 <h2>Issue 1: Case V and statistical analysis</h2>
 <p>But, what are the problems with this?</p>
-<div class="fragment">
+<div id="fig-thurstone_theory" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/dispersion.png" style="width:100.0%"></p>
+</div>
+<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./images/correlation.png" style="width:100.0%"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thurstone_theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on the distribution of the discriminal difference. <em>Left panel</em> illustrates the effect of dispersion discrepancies. <em>Right panel</em> depicts the effect of stimuli correlation.
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
 <ol type="a">
 <li><p>Assuming equal dispersions, neglecting judges’ biases and hierarchical structures</p>
 <p><span class="math inline">\(\longrightarrow\)</span> over- or underestimation of trait’s reliability</p>
 <p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span></p></li>
-</ol>
-</div>
-<div class="fragment">
-<ol start="2" type="a">
 <li><p>Conventional practice of discarding ‘misfit’ observations <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">3</a>–<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> discard valuable information</p>
 <p><span class="math inline">\(\longrightarrow\)</span> introduce bias into trait estimates <span class="citation" data-cites="Zimmerman_1994 McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span></p></li>
 </ol>
-</div>
+<p>Left panel</p>
+<ul>
+<li><span class="math inline">\(\sigma^{2}_{A}\)</span> remains fixed</li>
+<li><span class="math inline">\(\rho = 0\)</span></li>
+</ul>
+<p>Right panel</p>
+<ul>
+<li><span class="math inline">\(\sigma^{2}_{A}\)</span> and <span class="math inline">\(\sigma^{2}_{B}\)</span> remain fixed</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="issue-2-measurement-and-hypothesis-tests" class="slide level2" style="font-size:80%;">
 <h2>Issue 2: Measurement and hypothesis tests</h2>
@@ -633,12 +665,42 @@ Table&nbsp;1: Thurstones cases and their asumptions
 <section id="issue-2-measurement-and-hypothesis-tests-1" class="slide level2" style="font-size:80%;">
 <h2>Issue 2: Measurement and hypothesis tests</h2>
 <p>But, what are the problems with this?</p>
-<div class="fragment">
+<div id="fig-measurement_error" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-measurement_error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="./images/measurement_error1.png" style="width:100.0%"></p>
+</div>
+<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="./images/measurement_error2.png" style="width:100.0%"></p>
+</div>
+<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="./images/measurement_error3.png" style="width:100.0%"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement_error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The effect of measurement error on the estimation of a regression parameter <span class="math inline">\(\beta\)</span>. Measurement error increases from left to right.
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
 <p>This ignores the BTL scores’ <em>uncertainty</em> (<strong>measurement error</strong>):</p>
 <p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">22</a>, <a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> diminish statistical power of tests</p>
 <p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>.</p>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="extending-thurstones-general-form" class="slide level2" style="font-size:80%;">
 <h2>4. Extending Thurstone’s general form</h2>
@@ -727,7 +789,7 @@ Table&nbsp;1: Thurstones cases and their asumptions
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Conceptual-population model, final vectorized form. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
+Figure&nbsp;4: Conceptual-population model, final vectorized form. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
 </figcaption>
 </figure>
 </div>
@@ -776,7 +838,7 @@ Figure&nbsp;2: Conceptual-population model, final vectorized form. <em>Left pane
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
+Figure&nbsp;5: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the DAG. <em>Right panel </em> depicts the associated SCM.
 </figcaption>
 </figure>
 </div>
@@ -829,7 +891,7 @@ Figure&nbsp;3: Sample-comparison model including sample and comparison mechanism
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the sample-comparison SCM. <em>Right panel</em> depicts the statistical model.
+Figure&nbsp;6: Sample-comparison model including sample and comparison mechanisms. <em>Left panel</em> illustrates the sample-comparison SCM. <em>Right panel</em> depicts the statistical model.
 </figcaption>
 </figure>
 </div>
