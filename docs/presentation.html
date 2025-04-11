@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-04-09">
+  <meta name="dcterms.date" content="2025-04-12">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -406,7 +406,7 @@ UK, 2025</p><p></p>
     </div>
 </div>
 
-  <p class="date">2025-04-09</p>
+  <p class="date">2025-04-12</p>
 </section>
 <section id="motivating-example" class="slide level2" style="font-size:80%;">
 <h2>1. Motivating example</h2>
@@ -842,14 +842,50 @@ Figure&nbsp;5: Comparative judgment model. <em>Left panel</em> illustrates the D
 </figure>
 </div>
 </section>
-<section id="abandoning-the-btl-model" class="slide level2" style="font-size:80%;">
-<h2>5. Abandoning the BTL model</h2>
-<p>Using the SCM, we derive a statistical model to address violations of the equal dispersion assumption in CJ experiments:</p>
+<section id="from-scm-to-a-statistical-model" class="slide level2" style="font-size:80%;">
+<h2>5. From SCM to a statistical model</h2>
+<p>With the structure in the previous SCM, we can derive a statistical model that addresses violations of the equal dispersion assumption in CJ experiments.</p>
+<div>
+<div style="font-size:80%;">
+<ol type="a">
+<li class="fragment">This is possible because SCMs encodes functional and probabilistic information, which we can replace with appropriate functions and probabilistic assumptions <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">27</a>]</span>.</li>
+<li class="fragment">SCMs allows us to express the joint distribution of our complex CJ system as a product of simpler conditional probability distributions (CPDs)</li>
+</ol>
+</div>
+</div>
+<div class="fragment fade-left">
+<p><span class="math display">\[
+\begin{aligned}
+  P(O_{R}, &amp; S, C, D_{R}, T_{IA}, X_{IA}, e_{IA}, T_{I}, X_{I}, e_{I}, B_{JK}, Z_{JK}, e_{JK}, B_{J}, Z_{J}, e_{J} ) &amp; \\
+  &amp;= P(O_{R} \mid D_{R}, S, C) \cdot P(S) \cdot P(C) \cdot P(D_{R} \mid T_{IA}, B_{JK}) \\
+  &amp; \quad \cdot P(T_{IA} \mid T_{I}, X_{IA}, e_{IA}) \cdot P(T_{I} \mid X_{I}, e_{I}) \\
+  &amp; \quad \cdot P(B_{JK} \mid B_{J}, Z_{JK}, e_{JK}) \cdot P(B_{J} \mid Z_{J}, e_{J}) \\
+  &amp; \quad \cdot P(X_{IA}) \cdot P(X_{I}) \cdot P(Z_{JK}) \cdot P(Z_{J}) \\
+  &amp; \quad \cdot P(e_{IA}) \cdot P(e_{I}) \cdot P(e_{JK}) \cdot P(e_{J})  
+\end{aligned}
+\]</span></p>
+</div>
+<aside class="notes">
+<p>This re-expression is possible because the <em>chain rule</em> of probability and the <em>Bayesian Network Factorization (BNF)</em> property. For further details, see <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">27</a>]</span> and <span class="citation" data-cites="Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">29</a>]</span>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-scm-to-a-statistical-model-1" class="slide level2" style="font-size:80%;">
+<h2>5. From SCM to a statistical model</h2>
 <div id="fig-cj16" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cj16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
   O_{R} &amp; := f_{O}(D_{R}, S, C) \\
@@ -860,30 +896,46 @@ Figure&nbsp;5: Comparative judgment model. <em>Left panel</em> illustrates the D
   B_{J} &amp; := f_{B}(Z_{J}, e_{J}) \\
   e_{I} &amp; \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
   e_{J} &amp; \:\bot\:\{ e_{IA}, e_{JK} \} \\
-  e_{IA} &amp; \:\bot\:e_{JK}
+  e_{IA} &amp; \:\bot\:e_{JK} \\ \\
 \end{aligned}
 \]</span></p>
 </div>
-<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
-  O_{R} &amp; \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} \odot S \odot C ) \right] \\
+  &amp; P( O_{R} \mid D_{R}, S, C ) \cdot P(S) \cdot P(C) \\
+  &amp; P( D_{R} \mid T_{IA}, B_{JK} ) \\
+  &amp; P( T_{IA} \mid T_{I}, X_{IA}, e_{IA} ) \\
+  &amp; P( T_{I} \mid X_{I}, e_{I} ) \\
+  &amp; P( B_{JK} \mid B_{J}, Z_{JK}, e_{JK} ) \\
+  &amp; P( B_{J} \mid Z_{J}, e_{J} ) \\
+  &amp; P( e_{I} ) \\
+  &amp; P( e_{J} ) \\
+  &amp; P( e_{IA} ) \\  
+  &amp; P( e_{JK} )
+\end{aligned}
+\]</span></p>
+</div>
+<div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><span class="math display">\[
+\begin{aligned}
+  O_{R} &amp; \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} ) \right] \\
   D_{R} &amp; = \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
   T_{IA} &amp; = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} &amp; = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} &amp; = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
   B_{J} &amp; = \beta_{ZJ} Z_{J} + e_{J} \\
   e_{I} &amp; \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{XI}} ) \color{blue}{\longleftarrow} \\
-  e_{J} &amp; \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{ZJ}} ) \color{blue}{\longleftarrow} \\
-  e_{IA} &amp; \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
-  e_{JK} &amp; \overset{iid}{\sim} \text{Normal}(0, p_{JK})
+  e_{J} &amp; \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{XI}} ) \color{blue}{\longleftarrow} \\
+  e_{IA} &amp; \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{IA}} ) \color{blue}{\longleftarrow} \\  
+  e_{JK} &amp; \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{JK}} ) \color{blue}{\longleftarrow}
 \end{aligned}
 \]</span></p>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cj16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Comparative judgment model, SCM and statistical model assuming different discriminal dispersions for the student’s traits
+Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical model assuming different discriminal dispersions for the student’s traits
 </figcaption>
 </figure>
 </div>
@@ -892,12 +944,12 @@ Figure&nbsp;6: Comparative judgment model, SCM and statistical model assuming di
 <p>Constraints to anchor the scale of the latent trait <span class="citation" data-cites="Depaoli_2021">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span>:</p>
 </div>
 <p><span class="math display">\[
-\sum_{g=1}^{G} \color{blue}{s_{XI}}[g]/G = 1; \quad \sum_{g=1}^{G} \color{blue}{s_{ZJ}}[g]/G = 1
+\sum_{g=1}^{G} \color{blue}{s_{XI}}[g]/G = 1; \quad \sum_{g=1}^{G} \color{blue}{s_{ZJ}}[g]/G = 1; \quad 0 &lt; \color{blue}{p_{IA}} &lt; 1; \quad 0 &lt; \color{blue}{p_{JK}} &lt; 1
 \]</span></p>
 </div>
 </section>
-<section id="discussion-findings" class="slide level2" style="font-size:80%;">
-<h2>6.1 Discussion: Findings</h2>
+<section id="discussion" class="slide level2" style="font-size:80%;">
+<h2>6.1 Discussion</h2>
 <p>We have proposed a model that:</p>
 <div>
 <ol type="1">
@@ -935,8 +987,8 @@ Figure&nbsp;6: Comparative judgment model, SCM and statistical model assuming di
           display:block!important;
       }</style></aside>
 </section>
-<section id="discussion-findings-1" class="slide level2" style="font-size:80%;">
-<h2>6.1 Discussion: Findings</h2>
+<section id="discussion-1" class="slide level2" style="font-size:80%;">
+<h2>6.1 Discussion</h2>
 <p>We have proposed a model that:</p>
 <div>
 <ol start="2" type="1">
