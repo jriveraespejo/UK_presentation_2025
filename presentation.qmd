@@ -313,36 +313,56 @@ $\longrightarrow$ increase likelihood of type-I or type-II errors [@McElreath_20
 
 ## 4. Extending Thurstone's general form {style="font-size:80%;"}
 
-So, it is intuitive to think that:
+So, the outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
 
-::: {.fragment style="text-align:center; font-size:80%;"}
-The outcome's ability to reflect the "true" differences between texts **_largely depends on the validity of the model's assumptions_** [@Kohler_et_al_2019, pp. 150].
+::: incremental
++ Thus, we use **Causal inference** to address these issues and make relevant assumptions.
++ Specifically, we use **SCMs** and **DAGs** [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of the CJ system
 :::
 
 ::: {.fragment}
-Thus:
+Benefits:
 
 ::: incremental
 :::{style="font-size:80%;"}
-1. To address these issues
-2. Strength measurement reliability and validity [@Perron_et_al_2015, pp. 2]
-3. Enhance the statistical accuracy of the hypotheses tests
+1. They can represent causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2024]
+2. They depict causal relationships in a non-parametric way [@Pearl_et_al_2016]
+3. They are conceptual models on which **identification analysis** and **consistency** rests.
 :::
 :::
 
 :::
 
-::: {.fragment}
-We use the **_structural approach to causal inference_** [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]
 
-$\longrightarrow$ formally and graphically represent the (causal) structure of the CJ system. 
+::: {.notes}
+*Identification analysis* determines whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability [@Schuessler_et_al_2023]
+
+*Consistency* refers to the property of an estimator whose estimates converge to the "true" value of the estimand as the data size approaches infinity [@Everitt_et_al_2010]. 
+
+Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, consistency cannot be achieved, even with "infinite" and error-free data. Thus, deriving meaningful insights from finite data becomes impossible [@Schuessler_et_al_2023].
+:::
+
+
+---
+
+## 4. Extending Thurstone's general form {style="font-size:80%;"}
 
 Specifically, we developed:
 
 ::: incremental
-:::{style="font-size:80%;"}
 1. A **conceptual-population** model
 2. A **sample-comparison** model
+:::
+
+::: {.fragment}
+Benefits:
+
+::: incremental
+:::{style="font-size:80%;"}
+1. They clarify the interactions among all actors and processes involved in CJ experiments.
+2. They shift the current comparative data analysis paradigm from passively accepting the BTL model assumptions to actively testing whether those assumptions fit the data under analysis.
+2. They can strengthen measurement reliability and validity [@Perron_et_al_2015, pp. 2]
+3. They can enhance the statistical accuracy of the hypotheses tests
 :::
 :::
 
@@ -351,6 +371,7 @@ Specifically, we developed:
 ::: {.notes}
 more systematic and integrated way
 :::
+
 
 ---
 
@@ -451,13 +472,18 @@ Comparative judgment model. *Left panel* illustrates the DAG. *Right panel * dep
 
 ## 5. From SCM to a statistical model {style="font-size:80%;"}
 
-With the structure in the previous SCM, we can derive a statistical model that addresses violations of the equal dispersion assumption in CJ experiments. 
+Finally, with the structure in the previous SCM, we can derive a statistical model that addresses **violations of the equal dispersions' assumption**. 
+
+::: {.fragment}
+Why?
 
 ::: incremental
 ::: {style="font-size:80%;"}
-a. This is possible because SCMs encodes functional and probabilistic information, which we can replace with appropriate functions and probabilistic assumptions [@Pearl_et_al_2016]. 
-b. SCMs allows us to express the joint distribution of our complex CJ system as a product of simpler conditional probability distributions (CPDs)
+a. Because SCMs encodes functional and probabilistic information, which we can replace with appropriate functions and probabilistic assumptions [@Pearl_et_al_2016]. 
+b. Because SCMs allows us to express the joint distribution of our complex CJ system as a product of simpler conditional probability distributions (CPDs), in the form of:
 :::
+:::
+
 :::
 
 ::: {.fragment .fade-left}
@@ -518,14 +544,14 @@ $$
 ::: {.fragment .fade-left}
 $$
 \begin{aligned}
-  O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} ) \right] \\
+  O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv_logit}( D_{R} ) \right] \\
   D_{R} & = \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
   T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} & = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
   B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
   e_{I} & \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{XI}} ) \color{blue}{\longleftarrow} \\
-  e_{J} & \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{XI}} ) \color{blue}{\longleftarrow} \\
+  e_{J} & \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{ZJ}} ) \color{blue}{\longleftarrow} \\
   e_{IA} & \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{IA}} ) \color{blue}{\longleftarrow} \\  
   e_{JK} & \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{JK}} ) \color{blue}{\longleftarrow}
 \end{aligned}
