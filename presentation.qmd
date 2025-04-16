@@ -317,7 +317,7 @@ So, the outcome's ability to reflect the "true" differences between texts **_lar
 
 ::: incremental
 + Thus, we use **Causal inference** to address these issues and make relevant assumptions.
-+ Specifically, we use **SCMs** and **DAGs** [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of the CJ system
++ Particularly, we use **SCMs** and **DAGs** [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of the CJ system
 :::
 
 ::: {.fragment}
@@ -353,25 +353,6 @@ Specifically, we developed:
 1. A **conceptual-population** model
 2. A **sample-comparison** model
 :::
-
-::: {.fragment}
-Benefits:
-
-::: incremental
-:::{style="font-size:80%;"}
-1. They clarify the interactions among all actors and processes involved in CJ experiments.
-2. They shift the current comparative data analysis paradigm from passively accepting the BTL model assumptions to actively testing whether those assumptions fit the data under analysis.
-2. They can strengthen measurement reliability and validity [@Perron_et_al_2015, pp. 2]
-3. They can enhance the statistical accuracy of the hypotheses tests
-:::
-:::
-
-:::
-
-::: {.notes}
-more systematic and integrated way
-:::
-
 
 ---
 
@@ -577,7 +558,7 @@ $$
 We have proposed a model that:
 
 ::: incremental
-1. Shifts the analysis paradigm from *passively accepting* to *actively testing* whether the assumptions fit the data [@Kelly_et_al_2022, pp. 683]. Specifically, we have **lifted** the necessity of assuming: 
+1. Shifts the analysis paradigm from **passively accepting** to **actively testing** whether the assumptions fit the data [@Kelly_et_al_2022, pp. 683]. Specifically, we have **lifted** the necessity of assuming: 
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -615,7 +596,7 @@ b. [Judges and judgments]{style="color:blue;"}
 :::
 :::
 
-3. Clarify **two addional processes** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
+3. Clarify **two additional processes** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -624,6 +605,10 @@ a. The sample mechanism is a [**generator** of *missing data*]{style="color:blue
 b. The comparison mechanism is a [**generator** of *missing data*]{style="color:blue;"}. We can now use the missing data mechanisms MCAR, MAR, MNAR [@Rubin_1976]
 :::
 :::
+
+4. Can strengthen measurement reliability and validity [@Perron_et_al_2015, pp. 2]
+
+5. Can enhance the statistical accuracy of the hypotheses tests
 
 :::
 
