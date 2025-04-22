@@ -555,10 +555,54 @@ $$
 
 ## 6.1 Discussion {style="font-size:80%;"}
 
-We have proposed a model that:
+Benefits of the model:
+
+1. It can potentially enhance measurement reliability and validity [@Perron_et_al_2015, pp. 2]
+
+2. It can potentially improve the statistical accuracy of the hypotheses tests
+
+
+---
+
+## 6.1 Discussion {style="font-size:80%;"}
+
+Advantages of the model:
 
 ::: incremental
-1. Shifts the analysis paradigm from **passively accepting** to **actively testing** whether the assumptions fit the data [@Kelly_et_al_2022, pp. 683]. Specifically, we have **lifted** the necessity of assuming: 
+1. It clarifies the interactions **among all actors** within CJ experiments:
+
+::: incremental
+::: {style="font-size:80%;"}
+a. Students and texts
+b. [Judges and judgments]{style="color:blue;"}
+:::
+:::
+
+2. It clarifies **the processes** relevant to CJ experiments, particularly:
+
+::: incremental
+::: {style="font-size:80%;"}
+a. The sample mechanism as a [**generator** of *missing data*]{style="color:blue;"}. We can now use the missing data mechanisms MCAR, MAR, MNAR [@Rubin_1976]
+
+b. The comparison mechanism as a [**generator** of *missing data*]{style="color:blue;"}. We can now use the missing data mechanisms MCAR, MAR, MNAR [@Rubin_1976]
+:::
+:::
+
+:::
+
+
+::: {.notes }
+Together, advantages 1, 2 and 3 create a principled framework for evaluating best practices in CJ experimental designs--one that aligns better with the demands of contemporary CJ assessment contexts [@Kelly_et_al_2022].
+:::
+
+---
+
+## 6.1 Discussion {style="font-size:80%;"}
+
+Advantages of the model:
+
+::: incremental
+3. It shifts the analytic paradigm from **passively accepting** to **actively testing** whether the assumptions fit the data [@Kelly_et_al_2022, pp. 683]. Specifically, we have **lifted** the necessity of assuming: 
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -577,40 +621,11 @@ i. [Multidimensional traits$^{1}$]{style="color:blue;"}
 :::
 
 ::: {.notes }
+Together, advantages 1, 2 and 3 create a principled framework for evaluating best practices in CJ experimental designs--one that aligns better with the demands of contemporary CJ assessment contexts [@Kelly_et_al_2022].
+
 1. Stretching a bit the possibilities. Requires simulation analysis.
 :::
 
----
-
-## 6.1 Discussion {style="font-size:80%;"}
-
-We have proposed a model that:
-
-::: incremental
-2. Clarify interactions **among actors** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
-
-::: incremental
-::: {style="font-size:80%;"}
-a. Students and texts
-b. [Judges and judgments]{style="color:blue;"}
-:::
-:::
-
-3. Clarify **two additional processes** involved in CJ experiments [@Kelly_et_al_2022, pp. 683]:
-
-::: incremental
-::: {style="font-size:80%;"}
-a. The sample mechanism is a [**generator** of *missing data*]{style="color:blue;"}. We can now use the missing data mechanisms MCAR, MAR, MNAR [@Rubin_1976]
-
-b. The comparison mechanism is a [**generator** of *missing data*]{style="color:blue;"}. We can now use the missing data mechanisms MCAR, MAR, MNAR [@Rubin_1976]
-:::
-:::
-
-4. Can strengthen measurement reliability and validity [@Perron_et_al_2015, pp. 2]
-
-5. Can enhance the statistical accuracy of the hypotheses tests
-
-:::
 
 ---
 
