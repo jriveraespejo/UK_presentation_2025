@@ -67,17 +67,16 @@ title-slide-attributes:
 ## 1. Motivating example {style="font-size:80%;"}
 
 ::: incremental
-1. **Research question:** "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" 
+1. **Research question:** "To what extent do different teaching methods influence students' ability to produce high-quality written texts?"
 
 2. **Method:** Randomization and a CJ experiment. Specifically,
 
 ::: incremental 
 ::: {style="font-size:80%;"}
 - Randomly assign students to **two** different teaching method
-- Students will write preferably more than one text
-- We will assign judges to compare random pairs of texts
-- Judges will make more than one judgment (comparison)
-- Judges will produce a dichotomous outcome per comparison
+- Students will write preferably **more than one** text
+- Randomly assign judges to compare random pairs of texts
+- Judges will produce one dichotomous outcome per comparison
 
     $\longrightarrow$ reflecting the relative quality of each text
 :::
@@ -87,13 +86,11 @@ title-slide-attributes:
 
 
 ::: {.notes}
-3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?"
+3. **Estimand:** "*On average*, is there a difference in the ability to produce high-quality written texts between two groups of students?"
 
-4. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]
+3. **Estimator:** the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959], as it is customary.
 
-5. **Estimates:** BTL scores, or their transformations
-
-Following current CJ practices
+4. **Estimates:** BTL scores, or their transformations
 :::
 
 
@@ -156,6 +153,8 @@ Circle the assumptions of **Case V**:
 
 - Equal discriminal dispersion
 - Zero correlation
+
+The normal substitution has minimal impact on the model's estimation or interpretation because the discriminal process scale is arbitrary up to a non-monotonic transformation [@vanderLinden_et_al_2017_I; @McElreath_2021]
 :::
 
 
@@ -171,7 +170,7 @@ So, are the assumptions of **equal dispersion** and **zero correlation** violate
     $\longrightarrow$ Evidence staring at us in the form of 'misfit' statistics?
 
 ::: {.fragment style="text-align:center;"}
-![](/images/discriminal_process.png){width=50%}
+![](/images/diff_discriminal_dispersion.png){width=50%}
 :::
 
 :::

@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-04-22">
+  <meta name="dcterms.date" content="2025-04-23">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -406,7 +406,7 @@ UK, 2025</p><p></p>
     </div>
 </div>
 
-  <p class="date">2025-04-22</p>
+  <p class="date">2025-04-23</p>
 </section>
 <section id="motivating-example" class="slide level2" style="font-size:80%;">
 <h2>1. Motivating example</h2>
@@ -419,10 +419,9 @@ UK, 2025</p><p></p>
 <div style="font-size:80%;">
 <ul>
 <li class="fragment"><p>Randomly assign students to <strong>two</strong> different teaching method</p></li>
-<li class="fragment"><p>Students will write preferably more than one text</p></li>
-<li class="fragment"><p>We will assign judges to compare random pairs of texts</p></li>
-<li class="fragment"><p>Judges will make more than one judgment (comparison)</p></li>
-<li class="fragment"><p>Judges will produce a dichotomous outcome per comparison</p>
+<li class="fragment"><p>Students will write preferably <strong>more than one</strong> text</p></li>
+<li class="fragment"><p>Randomly assign judges to compare random pairs of texts</p></li>
+<li class="fragment"><p>Judges will produce one dichotomous outcome per comparison</p>
 <p><span class="math inline">\(\longrightarrow\)</span> reflecting the relative quality of each text</p></li>
 </ul>
 </div>
@@ -430,11 +429,10 @@ UK, 2025</p><p></p>
 </div>
 <aside class="notes">
 <ol start="3" type="1">
-<li><p><strong>Estimand:</strong> “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?”</p></li>
-<li><p><strong>Estimator:</strong> the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">[<a href="#/references" role="doc-biblioref" onclick="">1</a>, <a href="#/references" role="doc-biblioref" onclick="">2</a>]</span></p></li>
+<li><p><strong>Estimand:</strong> “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between two groups of students?”</p></li>
+<li><p><strong>Estimator:</strong> the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">[<a href="#/references" role="doc-biblioref" onclick="">1</a>, <a href="#/references" role="doc-biblioref" onclick="">2</a>]</span>, as it is customary.</p></li>
 <li><p><strong>Estimates:</strong> BTL scores, or their transformations</p></li>
 </ol>
-<p>Following current CJ practices</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -514,6 +512,7 @@ Table&nbsp;1: Thurstones cases and their asumptions
 <li>Equal discriminal dispersion</li>
 <li>Zero correlation</li>
 </ul>
+<p>The normal substitution has minimal impact on the model’s estimation or interpretation because the discriminal process scale is arbitrary up to a non-monotonic transformation <span class="citation" data-cites="vanderLinden_et_al_2017_I McElreath_2021">[<a href="#/references" role="doc-biblioref" onclick="">3</a>, <a href="#/references" role="doc-biblioref" onclick="">4</a>]</span></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -535,13 +534,13 @@ Table&nbsp;1: Thurstones cases and their asumptions
 <p><span class="math inline">\(\longrightarrow\)</span> Evidence staring at us in the form of ‘misfit’ statistics?</p></li>
 </ol>
 <div class="fragment" style="text-align:center;">
-<p><img data-src="./images/discriminal_process.png" style="width:50.0%"></p>
+<p><img data-src="./images/diff_discriminal_dispersion.png" style="width:50.0%"></p>
 </div>
 </div>
 <aside class="notes">
 <p><strong>Equal dispersion:</strong></p>
 <ul>
-<li>“misfits” texts are texts with more judgment discrepancies than others <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">3</a>–<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span></li>
+<li>“misfits” texts are texts with more judgment discrepancies than others <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">5</a>–<a href="#/references" role="doc-biblioref" onclick="">8</a>]</span></li>
 <li>“misfit” judges are judges who deviate substantially from the shared consensus.</li>
 </ul>
 <style type="text/css">
@@ -608,11 +607,11 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 <ol type="a">
 <li><p>Assuming equal dispersions, neglecting judges’ biases and hierarchical structures</p>
 <p><span class="math inline">\(\longrightarrow\)</span> over- or underestimation of trait’s reliability</p>
-<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span></p></li>
-<li><p>Conventional practice of discarding ‘misfit’ observations <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">3</a>–<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">9</a>]</span></p></li>
+<li><p>Conventional practice of discarding ‘misfit’ observations <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">5</a>–<a href="#/references" role="doc-biblioref" onclick="">8</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> discard valuable information</p>
-<p><span class="math inline">\(\longrightarrow\)</span> introduce bias into trait estimates <span class="citation" data-cites="Zimmerman_1994 McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>]</span></p>
-<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span></p></li>
+<p><span class="math inline">\(\longrightarrow\)</span> introduce bias into trait estimates <span class="citation" data-cites="Zimmerman_1994 McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">9</a>, <a href="#/references" role="doc-biblioref" onclick="">10</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> drawing spurious conclusions <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">9</a>]</span></p></li>
 </ol>
 <p>Left panel</p>
 <ul>
@@ -637,20 +636,20 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 </section>
 <section id="issue-2-measurement-and-hypothesis-tests" class="slide level2" style="font-size:80%;">
 <h2>Issue 2: Measurement and hypothesis tests</h2>
-<p>The BTL model serves as the <strong>measurement model</strong> for CJ <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018_thesis Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">4</a>–<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">9</a>–<a href="#/references" role="doc-biblioref" onclick="">13</a>]</span></p>
+<p>The BTL model serves as the <strong>measurement model</strong> for CJ <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018_thesis Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">6</a>–<a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">11</a>–<a href="#/references" role="doc-biblioref" onclick="">15</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> The literature uses BTL scores (<strong>point estimates</strong>), or their transformations, to conduct additional analyses, such as:</p>
 <div>
 <div style="font-size:80%;">
 <ul>
-<li class="fragment">Identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">4</a>–<a href="#/references" role="doc-biblioref" onclick="">6</a>]</span></li>
-<li class="fragment">Detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">[<a href="#/references" role="doc-biblioref" onclick="">4</a>, <a href="#/references" role="doc-biblioref" onclick="">14</a>]</span></li>
-<li class="fragment">Calculate correlations with other assessment methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">13</a>]</span>,</li>
-<li class="fragment">Test hypotheses related to the underlying trait of interest <span class="citation" data-cites="Casalicchio_et_al_2015 Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">[<a href="#/references" role="doc-biblioref" onclick="">13</a>, <a href="#/references" role="doc-biblioref" onclick="">15</a>–<a href="#/references" role="doc-biblioref" onclick="">20</a>]</span></li>
+<li class="fragment">Identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2016 Goossens_et_al_2018">[<a href="#/references" role="doc-biblioref" onclick="">6</a>–<a href="#/references" role="doc-biblioref" onclick="">8</a>]</span></li>
+<li class="fragment">Detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">[<a href="#/references" role="doc-biblioref" onclick="">6</a>, <a href="#/references" role="doc-biblioref" onclick="">16</a>]</span></li>
+<li class="fragment">Calculate correlations with other assessment methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">15</a>]</span>,</li>
+<li class="fragment">Test hypotheses related to the underlying trait of interest <span class="citation" data-cites="Casalicchio_et_al_2015 Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">[<a href="#/references" role="doc-biblioref" onclick="">15</a>, <a href="#/references" role="doc-biblioref" onclick="">17</a>–<a href="#/references" role="doc-biblioref" onclick="">22</a>]</span></li>
 </ul>
 </div>
 </div>
 <aside class="notes">
-<p>A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">21</a>]</span></p>
+<p>A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -688,9 +687,9 @@ Figure&nbsp;3: The effect of measurement error on the estimation of a regression
 </div>
 <aside class="notes">
 <p>This ignores the BTL scores’ <em>uncertainty</em> (<strong>measurement error</strong>):</p>
-<p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">22</a>, <a href="#/references" role="doc-biblioref" onclick="">23</a>]</span></p>
+<p><span class="math inline">\(\longrightarrow\)</span> introduce bias + reduce the precision of hypothesis tests <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">24</a>, <a href="#/references" role="doc-biblioref" onclick="">25</a>]</span></p>
 <p><span class="math inline">\(\longrightarrow\)</span> diminish statistical power of tests</p>
-<p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">7</a>]</span>.</p>
+<p><span class="math inline">\(\longrightarrow\)</span> increase likelihood of type-I or type-II errors <span class="citation" data-cites="McElreath_2020">[<a href="#/references" role="doc-biblioref" onclick="">9</a>]</span>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -705,11 +704,11 @@ Figure&nbsp;3: The effect of measurement error on the estimation of a regression
 </section>
 <section id="extending-thurstones-general-form" class="slide level2" style="font-size:80%;">
 <h2>4. Extending Thurstone’s general form</h2>
-<p>So, the outcome’s ability to reflect the “true” differences between texts <strong><em>largely depends on the validity of the model’s assumptions</em></strong> <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">24</a>]</span>.</p>
+<p>So, the outcome’s ability to reflect the “true” differences between texts <strong><em>largely depends on the validity of the model’s assumptions</em></strong> <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">26</a>]</span>.</p>
 <div>
 <ul>
 <li class="fragment">Thus, we use <strong>Causal inference</strong> to address these issues and make relevant assumptions.</li>
-<li class="fragment">Particularly, we use <strong>SCMs</strong> and <strong>DAGs</strong> <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Gross_et_al_2018 Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">25</a>–<a href="#/references" role="doc-biblioref" onclick="">28</a>]</span> to formally and graphically represent the assumed causal structure of the CJ system</li>
+<li class="fragment">Particularly, we use <strong>SCMs</strong> and <strong>DAGs</strong> <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Gross_et_al_2018 Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">27</a>–<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span> to formally and graphically represent the assumed causal structure of the CJ system</li>
 </ul>
 </div>
 <div class="fragment">
@@ -717,17 +716,17 @@ Figure&nbsp;3: The effect of measurement error on the estimation of a regression
 <div>
 <div style="font-size:80%;">
 <ol type="1">
-<li class="fragment">They can represent causal structures using only five fundamental building blocks <span class="citation" data-cites="Neal_2020 McElreath_2024">[<a href="#/references" role="doc-biblioref" onclick="">28</a>, <a href="#/references" role="doc-biblioref" onclick="">29</a>]</span></li>
-<li class="fragment">They depict causal relationships in a non-parametric way <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">26</a>]</span></li>
+<li class="fragment">They can represent causal structures using only five fundamental building blocks <span class="citation" data-cites="Neal_2020 McElreath_2024">[<a href="#/references" role="doc-biblioref" onclick="">30</a>, <a href="#/references" role="doc-biblioref" onclick="">31</a>]</span></li>
+<li class="fragment">They depict causal relationships in a non-parametric way <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">28</a>]</span></li>
 <li class="fragment">They are conceptual models on which <strong>identification analysis</strong> and <strong>consistency</strong> rests.</li>
 </ol>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p><em>Identification analysis</em> determines whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability <span class="citation" data-cites="Schuessler_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span></p>
-<p><em>Consistency</em> refers to the property of an estimator whose estimates converge to the “true” value of the estimand as the data size approaches infinity <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">21</a>]</span>.</p>
-<p>Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, consistency cannot be achieved, even with “infinite” and error-free data. Thus, deriving meaningful insights from finite data becomes impossible <span class="citation" data-cites="Schuessler_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span>.</p>
+<p><em>Identification analysis</em> determines whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability <span class="citation" data-cites="Schuessler_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">32</a>]</span></p>
+<p><em>Consistency</em> refers to the property of an estimator whose estimates converge to the “true” value of the estimand as the data size approaches infinity <span class="citation" data-cites="Everitt_et_al_2010">[<a href="#/references" role="doc-biblioref" onclick="">23</a>]</span>.</p>
+<p>Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, consistency cannot be achieved, even with “infinite” and error-free data. Thus, deriving meaningful insights from finite data becomes impossible <span class="citation" data-cites="Schuessler_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">32</a>]</span>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -852,7 +851,7 @@ Figure&nbsp;5: Comparative judgment model. <em>Left panel</em> illustrates the D
 <div>
 <div style="font-size:80%;">
 <ol type="a">
-<li class="fragment">Because SCMs encodes functional and probabilistic information, which we can replace with appropriate functions and probabilistic assumptions <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">26</a>]</span>.</li>
+<li class="fragment">Because SCMs encodes functional and probabilistic information, which we can replace with appropriate functions and probabilistic assumptions <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">28</a>]</span>.</li>
 <li class="fragment">Because SCMs allows us to express the joint distribution of our complex CJ system as a product of simpler conditional probability distributions (CPDs), in the form of:</li>
 </ol>
 </div>
@@ -871,7 +870,7 @@ Figure&nbsp;5: Comparative judgment model. <em>Left panel</em> illustrates the D
 \]</span></p>
 </div>
 <aside class="notes">
-<p>This re-expression is possible because the <em>chain rule</em> of probability and the <em>Bayesian Network Factorization (BNF)</em> property. For further details, see <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">26</a>]</span> and <span class="citation" data-cites="Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">28</a>]</span>.</p>
+<p>This re-expression is possible because the <em>chain rule</em> of probability and the <em>Bayesian Network Factorization (BNF)</em> property. For further details, see <span class="citation" data-cites="Pearl_et_al_2016">[<a href="#/references" role="doc-biblioref" onclick="">28</a>]</span> and <span class="citation" data-cites="Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -946,7 +945,7 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 </div>
 <div class="fragment">
 <div style="font-size:80%;">
-<p>Constraints to anchor the scale of the latent trait <span class="citation" data-cites="Depaoli_2021">[<a href="#/references" role="doc-biblioref" onclick="">31</a>]</span>:</p>
+<p>Constraints to anchor the scale of the latent trait <span class="citation" data-cites="Depaoli_2021">[<a href="#/references" role="doc-biblioref" onclick="">33</a>]</span>:</p>
 </div>
 <p><span class="math display">\[
 \sum_{g=1}^{G} \color{blue}{s_{XI}}[g]/G = 1; \quad \sum_{g=1}^{G} \color{blue}{s_{ZJ}}[g]/G = 1; \quad 0 &lt; \color{blue}{p_{IA}} &lt; 1; \quad 0 &lt; \color{blue}{p_{JK}} &lt; 1
@@ -957,7 +956,7 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <h2>6.1 Discussion</h2>
 <p>Benefits of the model:</p>
 <ol type="1">
-<li><p>It can potentially enhance measurement reliability and validity <span class="citation" data-cites="Perron_et_al_2015">[<a href="#/references" role="doc-biblioref" onclick="">32</a>]</span></p></li>
+<li><p>It can potentially enhance measurement reliability and validity <span class="citation" data-cites="Perron_et_al_2015">[<a href="#/references" role="doc-biblioref" onclick="">34</a>]</span></p></li>
 <li><p>It can potentially improve the statistical accuracy of the hypotheses tests</p></li>
 </ol>
 </section>
@@ -982,14 +981,14 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <div>
 <div style="font-size:80%;">
 <ol type="a">
-<li class="fragment"><p>The sample mechanism as a <span style="color:blue;"><strong>generator</strong> of <em>missing data</em></span>. We can now use the missing data mechanisms MCAR, MAR, MNAR <span class="citation" data-cites="Rubin_1976">[<a href="#/references" role="doc-biblioref" onclick="">33</a>]</span></p></li>
-<li class="fragment"><p>The comparison mechanism as a <span style="color:blue;"><strong>generator</strong> of <em>missing data</em></span>. We can now use the missing data mechanisms MCAR, MAR, MNAR <span class="citation" data-cites="Rubin_1976">[<a href="#/references" role="doc-biblioref" onclick="">33</a>]</span></p></li>
+<li class="fragment"><p>The sample mechanism as a <span style="color:blue;"><strong>generator</strong> of <em>missing data</em></span>. We can now use the missing data mechanisms MCAR, MAR, MNAR <span class="citation" data-cites="Rubin_1976">[<a href="#/references" role="doc-biblioref" onclick="">35</a>]</span></p></li>
+<li class="fragment"><p>The comparison mechanism as a <span style="color:blue;"><strong>generator</strong> of <em>missing data</em></span>. We can now use the missing data mechanisms MCAR, MAR, MNAR <span class="citation" data-cites="Rubin_1976">[<a href="#/references" role="doc-biblioref" onclick="">35</a>]</span></p></li>
 </ol>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>Together, advantages 1, 2 and 3 create a principled framework for evaluating best practices in CJ experimental designs–one that aligns better with the demands of contemporary CJ assessment contexts <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">34</a>]</span>.</p>
+<p>Together, advantages 1, 2 and 3 create a principled framework for evaluating best practices in CJ experimental designs–one that aligns better with the demands of contemporary CJ assessment contexts <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">36</a>]</span>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1007,7 +1006,7 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <p>Advantages of the model:</p>
 <div>
 <ol start="3" type="1">
-<li class="fragment">It shifts the analytic paradigm from <strong>passively accepting</strong> to <strong>actively testing</strong> whether the assumptions fit the data <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">34</a>]</span>. Specifically, we have <strong>lifted</strong> the necessity of assuming:</li>
+<li class="fragment">It shifts the analytic paradigm from <strong>passively accepting</strong> to <strong>actively testing</strong> whether the assumptions fit the data <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">36</a>]</span>. Specifically, we have <strong>lifted</strong> the necessity of assuming:</li>
 </ol>
 <div>
 <div style="font-size:80%;">
@@ -1026,7 +1025,7 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 </div>
 </div>
 <aside class="notes">
-<p>Together, advantages 1, 2 and 3 create a principled framework for evaluating best practices in CJ experimental designs–one that aligns better with the demands of contemporary CJ assessment contexts <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">34</a>]</span>.</p>
+<p>Together, advantages 1, 2 and 3 create a principled framework for evaluating best practices in CJ experimental designs–one that aligns better with the demands of contemporary CJ assessment contexts <span class="citation" data-cites="Kelly_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">36</a>]</span>.</p>
 <ol type="1">
 <li>Stretching a bit the possibilities. Requires simulation analysis.</li>
 </ol>
@@ -1055,8 +1054,8 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 </ol>
 </div>
 <aside class="notes">
-<p>a <em>sufficient adjustment</em> set of variables (potentially an empty set) refers to those that satisfy the <em>backdoor criterion</em> <span class="citation" data-cites="Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">28</a>]</span>, that is, variables that block all non-causal paths without introducing new ones <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Morgan_et_al_2014">[<a href="#/references" role="doc-biblioref" onclick="">25</a>, <a href="#/references" role="doc-biblioref" onclick="">26</a>, <a href="#/references" role="doc-biblioref" onclick="">35</a>]</span>.</p>
-<p>Naturally, the validity of causal claims now hinges on the assumption that these variables serve as a sufficient adjustment set, a property that cannot be guaranteed for any variable. Nevertheless, as <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">24</a>]</span> noted, drawing conclusions about the real world from observed data inevitably requires assumptions, and these requirements hold true for both observational and experimental data.</p>
+<p>a <em>sufficient adjustment</em> set of variables (potentially an empty set) refers to those that satisfy the <em>backdoor criterion</em> <span class="citation" data-cites="Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span>, that is, variables that block all non-causal paths without introducing new ones <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Morgan_et_al_2014">[<a href="#/references" role="doc-biblioref" onclick="">27</a>, <a href="#/references" role="doc-biblioref" onclick="">28</a>, <a href="#/references" role="doc-biblioref" onclick="">37</a>]</span>.</p>
+<p>Naturally, the validity of causal claims now hinges on the assumption that these variables serve as a sufficient adjustment set, a property that cannot be guaranteed for any variable. Nevertheless, as <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">26</a>]</span> noted, drawing conclusions about the real world from observed data inevitably requires assumptions, and these requirements hold true for both observational and experimental data.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1083,9 +1082,9 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <li class="fragment">“New” rules of thumb for sample sizes or number of comparisons</li>
 <li class="fragment">Are there benefits of adaptive comparative algorithms?</li>
 <li class="fragment">Effects of predictor variables on students, texts, judges, and judgments</li>
-<li class="fragment">Do repeated judgments bring benefits? (<em>repeated measures design</em> <span class="citation" data-cites="Lawson_2015">[<a href="#/references" role="doc-biblioref" onclick="">36</a>]</span>)</li>
+<li class="fragment">Do repeated judgments bring benefits? (<em>repeated measures design</em> <span class="citation" data-cites="Lawson_2015">[<a href="#/references" role="doc-biblioref" onclick="">38</a>]</span>)</li>
 <li class="fragment">Are additive better than multiplicative judges’ biases (akin to <em>discrimination</em> in 2-PL IRT model)</li>
-<li class="fragment">How to work with random and non-random samples <span class="citation" data-cites="Bareinboim_et_al_2014">[<a href="#/references" role="doc-biblioref" onclick="">37</a>]</span></li>
+<li class="fragment">How to work with random and non-random samples <span class="citation" data-cites="Bareinboim_et_al_2014">[<a href="#/references" role="doc-biblioref" onclick="">39</a>]</span></li>
 <li class="fragment"><strong>etc. etc. etc.</strong></li>
 </ol>
 </div>
@@ -1101,110 +1100,116 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <div id="ref-Luce_1959" class="csl-entry" role="listitem">
 <div class="csl-left-margin">2. </div><div class="csl-right-inline">Luce R (1959) On the possible psychophysical laws. The Psychologcal Review 66(2):482–499. <a href="https://doi.org/10.1037/h0043178">https://doi.org/10.1037/h0043178</a></div>
 </div>
+<div id="ref-vanderLinden_et_al_2017_I" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">van der Linden W (2017) <a href="">Handbook of item response theory: models</a>. CRC Press</div>
+</div>
+<div id="ref-McElreath_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">McElreath R (2021) Science before statistics: Causal inference</div>
+</div>
 <div id="ref-Pollitt_2012a" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Pollitt A (2012) Comparative judgement for assessment. International Journal of Technology and Design Education 22(2):157--170. <a href="https://doi.org/10.1007/s10798-011-9189-x">https://doi.org/10.1007/s10798-011-9189-x</a></div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Pollitt A (2012) Comparative judgement for assessment. International Journal of Technology and Design Education 22(2):157--170. <a href="https://doi.org/10.1007/s10798-011-9189-x">https://doi.org/10.1007/s10798-011-9189-x</a></div>
 </div>
 <div id="ref-Pollitt_2012b" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Pollitt A (2012) The method of adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 19(3):281--300. <a href="https://doi.org/10.1080/0969594X.2012.665354">https://doi.org/10.1080/0969594X.2012.665354</a></div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Pollitt A (2012) The method of adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 19(3):281--300. <a href="https://doi.org/10.1080/0969594X.2012.665354">https://doi.org/10.1080/0969594X.2012.665354</a></div>
 </div>
 <div id="ref-vanDaal_et_al_2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, Donche V, De Maeyer S (2016) Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus. Assessment in Education: Principles, Policy &amp; Practice 26(1):59–74. <a href="https://doi.org/10.1080/0969594X.2016.1253542">https://doi.org/10.1080/0969594X.2016.1253542</a></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, Donche V, De Maeyer S (2016) Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus. Assessment in Education: Principles, Policy &amp; Practice 26(1):59–74. <a href="https://doi.org/10.1080/0969594X.2016.1253542">https://doi.org/10.1080/0969594X.2016.1253542</a></div>
 </div>
 <div id="ref-Goossens_et_al_2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Goossens M, De Maeyer S (2018) <a href="https://doi.org/10.1007/978-3-319-97807-9_2">How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement</a>. In: Ras E, Guerrero Roldán A (eds) Technology enhanced assessment. Springer International Publishing, pp 13–25</div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Goossens M, De Maeyer S (2018) <a href="https://doi.org/10.1007/978-3-319-97807-9_2">How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement</a>. In: Ras E, Guerrero Roldán A (eds) Technology enhanced assessment. Springer International Publishing, pp 13–25</div>
 </div>
 <div id="ref-McElreath_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">McElreath R (2020) <a href="">Statistical rethinking: A bayesian course with examples in r and STAN</a>. Chapman; Hall/CRC</div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">McElreath R (2020) <a href="">Statistical rethinking: A bayesian course with examples in r and STAN</a>. Chapman; Hall/CRC</div>
 </div>
 <div id="ref-Zimmerman_1994" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Zimmerman D (1994) A note on the influence of outliers on parametric and nonparametric tests. The Journal of General Psychology 121(4):391–401. <a href="https://doi.org/10.1080/00221309.1994.9921213">https://doi.org/10.1080/00221309.1994.9921213</a></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Zimmerman D (1994) A note on the influence of outliers on parametric and nonparametric tests. The Journal of General Psychology 121(4):391–401. <a href="https://doi.org/10.1080/00221309.1994.9921213">https://doi.org/10.1080/00221309.1994.9921213</a></div>
 </div>
 <div id="ref-Laming_2004" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Laming D (2004) Marking university examinations: Some lessons from psychophysics. Psychology Learning &amp; Teaching 3(2):89–96. <a href="https://doi.org/10.2304/plat.2003.3.2.89">https://doi.org/10.2304/plat.2003.3.2.89</a></div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Laming D (2004) Marking university examinations: Some lessons from psychophysics. Psychology Learning &amp; Teaching 3(2):89–96. <a href="https://doi.org/10.2304/plat.2003.3.2.89">https://doi.org/10.2304/plat.2003.3.2.89</a></div>
 </div>
 <div id="ref-Whitehouse_2012" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Whitehouse C (2012) <a href="https://filestore.aqa.org.uk/content/research/CERP_RP_CW_24102012_0.pdf?download=1">Testing the validity of judgements about geography essays using the adaptive comparative judgement method</a></div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Whitehouse C (2012) <a href="https://filestore.aqa.org.uk/content/research/CERP_RP_CW_24102012_0.pdf?download=1">Testing the validity of judgements about geography essays using the adaptive comparative judgement method</a></div>
 </div>
 <div id="ref-Lesterhuis_2018_thesis" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Lesterhuis M (2018) <a href="https://hdl.handle.net/10067/1548280151162165141">The validity of comparative judgement for assessing text quality: An assessor’s perspective</a>. PhD thesis, University of Antwerp</div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Lesterhuis M (2018) <a href="https://hdl.handle.net/10067/1548280151162165141">The validity of comparative judgement for assessing text quality: An assessor’s perspective</a>. PhD thesis, University of Antwerp</div>
 </div>
 <div id="ref-Coertjens_et_al_2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Coertjens L, Lesterhuis M, Verhavert S, Van Gasse R, De Maeyer S (2017) <a href="">Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering</a>. Pedagogische Studien 94:283–303</div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Coertjens L, Lesterhuis M, Verhavert S, Van Gasse R, De Maeyer S (2017) <a href="">Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering</a>. Pedagogische Studien 94:283–303</div>
 </div>
 <div id="ref-Bouwer_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Bouwer R, Lesterhuis M, De Smedt F, Van Keer H, De Maeyer S (2023) Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement. Journal of Writing Research 15(3):497–518. <a href="https://doi.org/10.17239/jowr-2024.15.03.03">https://doi.org/10.17239/jowr-2024.15.03.03</a></div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Bouwer R, Lesterhuis M, De Smedt F, Van Keer H, De Maeyer S (2023) Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement. Journal of Writing Research 15(3):497–518. <a href="https://doi.org/10.17239/jowr-2024.15.03.03">https://doi.org/10.17239/jowr-2024.15.03.03</a></div>
 </div>
 <div id="ref-Pollitt_et_al_2003" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Pollitt A, Elliott G (2003) <a href="https://www.cambridgeassessment.org.uk/Images/109707-monitoring-and-investigating-comparability-a-proper-role-for-human-judgement.pdf">Finding a proper role for human judgement in the examination system.</a></div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Pollitt A, Elliott G (2003) <a href="https://www.cambridgeassessment.org.uk/Images/109707-monitoring-and-investigating-comparability-a-proper-role-for-human-judgement.pdf">Finding a proper role for human judgement in the examination system.</a></div>
 </div>
 <div id="ref-Casalicchio_et_al_2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Casalicchio G, Tutz G, Schauberger G (2015) Subject-specific bradley–terry–luce models with implicit variable selection. Statistical Modelling 15(6):526–547. <a href="https://doi.org/10.1177/1471082X15571817">https://doi.org/10.1177/1471082X15571817</a></div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Casalicchio G, Tutz G, Schauberger G (2015) Subject-specific bradley–terry–luce models with implicit variable selection. Statistical Modelling 15(6):526–547. <a href="https://doi.org/10.1177/1471082X15571817">https://doi.org/10.1177/1471082X15571817</a></div>
 </div>
 <div id="ref-Bramley_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 71(9):1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a></div>
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 71(9):1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a></div>
 </div>
 <div id="ref-Boonen_et_al_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Boonen N, Kloots H, Gillis S (2020) Rating the overall speech quality of hearing-impaired children by means of comparative judgements. Journal of Communication Disorders 83:1675–1687. <a href="https://doi.org/10.1016/j.jcomdis.2019.105969">https://doi.org/10.1016/j.jcomdis.2019.105969</a></div>
+<div class="csl-left-margin">19. </div><div class="csl-right-inline">Boonen N, Kloots H, Gillis S (2020) Rating the overall speech quality of hearing-impaired children by means of comparative judgements. Journal of Communication Disorders 83:1675–1687. <a href="https://doi.org/10.1016/j.jcomdis.2019.105969">https://doi.org/10.1016/j.jcomdis.2019.105969</a></div>
 </div>
 <div id="ref-vanDaal_et_al_2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, van de Kamp MT, Donche V, De Maeyer S (2017) The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy. Frontiers in Education 2. <a href="https://doi.org/10.3389/feduc.2017.00044">https://doi.org/10.3389/feduc.2017.00044</a></div>
+<div class="csl-left-margin">20. </div><div class="csl-right-inline">van Daal T, Lesterhuis M, Coertjens L, van de Kamp MT, Donche V, De Maeyer S (2017) The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy. Frontiers in Education 2. <a href="https://doi.org/10.3389/feduc.2017.00044">https://doi.org/10.3389/feduc.2017.00044</a></div>
 </div>
 <div id="ref-Jones_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline">Jones I, Bisson M, Gilmore C, Inglis M (2019) Measuring conceptual understanding in randomised controlled trials: Can comparative judgement help? British Educational Research Journal 45(3):662–680. <a href="https://doi.org/10.1002/berj.3519">https://doi.org/10.1002/berj.3519</a></div>
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">Jones I, Bisson M, Gilmore C, Inglis M (2019) Measuring conceptual understanding in randomised controlled trials: Can comparative judgement help? British Educational Research Journal 45(3):662–680. <a href="https://doi.org/10.1002/berj.3519">https://doi.org/10.1002/berj.3519</a></div>
 </div>
 <div id="ref-Gijsen_et_al_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline">Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a></div>
+<div class="csl-left-margin">22. </div><div class="csl-right-inline">Gijsen M, van Daal T, Lesterhuis M, Gijbels D, De Maeyer S (2021) The complexity of comparative judgments in assessing argumentative writing: An eye tracking study. Frontiers in Education 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a></div>
 </div>
 <div id="ref-Everitt_et_al_2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline">Everitt B, Skrondal A (2010) <a href="">The cambridge dictionary of statistics</a>. Cambridge University Press</div>
+<div class="csl-left-margin">23. </div><div class="csl-right-inline">Everitt B, Skrondal A (2010) <a href="">The cambridge dictionary of statistics</a>. Cambridge University Press</div>
 </div>
 <div id="ref-Kline_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline">Kline R (2023) <a href="">Principles and practice of structural equation modeling</a>. Guilford Press</div>
 </div>
 <div id="ref-Hoyle_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline">Hoyle R(eds) (2023) <a href="">Handbook of structural equation modeling</a>. Guilford Press</div>
 </div>
 <div id="ref-Kohler_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline">Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/<a href="https://doi.org/10.1146/annurev-statistics-030718-104951">https://doi.org/10.1146/annurev-statistics-030718-104951</a></div>
+<div class="csl-left-margin">26. </div><div class="csl-right-inline">Kohler U, Kreuter F, Stuart E (2019) Nonprobability sampling and causal analysis. Annual Review of Statistics and Its Application 6:149–172. https://doi.org/<a href="https://doi.org/10.1146/annurev-statistics-030718-104951">https://doi.org/10.1146/annurev-statistics-030718-104951</a></div>
 </div>
 <div id="ref-Pearl_2009" class="csl-entry" role="listitem">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline">Pearl J (2009) <a href="">Causality: Models, reasoning and inference</a>. Cambrige University Press</div>
+<div class="csl-left-margin">27. </div><div class="csl-right-inline">Pearl J (2009) <a href="">Causality: Models, reasoning and inference</a>. Cambrige University Press</div>
 </div>
 <div id="ref-Pearl_et_al_2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline">Pearl J, Glymour M, Jewell N (2016) <a href="">Causal inference in statistics: A primer</a>. John Wiley &amp; Sons, Inc.</div>
+<div class="csl-left-margin">28. </div><div class="csl-right-inline">Pearl J, Glymour M, Jewell N (2016) <a href="">Causal inference in statistics: A primer</a>. John Wiley &amp; Sons, Inc.</div>
 </div>
 <div id="ref-Gross_et_al_2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline">Gross J, Yellen J, Anderson M (2018) <a href="https://doi.org/10.1201/9780429425134 ">Graph theory and its applications</a>. Chapman; Hall/CRC</div>
+<div class="csl-left-margin">29. </div><div class="csl-right-inline">Gross J, Yellen J, Anderson M (2018) <a href="https://doi.org/10.1201/9780429425134 ">Graph theory and its applications</a>. Chapman; Hall/CRC</div>
 </div>
 <div id="ref-Neal_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline">Neal B (2020) <a href="https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf">Introduction to causal inference from a machine learning perspective</a></div>
+<div class="csl-left-margin">30. </div><div class="csl-right-inline">Neal B (2020) <a href="https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf">Introduction to causal inference from a machine learning perspective</a></div>
 </div>
 <div id="ref-McElreath_2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline">McElreath R (2024) <a href="https://github.com/rmcelreath/stat\_rethinking\_2024">Statistical rethinking, 2024 course</a></div>
+<div class="csl-left-margin">31. </div><div class="csl-right-inline">McElreath R (2024) <a href="https://github.com/rmcelreath/stat\_rethinking\_2024">Statistical rethinking, 2024 course</a></div>
 </div>
 <div id="ref-Schuessler_et_al_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline">Schuessler J, Selb P (2023) Graphical causal models for survey inference. Sociological Methods and Research 0(0). <a href="https://doi.org/10.1177/00491241231176851">https://doi.org/10.1177/00491241231176851</a></div>
+<div class="csl-left-margin">32. </div><div class="csl-right-inline">Schuessler J, Selb P (2023) Graphical causal models for survey inference. Sociological Methods and Research 0(0). <a href="https://doi.org/10.1177/00491241231176851">https://doi.org/10.1177/00491241231176851</a></div>
 </div>
 <div id="ref-Depaoli_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">31. </div><div class="csl-right-inline">Depaoli S (2021) <a href="">Bayesian structural equation modeling</a>. The Guilford Press</div>
+<div class="csl-left-margin">33. </div><div class="csl-right-inline">Depaoli S (2021) <a href="">Bayesian structural equation modeling</a>. The Guilford Press</div>
 </div>
 <div id="ref-Perron_et_al_2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline">Perron B, Gillespie D (2015) <a href="https://doi.org/10.1093/acprof:oso/9780199855483.003.0004"><span class="nocase">Reliability and Measurement Error</span></a>. In: <span class="nocase">Key Concepts in Measurement</span>. Oxford University Press</div>
+<div class="csl-left-margin">34. </div><div class="csl-right-inline">Perron B, Gillespie D (2015) <a href="https://doi.org/10.1093/acprof:oso/9780199855483.003.0004"><span class="nocase">Reliability and Measurement Error</span></a>. In: <span class="nocase">Key Concepts in Measurement</span>. Oxford University Press</div>
 </div>
 <div id="ref-Rubin_1976" class="csl-entry" role="listitem">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline">Rubin D (1976) Inference and missing data. Biometrika 63(3):581–592. <a href="https://doi.org/10.1093/biomet/63.3.581">https://doi.org/10.1093/biomet/63.3.581</a></div>
+<div class="csl-left-margin">35. </div><div class="csl-right-inline">Rubin D (1976) Inference and missing data. Biometrika 63(3):581–592. <a href="https://doi.org/10.1093/biomet/63.3.581">https://doi.org/10.1093/biomet/63.3.581</a></div>
 </div>
 <div id="ref-Kelly_et_al_2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline">Kelly K, Richardson M, Isaacs T (2022) Critiquing the rationales for using comparative judgement: A call for clarity. Assessment in Education: Principles, Policy &amp; Practice 29(6):674–688. <a href="https://doi.org/10.1080/0969594X.2022.2147901">https://doi.org/10.1080/0969594X.2022.2147901</a></div>
+<div class="csl-left-margin">36. </div><div class="csl-right-inline">Kelly K, Richardson M, Isaacs T (2022) Critiquing the rationales for using comparative judgement: A call for clarity. Assessment in Education: Principles, Policy &amp; Practice 29(6):674–688. <a href="https://doi.org/10.1080/0969594X.2022.2147901">https://doi.org/10.1080/0969594X.2022.2147901</a></div>
 </div>
 <div id="ref-Morgan_et_al_2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">35. </div><div class="csl-right-inline">Morgan S, Winship C (2014) <a href="">Counterfactuals and causal inference: Methods and principles for social research</a>, 2nd ed. Cambridge University Press</div>
+<div class="csl-left-margin">37. </div><div class="csl-right-inline">Morgan S, Winship C (2014) <a href="">Counterfactuals and causal inference: Methods and principles for social research</a>, 2nd ed. Cambridge University Press</div>
 </div>
 <div id="ref-Lawson_2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">36. </div><div class="csl-right-inline">Lawson J (2015) <a href="">Design and analysis of experiments with r</a>. Chapman; Hall/CRC</div>
+<div class="csl-left-margin">38. </div><div class="csl-right-inline">Lawson J (2015) <a href="">Design and analysis of experiments with r</a>. Chapman; Hall/CRC</div>
 </div>
 <div id="ref-Bareinboim_et_al_2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">37. </div><div class="csl-right-inline">Bareinboim E, Tian J, Pearl J (2014) Recovering from selection bias in causal and statistical inference. Proceedings of the AAAI Conference on Artificial Intelligence 28(1). <a href="https://doi.org/10.1609/aaai.v28i1.9074">https://doi.org/10.1609/aaai.v28i1.9074</a></div>
+<div class="csl-left-margin">39. </div><div class="csl-right-inline">Bareinboim E, Tian J, Pearl J (2014) Recovering from selection bias in causal and statistical inference. Proceedings of the AAAI Conference on Artificial Intelligence 28(1). <a href="https://doi.org/10.1609/aaai.v28i1.9074">https://doi.org/10.1609/aaai.v28i1.9074</a></div>
 </div>
 </div>
 
