@@ -260,7 +260,7 @@ Right panel
 
 The BTL model serves as the **measurement model** for CJ [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018_thesis; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023]
 
-$\longrightarrow$ The literature uses BTL scores (**point estimates**), or their transformations, to conduct additional analyses, such as:
+$\longrightarrow$ The literature uses **point estimates**--such as BTL scores or their transformations--to conduct additional analyses, such as:
 
 ::: incremental
 ::: {style="font-size:80%;"}
@@ -497,26 +497,23 @@ $$
   T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\ \\
   e_{I} & \dsep \{ e_{J}, e_{IA}, e_{JK} \} \\
   e_{J} & \dsep \{ e_{IA}, e_{JK} \} \\
-  e_{IA} & \dsep e_{JK} \\ \\
+  e_{IA} & \dsep e_{JK}
 \end{aligned}
 $$
 
 ::: {.fragment .fade-left}
 $$
 \begin{aligned}
-  & P( O_{R} \mid D_{R}, S, C ) \cdot P(S) \cdot P(C) \\
+  & P( O_{R} \mid D_{R}, S, C ) \\
   & P( D_{R} \mid T_{IA}, B_{JK} ) \\
   & P( T_{IA} \mid T_{I}, X_{IA}, e_{IA} ) \\
   & P( T_{I} \mid X_{I}, e_{I} ) \\
   & P( B_{JK} \mid B_{J}, Z_{JK}, e_{JK} ) \\
-  & P( B_{J} \mid Z_{J}, e_{J} ) \\
-  & P( e_{I} ) \\
-  & P( e_{J} ) \\
-  & P( e_{IA} ) \\  
-  & P( e_{JK} )
+  & P( B_{J} \mid Z_{J}, e_{J} ) \\ \\
+  & P( e_{I} ) P( e_{IA} ) P( e_{J} ) P( e_{JK} ) \\ \\ \\
 \end{aligned}
 $$
 :::
@@ -524,16 +521,15 @@ $$
 ::: {.fragment .fade-left}
 $$
 \begin{aligned}
-  O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv_logit}( D_{R} ) \right] \\
+  O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} ) \right] \\
   D_{R} & = \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
   T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} & = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} & \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{XI}} ) \color{blue}{\longleftarrow} \\
-  e_{J} & \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{ZJ}} ) \color{blue}{\longleftarrow} \\
-  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{IA}} ) \color{blue}{\longleftarrow} \\  
-  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{JK}} ) \color{blue}{\longleftarrow}
+  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\ \\
+  \boldsymbol{e} & \sim \text{Multi-Normal}( \boldsymbol{\mu}, \boldsymbol{\Sigma} )
+  \\
+  \boldsymbol{\Sigma} &= \boldsymbol{V} \boldsymbol{Q} \boldsymbol{V} \\ \\
 \end{aligned}
 $$
 :::
@@ -543,27 +539,40 @@ Comparative judgment model, SCM, probabilistic and statistical model assuming di
 
 ::: {.fragment}
 ::: {style="font-size:80%;"}
-Constraints to anchor the scale of the latent trait [@Depaoli_2021]: 
+Constraints to solve indeterminacies in *location*, *orientation*, and *scale* of $T_{I}$, $T_{IA}$, $B_{J}$, and $B_{JK}$ [@Depaoli_2021]: 
+
+$$\boldsymbol{\mu} = [0, 0, 0, 0]^{T}; \quad 
+\boldsymbol{Q} = \begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 
+  \end{bmatrix}; \quad 
+  \boldsymbol{V} = \begin{bmatrix}
+    s_{XI} & 0 & 0 & 0 \\
+    0 & p_{IA} & 0 & 0 \\
+    0 & 0 & s_{ZJ} & 0 \\
+    0 & 0 & 0 & p_{JK} 
+  \end{bmatrix}$$ 
+  
+$$\sum_{g=1}^{2} s_{XI}[g]/2 = 1; \quad 0< p_{IA} < 1; \quad \sum_{g=1}^{2} s_{ZJ}[g]/3 = 1; \quad 0< p_{JK} < 1$$ 
 :::
-$$
-\sum_{g=1}^{G} \color{blue}{s_{XI}}[g]/G = 1; \quad \sum_{g=1}^{G} \color{blue}{s_{ZJ}}[g]/G = 1; \quad 0 < \color{blue}{p_{IA}} < 1; \quad 0 < \color{blue}{p_{JK}} < 1
-$$
 :::
 
 ---
 
-## 6.1 Discussion {style="font-size:80%;"}
+## 6. Discussion {style="font-size:80%;"}
 
-Benefits of the model:
+Potential benefits of the approach:
 
-1. It can potentially enhance measurement reliability and validity [@Perron_et_al_2015, pp. 2]
+1. It can enhance the reliability and validity of trait measurement [@Perron_et_al_2015]
 
-2. It can potentially improve the statistical accuracy of the hypotheses tests
+2. It can improve the accuracy of statistical inferences
 
 
 ---
 
-## 6.1 Discussion {style="font-size:80%;"}
+## 6. Discussion {style="font-size:80%;"}
 
 Advantages of the model:
 
@@ -596,7 +605,7 @@ Together, advantages 1, 2 and 3 create a principled framework for evaluating bes
 
 ---
 
-## 6.1 Discussion {style="font-size:80%;"}
+## 6. Discussion {style="font-size:80%;"}
 
 Advantages of the model:
 
@@ -609,9 +618,9 @@ a. Zero correlation between texts
 b. Separate process for trait measurement and hypothesis testing
 c. Equal dispersions between students or texts
 d. [No judgment biases]{style="color:blue;"}
-e. [Dichotomous outcome]{style="color:blue;"}
-f. [Need for removal of 'misfit' observations]{style="color:blue;"}
-g. [Normal $e_{IA}, e_{I}, e_{JK},e_{J}$ idiosyncrasies$^{1}$]{style="color:blue;"}
+e. [Need for removal of 'misfit' observations]{style="color:blue;"}
+f. [Dichotomous outcome]{style="color:blue;"}
+g. [Normal $e_{IA}, e_{I}, e_{JK},e_{J}$ idiosyncrasies, how about robust models?$^{1}$]{style="color:blue;"}
 h. [Only two hierarchical components$^{1}$]{style="color:blue;"}
 i. [Multidimensional traits$^{1}$]{style="color:blue;"}
 :::
@@ -628,51 +637,43 @@ Together, advantages 1, 2 and 3 create a principled framework for evaluating bes
 
 ---
 
-## 6.2 Discussion: Limitations and challenges {style="font-size:80%;"}
+## 6.1 Discussion: Future research {style="font-size:80%;"}
+
+Many avenues, but three deserve particular attention:
 
 ::: incremental
-1. **No epistemological** considerations for the connection between the quantitative and theoretical latent trait
-1. Tested **only** in simulation scenarios (*context dependent*)
-2. You need a deep knowledge of **Causal inference**
-
-    $\longrightarrow$ e.g., what does it mean for predictor variables $X_{IA}, X_{I}, Z_{JK}, Z_{J}$ to be part of the *sufficient adjustment set*?
-
-3. You need knowledge of **Probabilistic Programming Languages (PPL)**
-4. You need knowledge of **Bayesian inference** methods
+1. The impact of sampling and comparison mechanisms
+2. The effects of judges' bias on the reliability of traits
+3. The identification of 'misfitting' judges and stimuli
 :::
 
-::: {.notes}
-a *sufficient adjustment* set of variables (potentially an empty set) refers to those that satisfy the *backdoor criterion* [@Neal_2020, pp. 37], that is, variables that block all non-causal paths without introducing new ones [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014].
-
-Naturally, the validity of causal claims now hinges on the assumption that these variables serve as a sufficient adjustment set, a property that cannot be guaranteed for any variable. Nevertheless, as @Kohler_et_al_2019 [pp. 150] noted, drawing conclusions about the real world from observed data inevitably requires assumptions, and these requirements hold true for both observational and experimental data.
-:::
 
 ---
 
-## 6.2 Discussion: Further research {style="font-size:80%;"}
+## 6.2 Discussion: Study limitations and practical challenges for applied CJ researchers {style="font-size:80%;"}
 
 ::: incremental
-1. Model testing trough simulation and power analysis (*context dependent*)
-2. Package development
-3. Apply the model to, for instance, replication studies:
+1. Study limitations:
 
 ::: incremental
 ::: {style="font-size:80%;"}
-a. "New" rules of thumb for sample sizes or number of comparisons
-b. Are there benefits of adaptive comparative algorithms?
-c. Effects of predictor variables on students, texts, judges, and judgments
-d. Do repeated judgments bring benefits? (*repeated measures design* [@Lawson_2015, pp. 366-376])
-e. Are additive better than multiplicative judges' biases (akin to *discrimination* in 2-PL IRT model)
-f. How to work with random and non-random samples [@Bareinboim_et_al_2014]
-g. **etc. etc. etc.**
++ As with all approaches grounded on causal inference, ours has the limitation of relying on expert knowledge and assumptions about the variables' causal structure that are often untestable at the outset [@Hernan_et_al_2025].
+
++ However, the theory-driven nature of our approach provides a solid foundation for future empirical evaluation of its causal assumptions [@Deffner_et_al_2022], which are well supported by both theory and existing evidence.
+:::
+:::
+
+2. Practical challenges for applied CJ researchers:
+
+::: incremental
+::: {style="font-size:80%;"}
++ It requires foundational knowledge in causal inference and Bayesian inference methods
+
++ It requires more attention for conceptual and statistical modeling. Particularly, ensuring a *faithful* representation of the CJ system under study and evaluating whether the statistical model can accurately estimate the intended parameters from empirical data. 
 :::
 :::
 
 :::
-
-
-
-
 
 ## References {style="font-size:80%;"}
 

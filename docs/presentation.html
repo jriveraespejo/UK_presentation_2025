@@ -14,7 +14,7 @@
   <meta name="author" content="Tine van van Daal">
   <meta name="author" content="Sven De De Maeyer">
   <meta name="author" content="Steven Gillis">
-  <meta name="dcterms.date" content="2025-04-23">
+  <meta name="dcterms.date" content="2025-06-07">
   <title>Let’s talk about Thurstone &amp; Co.</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -406,7 +406,7 @@ UK, 2025</p><p></p>
     </div>
 </div>
 
-  <p class="date">2025-04-23</p>
+  <p class="date">2025-06-07</p>
 </section>
 <section id="motivating-example" class="slide level2" style="font-size:80%;">
 <h2>1. Motivating example</h2>
@@ -637,7 +637,7 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimuli correlation on
 <section id="issue-2-measurement-and-hypothesis-tests" class="slide level2" style="font-size:80%;">
 <h2>Issue 2: Measurement and hypothesis tests</h2>
 <p>The BTL model serves as the <strong>measurement model</strong> for CJ <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018_thesis Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">[<a href="#/references" role="doc-biblioref" onclick="">6</a>–<a href="#/references" role="doc-biblioref" onclick="">8</a>, <a href="#/references" role="doc-biblioref" onclick="">11</a>–<a href="#/references" role="doc-biblioref" onclick="">15</a>]</span></p>
-<p><span class="math inline">\(\longrightarrow\)</span> The literature uses BTL scores (<strong>point estimates</strong>), or their transformations, to conduct additional analyses, such as:</p>
+<p><span class="math inline">\(\longrightarrow\)</span> The literature uses <strong>point estimates</strong>–such as BTL scores or their transformations–to conduct additional analyses, such as:</p>
 <div>
 <div style="font-size:80%;">
 <ul>
@@ -897,42 +897,38 @@ Figure&nbsp;5: Comparative judgment model. <em>Left panel</em> illustrates the D
   T_{IA} &amp; := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
   T_{I} &amp; := f_{T}(X_{I}, e_{I}) \\
   B_{JK} &amp; := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
-  B_{J} &amp; := f_{B}(Z_{J}, e_{J}) \\
+  B_{J} &amp; := f_{B}(Z_{J}, e_{J}) \\ \\
   e_{I} &amp; \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
   e_{J} &amp; \:\bot\:\{ e_{IA}, e_{JK} \} \\
-  e_{IA} &amp; \:\bot\:e_{JK} \\ \\
+  e_{IA} &amp; \:\bot\:e_{JK}
 \end{aligned}
 \]</span></p>
 </div>
 <div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
-  &amp; P( O_{R} \mid D_{R}, S, C ) \cdot P(S) \cdot P(C) \\
+  &amp; P( O_{R} \mid D_{R}, S, C ) \\
   &amp; P( D_{R} \mid T_{IA}, B_{JK} ) \\
   &amp; P( T_{IA} \mid T_{I}, X_{IA}, e_{IA} ) \\
   &amp; P( T_{I} \mid X_{I}, e_{I} ) \\
   &amp; P( B_{JK} \mid B_{J}, Z_{JK}, e_{JK} ) \\
-  &amp; P( B_{J} \mid Z_{J}, e_{J} ) \\
-  &amp; P( e_{I} ) \\
-  &amp; P( e_{J} ) \\
-  &amp; P( e_{IA} ) \\  
-  &amp; P( e_{JK} )
+  &amp; P( B_{J} \mid Z_{J}, e_{J} ) \\ \\
+  &amp; P( e_{I} ) P( e_{IA} ) P( e_{J} ) P( e_{JK} ) \\ \\ \\
 \end{aligned}
 \]</span></p>
 </div>
 <div class="fragment fade-left quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="math display">\[
 \begin{aligned}
-  O_{R} &amp; \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv_logit}( D_{R} ) \right] \\
+  O_{R} &amp; \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} ) \right] \\
   D_{R} &amp; = \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
   T_{IA} &amp; = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} &amp; = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} &amp; = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} &amp; = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} &amp; \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{XI}} ) \color{blue}{\longleftarrow} \\
-  e_{J} &amp; \overset{iid}{\sim} \text{Normal}(0,\color{blue}{s_{ZJ}} ) \color{blue}{\longleftarrow} \\
-  e_{IA} &amp; \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{IA}} ) \color{blue}{\longleftarrow} \\  
-  e_{JK} &amp; \overset{iid}{\sim} \text{Normal}(0, \color{blue}{p_{JK}} ) \color{blue}{\longleftarrow}
+  B_{J} &amp; = \beta_{ZJ} Z_{J} + e_{J} \\ \\
+  \boldsymbol{e} &amp; \sim \text{Multi-Normal}( \boldsymbol{\mu}, \boldsymbol{\Sigma} )
+  \\
+  \boldsymbol{\Sigma} &amp;= \boldsymbol{V} \boldsymbol{Q} \boldsymbol{V} \\ \\
 \end{aligned}
 \]</span></p>
 </div>
@@ -945,23 +941,34 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 </div>
 <div class="fragment">
 <div style="font-size:80%;">
-<p>Constraints to anchor the scale of the latent trait <span class="citation" data-cites="Depaoli_2021">[<a href="#/references" role="doc-biblioref" onclick="">33</a>]</span>:</p>
+<p>Constraints to solve indeterminacies in <em>location</em>, <em>orientation</em>, and <em>scale</em> of <span class="math inline">\(T_{I}\)</span>, <span class="math inline">\(T_{IA}\)</span>, <span class="math inline">\(B_{J}\)</span>, and <span class="math inline">\(B_{JK}\)</span> <span class="citation" data-cites="Depaoli_2021">[<a href="#/references" role="doc-biblioref" onclick="">33</a>]</span>:</p>
+<p><span class="math display">\[\boldsymbol{\mu} = [0, 0, 0, 0]^{T}; \quad
+\boldsymbol{Q} = \begin{bmatrix}
+    1 &amp; 0 &amp; 0 &amp; 0 \\
+    0 &amp; 1 &amp; 0 &amp; 0 \\
+    0 &amp; 0 &amp; 1 &amp; 0 \\
+    0 &amp; 0 &amp; 0 &amp; 1
+  \end{bmatrix}; \quad
+  \boldsymbol{V} = \begin{bmatrix}
+    s_{XI} &amp; 0 &amp; 0 &amp; 0 \\
+    0 &amp; p_{IA} &amp; 0 &amp; 0 \\
+    0 &amp; 0 &amp; s_{ZJ} &amp; 0 \\
+    0 &amp; 0 &amp; 0 &amp; p_{JK}
+  \end{bmatrix}\]</span></p>
+<p><span class="math display">\[\sum_{g=1}^{2} s_{XI}[g]/2 = 1; \quad 0&lt; p_{IA} &lt; 1; \quad \sum_{g=1}^{2} s_{ZJ}[g]/3 = 1; \quad 0&lt; p_{JK} &lt; 1\]</span></p>
 </div>
-<p><span class="math display">\[
-\sum_{g=1}^{G} \color{blue}{s_{XI}}[g]/G = 1; \quad \sum_{g=1}^{G} \color{blue}{s_{ZJ}}[g]/G = 1; \quad 0 &lt; \color{blue}{p_{IA}} &lt; 1; \quad 0 &lt; \color{blue}{p_{JK}} &lt; 1
-\]</span></p>
 </div>
 </section>
 <section id="discussion" class="slide level2" style="font-size:80%;">
-<h2>6.1 Discussion</h2>
-<p>Benefits of the model:</p>
+<h2>6. Discussion</h2>
+<p>Potential benefits of the approach:</p>
 <ol type="1">
-<li><p>It can potentially enhance measurement reliability and validity <span class="citation" data-cites="Perron_et_al_2015">[<a href="#/references" role="doc-biblioref" onclick="">34</a>]</span></p></li>
-<li><p>It can potentially improve the statistical accuracy of the hypotheses tests</p></li>
+<li><p>It can enhance the reliability and validity of trait measurement <span class="citation" data-cites="Perron_et_al_2015">[<a href="#/references" role="doc-biblioref" onclick="">34</a>]</span></p></li>
+<li><p>It can improve the accuracy of statistical inferences</p></li>
 </ol>
 </section>
 <section id="discussion-1" class="slide level2" style="font-size:80%;">
-<h2>6.1 Discussion</h2>
+<h2>6. Discussion</h2>
 <p>Advantages of the model:</p>
 <div>
 <ol type="1">
@@ -1002,7 +1009,7 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
       }</style></aside>
 </section>
 <section id="discussion-2" class="slide level2" style="font-size:80%;">
-<h2>6.1 Discussion</h2>
+<h2>6. Discussion</h2>
 <p>Advantages of the model:</p>
 <div>
 <ol start="3" type="1">
@@ -1015,9 +1022,9 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <li class="fragment">Separate process for trait measurement and hypothesis testing</li>
 <li class="fragment">Equal dispersions between students or texts</li>
 <li class="fragment"><span style="color:blue;">No judgment biases</span></li>
-<li class="fragment"><span style="color:blue;">Dichotomous outcome</span></li>
 <li class="fragment"><span style="color:blue;">Need for removal of ‘misfit’ observations</span></li>
-<li class="fragment"><span style="color:blue;">Normal <span class="math inline">\(e_{IA}, e_{I}, e_{JK},e_{J}\)</span> idiosyncrasies<span class="math inline">\(^{1}\)</span></span></li>
+<li class="fragment"><span style="color:blue;">Dichotomous outcome</span></li>
+<li class="fragment"><span style="color:blue;">Normal <span class="math inline">\(e_{IA}, e_{I}, e_{JK},e_{J}\)</span> idiosyncrasies, how about robust models?<span class="math inline">\(^{1}\)</span></span></li>
 <li class="fragment"><span style="color:blue;">Only two hierarchical components<span class="math inline">\(^{1}\)</span></span></li>
 <li class="fragment"><span style="color:blue;">Multidimensional traits<span class="math inline">\(^{1}\)</span></span></li>
 </ol>
@@ -1041,52 +1048,40 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
           display:block!important;
       }</style></aside>
 </section>
-<section id="discussion-limitations-and-challenges" class="slide level2" style="font-size:80%;">
-<h2>6.2 Discussion: Limitations and challenges</h2>
+<section id="discussion-future-research" class="slide level2" style="font-size:80%;">
+<h2>6.1 Discussion: Future research</h2>
+<p>Many avenues, but three deserve particular attention:</p>
 <div>
 <ol type="1">
-<li class="fragment"><p><strong>No epistemological</strong> considerations for the connection between the quantitative and theoretical latent trait</p></li>
-<li class="fragment"><p>Tested <strong>only</strong> in simulation scenarios (<em>context dependent</em>)</p></li>
-<li class="fragment"><p>You need a deep knowledge of <strong>Causal inference</strong></p>
-<p><span class="math inline">\(\longrightarrow\)</span> e.g., what does it mean for predictor variables <span class="math inline">\(X_{IA}, X_{I}, Z_{JK}, Z_{J}\)</span> to be part of the <em>sufficient adjustment set</em>?</p></li>
-<li class="fragment"><p>You need knowledge of <strong>Probabilistic Programming Languages (PPL)</strong></p></li>
-<li class="fragment"><p>You need knowledge of <strong>Bayesian inference</strong> methods</p></li>
+<li class="fragment">The impact of sampling and comparison mechanisms</li>
+<li class="fragment">The effects of judges’ bias on the reliability of traits</li>
+<li class="fragment">The identification of ‘misfitting’ judges and stimuli</li>
 </ol>
 </div>
-<aside class="notes">
-<p>a <em>sufficient adjustment</em> set of variables (potentially an empty set) refers to those that satisfy the <em>backdoor criterion</em> <span class="citation" data-cites="Neal_2020">[<a href="#/references" role="doc-biblioref" onclick="">30</a>]</span>, that is, variables that block all non-causal paths without introducing new ones <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Morgan_et_al_2014">[<a href="#/references" role="doc-biblioref" onclick="">27</a>, <a href="#/references" role="doc-biblioref" onclick="">28</a>, <a href="#/references" role="doc-biblioref" onclick="">37</a>]</span>.</p>
-<p>Naturally, the validity of causal claims now hinges on the assumption that these variables serve as a sufficient adjustment set, a property that cannot be guaranteed for any variable. Nevertheless, as <span class="citation" data-cites="Kohler_et_al_2019">[<a href="#/references" role="doc-biblioref" onclick="">26</a>]</span> noted, drawing conclusions about the real world from observed data inevitably requires assumptions, and these requirements hold true for both observational and experimental data.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="discussion-further-research" class="slide level2" style="font-size:80%;">
-<h2>6.2 Discussion: Further research</h2>
+<section id="discussion-study-limitations-and-practical-challenges-for-applied-cj-researchers" class="slide level2" style="font-size:80%;">
+<h2>6.2 Discussion: Study limitations and practical challenges for applied CJ researchers</h2>
 <div>
 <ol type="1">
-<li class="fragment">Model testing trough simulation and power analysis (<em>context dependent</em>)</li>
-<li class="fragment">Package development</li>
-<li class="fragment">Apply the model to, for instance, replication studies:</li>
+<li class="fragment">Study limitations:</li>
 </ol>
 <div>
 <div style="font-size:80%;">
-<ol type="a">
-<li class="fragment">“New” rules of thumb for sample sizes or number of comparisons</li>
-<li class="fragment">Are there benefits of adaptive comparative algorithms?</li>
-<li class="fragment">Effects of predictor variables on students, texts, judges, and judgments</li>
-<li class="fragment">Do repeated judgments bring benefits? (<em>repeated measures design</em> <span class="citation" data-cites="Lawson_2015">[<a href="#/references" role="doc-biblioref" onclick="">38</a>]</span>)</li>
-<li class="fragment">Are additive better than multiplicative judges’ biases (akin to <em>discrimination</em> in 2-PL IRT model)</li>
-<li class="fragment">How to work with random and non-random samples <span class="citation" data-cites="Bareinboim_et_al_2014">[<a href="#/references" role="doc-biblioref" onclick="">39</a>]</span></li>
-<li class="fragment"><strong>etc. etc. etc.</strong></li>
+<ul>
+<li class="fragment"><p>As with all approaches grounded on causal inference, ours has the limitation of relying on expert knowledge and assumptions about the variables’ causal structure that are often untestable at the outset <span class="citation" data-cites="Hernan_et_al_2025">[<a href="#/references" role="doc-biblioref" onclick="">37</a>]</span>.</p></li>
+<li class="fragment"><p>However, the theory-driven nature of our approach provides a solid foundation for future empirical evaluation of its causal assumptions <span class="citation" data-cites="Deffner_et_al_2022">[<a href="#/references" role="doc-biblioref" onclick="">38</a>]</span>, which are well supported by both theory and existing evidence.</p></li>
+</ul>
+</div>
+</div>
+<ol start="2" type="1">
+<li class="fragment">Practical challenges for applied CJ researchers:</li>
 </ol>
+<div>
+<div style="font-size:80%;">
+<ul>
+<li class="fragment"><p>It requires foundational knowledge in causal inference and Bayesian inference methods</p></li>
+<li class="fragment"><p>It requires more attention for conceptual and statistical modeling. Particularly, ensuring a <em>faithful</em> representation of the CJ system under study and evaluating whether the statistical model can accurately estimate the intended parameters from empirical data.</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -1119,7 +1114,7 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <div class="csl-left-margin">8. </div><div class="csl-right-inline">Goossens M, De Maeyer S (2018) <a href="https://doi.org/10.1007/978-3-319-97807-9_2">How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement</a>. In: Ras E, Guerrero Roldán A (eds) Technology enhanced assessment. Springer International Publishing, pp 13–25</div>
 </div>
 <div id="ref-McElreath_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">McElreath R (2020) <a href="">Statistical rethinking: A bayesian course with examples in r and STAN</a>. Chapman; Hall/CRC</div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">McElreath R (2020) <a href="https://doi.org/10.1201/9780429029608">Statistical rethinking: A bayesian course with examples in r and STAN</a>. Chapman; Hall/CRC</div>
 </div>
 <div id="ref-Zimmerman_1994" class="csl-entry" role="listitem">
 <div class="csl-left-margin">10. </div><div class="csl-right-inline">Zimmerman D (1994) A note on the influence of outliers on parametric and nonparametric tests. The Journal of General Psychology 121(4):391–401. <a href="https://doi.org/10.1080/00221309.1994.9921213">https://doi.org/10.1080/00221309.1994.9921213</a></div>
@@ -1146,7 +1141,7 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <div class="csl-left-margin">17. </div><div class="csl-right-inline">Casalicchio G, Tutz G, Schauberger G (2015) Subject-specific bradley–terry–luce models with implicit variable selection. Statistical Modelling 15(6):526–547. <a href="https://doi.org/10.1177/1471082X15571817">https://doi.org/10.1177/1471082X15571817</a></div>
 </div>
 <div id="ref-Bramley_et_al_2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline">Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy and Practice 71(9):1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a></div>
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">Bramley T, Vitello S (2019) The effect of adaptivity on the reliability coefficient in adaptive comparative judgement. Assessment in Education: Principles, Policy &amp; Practice 26(1):43–58. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a></div>
 </div>
 <div id="ref-Boonen_et_al_2020" class="csl-entry" role="listitem">
 <div class="csl-left-margin">19. </div><div class="csl-right-inline">Boonen N, Kloots H, Gillis S (2020) Rating the overall speech quality of hearing-impaired children by means of comparative judgements. Journal of Communication Disorders 83:1675–1687. <a href="https://doi.org/10.1016/j.jcomdis.2019.105969">https://doi.org/10.1016/j.jcomdis.2019.105969</a></div>
@@ -1202,14 +1197,11 @@ Figure&nbsp;6: Comparative judgment model, SCM, probabilistic and statistical mo
 <div id="ref-Kelly_et_al_2022" class="csl-entry" role="listitem">
 <div class="csl-left-margin">36. </div><div class="csl-right-inline">Kelly K, Richardson M, Isaacs T (2022) Critiquing the rationales for using comparative judgement: A call for clarity. Assessment in Education: Principles, Policy &amp; Practice 29(6):674–688. <a href="https://doi.org/10.1080/0969594X.2022.2147901">https://doi.org/10.1080/0969594X.2022.2147901</a></div>
 </div>
-<div id="ref-Morgan_et_al_2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">37. </div><div class="csl-right-inline">Morgan S, Winship C (2014) <a href="">Counterfactuals and causal inference: Methods and principles for social research</a>, 2nd ed. Cambridge University Press</div>
+<div id="ref-Hernan_et_al_2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">37. </div><div class="csl-right-inline">Hernán M, Robins J (2025) <a href="">Causal inference: What if</a>, 1st ed. Chapman; Hall/CRC</div>
 </div>
-<div id="ref-Lawson_2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">38. </div><div class="csl-right-inline">Lawson J (2015) <a href="">Design and analysis of experiments with r</a>. Chapman; Hall/CRC</div>
-</div>
-<div id="ref-Bareinboim_et_al_2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">39. </div><div class="csl-right-inline">Bareinboim E, Tian J, Pearl J (2014) Recovering from selection bias in causal and statistical inference. Proceedings of the AAAI Conference on Artificial Intelligence 28(1). <a href="https://doi.org/10.1609/aaai.v28i1.9074">https://doi.org/10.1609/aaai.v28i1.9074</a></div>
+<div id="ref-Deffner_et_al_2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">38. </div><div class="csl-right-inline">Deffner D, Rohrer J, McElreath R (2022) A causal framework for cross-cultural generalizability. Advances in Methods and Practices in Psychological Science 5(3). <a href="https://doi.org/10.1177/25152459221106366">https://doi.org/10.1177/25152459221106366</a></div>
 </div>
 </div>
 
